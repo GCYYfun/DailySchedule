@@ -52,10 +52,15 @@ https://github.com/rcore-os/zCore/wiki/Status:-Syscalls
 ##### 简要实现流程：  
 
 Step1：实现对CPU支持vmx和扩展分页的检测，了解如何发现CPU是否支持vmx和扩展分页、用以知道是否可虚拟化、  
+
 Step2：通过syscall创建guest、然后把guest的bootloder和kernel复制到guest的物理地址空间中  
+
 Step3：实现vmlaunch和vmresume、用以来启动VM、  
+
 Step4：这时guest可以成功进入运行、但还不可以处理中断、要添加guest的处理中断功能、叫做VM exits、与发出系统调用（例如，使用 int 或 syscall 指令）类似，guest可以使用 vmcall 指令（有时称为hypercalls）以编程方式捕获到host  
+
 Step5：在VM中仅使用vmcall来请求“伪”内存映射、完成实现handle_cpuid  
+
 Step6：当执行I/O时也应补充上I/O的vmcall
 
 这样大概就有一个简单能跑的和hypervisor、以上内容仅有读实验指导书得出的大概理解、没有对代码由过多深入理解、感觉理解程度仅有20%、
