@@ -2,7 +2,8 @@
 
 目录  
 
-[Day 0](#Day0)
+[Day 0](#Day0)  
+[Day 1](#Day1)
 
 <span id="Day0"></span>
 ## Day 0
@@ -29,3 +30,16 @@ https://github.com/rcore-os/zCore/wiki/Status:-Syscalls
 1、再次沟通了解实现思路与具体做法、所需背景知识、  
 2、开发环境搭建与准备、  
 3、沟通了解zcore整体结构、  
+
+<span id="Day1"></span>
+## Day 1 （2020-04-10）
+
+
+### 事件1： 沟通hypervisor实现流程
+
+沟通后、因为对这方面没有太多知识储备支撑、建议先参考https://www.cs.unc.edu/~porter/courses/comp790/s17/labs.html 一个小型的hypervisor构建过程进行理解学习、
+
+### 事件2: 科学上网、浏览Fuchsia文档结构
+
+根据理解、在zcore上补全syscall的工作、似乎是参照zircon进行的、所以需要理解zircon的内容和运作、
+
