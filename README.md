@@ -131,4 +131,4 @@ Errr..今天处理了一些杂事、没能正经营业、接下来要抓紧时�
 ### 计划
 
 1、找rj交流下zircon的内容、  
-2、在对zircon有了一定认识后在去交流hypervisor、  
+2、在对zircon有了一定认识后在去交流hypervisor、syscall、  
