@@ -6,6 +6,7 @@
 [Day 1   (2020-04-10)](#Day1)   
 [Day 2   (2020-04-11)](#Day2)   
 [Day 3   (2020-04-12)](#Day3)  
+[Day 4   (2020-04-13)](#Day4)  
 
 <span id="Day0"></span>
 ## Day 0
@@ -107,4 +108,10 @@ Step6：当执行I/O时也应补充上I/O的vmcall
 
 Errr..今天处理了一些杂事、没能正经营业、接下来要抓紧时间了、  
 
+<span id="Day4"></span>
+## Day 4 （2020-04-13）周一
 
+### 事件1：继续学习hypervisor
+
+再次参考https://www.cs.unc.edu/~porter/courses/comp790/s17/labs.html 一个小型的hypervisor构建过程、结合代码理解hypervisor、并制作一个简单流程图帮助理解、  
+![启动VMM流程图]()
