@@ -114,4 +114,21 @@ Errr..今天处理了一些杂事、没能正经营业、接下来要抓紧时�
 ### 事件1：继续学习hypervisor
 
 再次参考https://www.cs.unc.edu/~porter/courses/comp790/s17/labs.html 一个小型的hypervisor构建过程、结合代码理解hypervisor、并制作一个简单流程图帮助理解、  
-![启动VMM流程图]()
+![启动VMM流程图](https://github.com/GCYYfun/DailySchedule/blob/master/VMM%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%E5%9B%BE.png?raw=true)
+
+理解vmcs的作用及需要设置的大概内容、艰难阅读intel手册、效率不够理想、对此感到沮丧、
+
+### 事件2：继续学习理解zircon
+
+阅读了关于zircon、kernel部分的概念、对zircon大概有了一个认知、并确认了体量很大、还有对很多内容理解不到位、认为这个方法不有效、决定找rj取取经、加快对zircon的学习、
+
+
+### 问题
+
+1、对hypervisor大体认识有了、细节不够、包括很多intel手册内容、也不清楚、   
+2、又看了zircon的结构、还是不能清晰代码逻辑、知道中间缺着一些内容、但具体什么不清楚、需要一点一点查、  
+
+### 计划
+
+1、找rj交流下zircon的内容、  
+2、在对zircon有了一定认识后在去交流hypervisor、  
