@@ -150,9 +150,29 @@ Errr..今天处理了一些杂事、没能正经营业、接下来要抓紧时�
    4、zcore 
 ```
 时间分配:  
-1、重新温习熟悉Blog os内容 （3天）  
-2、重新温习掌握rcore_tutorial内容 （4天）  
+1、重新理解熟悉Blog os内容 （3天）  
+2、重新理解掌握rcore_tutorial内容 （4天）  
 3、理解尝试完成hypervisor lab（3天）  
 4、run起zcore、并理解项目 （4天）  
 
 预计十四天左右、上下浮动不应超过太多、要求保质保量、稳步进行、
+
+
+### 事件1：深入理解学习 Blog OS
+
+再一次看Blog OS 虽然今天没有代码操作、但对最基本的一些概念和理解感觉认识的更清晰了、第一次学的时候没那么清晰的概念、或没有注意的地方、这次比较容易的就理解了。
+
+今天的进度是：  
+1、A Freestanding Rust Binary  
+2、A Minimal Rust Kernel  
+5、CPU Exceptions  
+6、Double Faults  
+7、Hardware Interrupts  
+
+### Funny thing ★
+
+看Blog OS时发现出了中文版、我也去看看了中文版、很巧的找到了一个命令错误、我看comment没有人进行评论、我以为没什么人在意这个中文版、就用中文写了个comment、没想到作者真的很勤快、没多久就回复了、😂、但他看不懂中文、并@了中文翻译的贡献者、然后改了、算是一件比较有趣的事情、😂😂😂、
+
+### 计划 
+
+明天看MEMORY MANAGEMENT章节
