@@ -150,7 +150,7 @@ Errr..今天处理了一些杂事、没能正经营业、接下来要抓紧时�
    4、zcore 
 ```
 时间分配:  
-1、重新温习熟悉log os内容 （3天）  
+1、重新温习熟悉Blog os内容 （3天）  
 2、重新温习掌握rcore_tutorial内容 （4天）  
 3、理解尝试完成hypervisor lab（3天）  
 4、run起zcore、并理解项目 （4天）  
