@@ -7,6 +7,7 @@
 [Day 2   (2020-04-11)](#Day2)   
 [Day 3   (2020-04-12)](#Day3)  
 [Day 4   (2020-04-13)](#Day4)  
+[Day 5   (2020-04-14)](#Day5)  
 
 <span id="Day0"></span>
 ## Day 0
@@ -132,3 +133,26 @@ Errr..今天处理了一些杂事、没能正经营业、接下来要抓紧时�
 
 1、找rj交流下zircon的内容、  
 2、在对zircon有了一定认识后在去交流hypervisor、syscall、  
+
+
+<span id="Day5"></span>
+## Day 5 （2020-04-14）周二
+
+### 评估后新短期计划
+
+预计时间: 两个星期  
+
+预计内容: 
+```
+   1、Blog OS 
+   2、rCore_tutorial
+   3、hypervisor lab
+   4、zcore 
+```
+时间分配:  
+1、重新温习熟悉log os内容 （3天）  
+2、重新温习掌握rcore_tutorial内容 （4天）  
+3、理解尝试完成hypervisor lab（3天）  
+4、run起zcore、并理解项目 （4天）  
+
+预计十四天左右、上下浮动不应超过太多、要求保质保量、稳步进行、
