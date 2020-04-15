@@ -179,7 +179,7 @@ Errr..今天处理了一些杂事、没能正经营业、接下来要抓紧时�
 明天看MEMORY MANAGEMENT章节
 
 
-<span id="Day5"></span>
+<span id="Day6"></span>
 ## Day 6 （2020-04-15）周三
 
 ### 事件1：复习Rust
