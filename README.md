@@ -604,3 +604,14 @@ rust 部分 需要std 这好像就不是libc了、卡在对future掌握不全面
 ### 事件1： 完成bootloader ？
 
 差不多完成了bootloader的大体内容、还没测试、还有一个小问题需要解决、但都在可预见范围内了、已经没有逻辑上不确定的不能认知的事情了、
+
+
+|   HW   |                                Descript                                              |  Difficulty  |  Priority  |  Finish  |
+|  ----  |                                --------                                              |  ----------  |  --------  |  ------  |
+|   01   |  不用Target Specification可不可以进行、怎么进行？                                         |      ★★      |    ★★      |yes|
+|   02   |  理解串口、1、使用串口 输出 hello ；2、使用串口 输入 hello                                  |     ★★★★★    |    ★★★★    |not perfect but do|
+|   03   |  理解bootloader 、1、使用自己写的bootloader加载blog os、（汇编、C、Rust都可以，可以参考xv6）  |     ★★★★★    |    ★★★★    |yes but not perfect|
+|   04   |  在IDT初始化时、打印出当前系统状态、比如、当前处于什么模式、异常处理函数地址、页表情况诸如此类      |      ★★      |     ★★     |yse|
+|   05   |  理解内存布局情况、包括不限于初始化时内存的物理内存布局、虚拟内存布局、各个时期的内存变化           |      ★★      |     ★★     |yse|
+|   06   |  清晰描述包括且不限于linked list分配算法                                                  |      ★★      |     ★★     |not yet|
+|   07   |  写一些系统调用、分别使用、同步方式 1、C & Rust、2、异步方式 Rust                            |      ★★★     |    ★★★★★   |yes but not perfect|
