@@ -672,3 +672,22 @@ gdb打印的指针变量总是不对、去仔细阅读rust语言关于指针的�
 
 <span id="Day036"></span>
 ## Day 36 （2020-05-015）周五
+
+### 事件1:在rust-playground上复线代码、
+
+在rust playground 上 复线代码 是可以运行的、跑到bootloader里就不太正确、匪夷所思
+
+最后的挣扎、用了各种办法、失败告终
+
+
+
+<span id="Day037"></span>
+## Day 37 （2020-05-016）周六
+
+### 事件1:上传bootloader仓库
+
+https://github.com/GCYYfun/simple_bootloader 写了文档
+
+### 事件1:bootloader遇阻、调剂到zcore
+
+把zcore下载、查询相关信息
