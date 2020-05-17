@@ -691,3 +691,8 @@ https://github.com/GCYYfun/simple_bootloader 写了文档
 ### 事件1:bootloader遇阻、调剂到zcore
 
 把zcore下载、查询相关信息
+
+<span id="Day038"></span>
+## Day 38 （2020-05-017）周日
+
+### 事件1：阅读cargo reference
