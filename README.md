@@ -696,3 +696,7 @@ https://github.com/GCYYfun/simple_bootloader 写了文档
 ## Day 38 （2020-05-017）周日
 
 ### 事件1：阅读cargo reference
+
+### 事件2：bootloader
+
+写在bootloader.md中
