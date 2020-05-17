@@ -307,9 +307,50 @@ src/stage_2.s
 
 
 
+src/stage3
+
+
+这个阶段对CPU执行一些检查（cpuid，长模式），
+设置初始页表映射（身份映射bootloader，递归映射P4，将内核blob映射到4MB），
+启用分页，切换到长模式，跳转到阶段4。
+
+//重新设置 段寄存器 
+
+> stage_3:
+
+
+// 检测
+> check_cpu
+
+check cpuid
+check long mode
+
+// 设置页表
+
+四级  
+三  
+二  
+一  
+
+页表空间 已在ld分布好了
+
+
+// 页表 开启
+
+1、设置 CR3
+2、使能 PAE
+3、开启EFER 第八位 长模式
+4、开启页表 CR0 31位
+
+// 加载 长模式的gdt
+
+
+// 跳转 stage 4
 
 
 
+
+stage4
 
 
 
