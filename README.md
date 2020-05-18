@@ -704,3 +704,14 @@ cargo 使用相关知识 关于build.rs、等一些配置
 ### 事件2：bootloader
 
 独立写了 一篇 bootloder 放在同仓库 bootloader.md中
+
+<span id="Day039"></span>
+## Day 39 （2020-05-018）周一
+
+### 事件1：查漏补缺 bootloader
+
+把一些细节又去查看了些、还是有些细节的地方看不太懂、但不影响整体理解
+
+### 事件2：为展示作准备
+
+整理了新的文档 、simple bootloader 库里
