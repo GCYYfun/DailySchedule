@@ -695,6 +695,8 @@ https://github.com/GCYYfun/simple_bootloader 写了文档
 
 把zcore下载、查询相关信息
 
+
+
 <span id="Day038"></span>
 ## Day 38 （2020-05-017）周日
 
@@ -705,6 +707,8 @@ cargo 使用相关知识 关于build.rs、等一些配置
 ### 事件2：bootloader
 
 独立写了 一篇 bootloder 放在同仓库 bootloader.md中
+
+
 
 <span id="Day039"></span>
 ## Day 39 （2020-05-018）周一
