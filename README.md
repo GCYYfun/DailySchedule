@@ -699,6 +699,8 @@ https://github.com/GCYYfun/simple_bootloader 写了文档
 
 ### 事件1：阅读cargo reference
 
+cargo 使用相关知识 关于build.rs、等一些配置
+
 ### 事件2：bootloader
 
-写在bootloader.md中
+独立写了 一篇 bootloder 放在同仓库 bootloader.md中
