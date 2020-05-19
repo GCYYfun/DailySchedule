@@ -746,7 +746,7 @@ cargo 使用相关知识 关于build.rs、等一些配置
 有些工作之外的情况、造成一些进度延迟、明天弥补
 
 1. 下载 rcore https://github.com/rcore-os/rCore   zcore https://github.com/rcore-os/zCore   |完成
-1. 编译运行rcore，zcore |未完成   (遇到的问题 放在zcore syscall detail 里)
+1. 编译运行rcore，zcore |完成   (遇到的问题 放在zcore syscall detail 里)
 1. 下载 alpline linux 虚拟机 跑起来 |未完成
 1. 编译 musl libc test-case      |未完成
 1. 移植 rcore syscall 到zcore |未完成
