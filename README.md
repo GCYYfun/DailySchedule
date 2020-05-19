@@ -738,3 +738,4 @@ cargo 使用相关知识 关于build.rs、等一些配置
 1. 在zcore的开发中，注意首先基于用户态模式的zcore进行开发，这样避免开发难度。
 1. 进一步学习 https://os20-rcore-tutorial.github.io/rCore-Tutorial-deploy/ 
 1. 有问题直接在rcore2020微信群中提问，请其他同学帮忙。
+1. https://github.com/EatenBagpipe/rCore  这组同学在rcore上做了一些linux syscall的支持，并用musl libc的testcase 进行测试。你可以做为zcore上linux syscall支持的参考。
