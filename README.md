@@ -733,5 +733,8 @@ cargo 使用相关知识 关于build.rs、等一些配置
 1. 编译运行rcore, zcore
 1. 下载alpline linux，在虚拟机(kvm, virtualbox,...之一)中安装alpine linux，在alpine linux中编译生成musl libc的testcase (musl-libc 测例：http://nsz.repo.hu/git/?p=libc-test )，做为syscall测试用例
 1. rcore目前已经支持不少libc-test中的测试用例，尝试从简单到复杂把rcore的syscall支持移到zcore中。
-1. 在zcore的开发中，注意首先基于用户态模式的zcore进行开发，这样避免开发难度。
 
+注意事项：
+1. 在zcore的开发中，注意首先基于用户态模式的zcore进行开发，这样避免开发难度。
+1. 进一步学习 https://os20-rcore-tutorial.github.io/rCore-Tutorial-deploy/ 
+1. 有问题直接在rcore2020微信群中提问，请其他同学帮忙。
