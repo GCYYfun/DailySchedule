@@ -378,3 +378,38 @@ stage4
 #### 改造
 
 1. 加入 build.rs 添加条件编译
+2. 修改 linker.ld 布局
+
+
+#### 不同
+
+之前的方法、在于把boot和内核 、生成成为bin、然后通过dd命令 拷贝到一起、这么做不知道有什么问题、  
+按理解来说、一个程序被build成为elf文件、是具有elf文件格式、是操作系统可执行但机器无法执行、这时候使用objcopy拷贝制作成为二进制文件、去除了一些冗余信息、且机器可直接运行
+
+电脑按块大小读取 内容 一块512字节(B)、因该把boot放在第一个块中、并设置放入内存地址为0x7c00、为什么呢、因为生成elf文件前、又一个叫做连接脚本的文件、他设置了VMA和LMA、分别是 虚拟内存地址和加载内存地址
+
+到达这里、我之前的程序一切顺利、问题出现、在之后 需要从硬盘上加载 文件 、
+
+参考 xv6和jos、是拥有bootmain.c的代码、他的作用就是从硬盘读取文件、通过I/O端口命令 insl、读出来用elf文件格式解析、
+
+insl 从 DX 指定的 I/O 端口将双字输入 ES:(E)DI 指定的内存位置 参看  
+https://blog.csdn.net/sgy1993/article/details/89225075  
+
+
+um.. 那么kernel应该是elf 还是bin？ 到这里就无法进行、找不到是那里出了问题
+
+
+
+
+而 bootloader 使用 汇编直接进行了读取的部分、通过 中断int 13h
+
+并没有找到两者的区别、因为都是汇编、我也不能理解、差别在那里、
+
+在这这前 bootloader 用的是build.rs 把内核和bootloader 组合到一起的、
+
+查看build.rs 最后找到 使用了llvm-ar 
+> ar crs kernel_archive kernelbin  
+
+可是这个创建出来的、不是静态库么 名字是kernel_archive 使用的是kernelbin
+
+之后也没看见 bootloader 是怎么和这个文件进行连接的、um...但经过仔细查看、发现 是通过linker进行的连接、因为kernel和bootloader一起进行了build、不知道为什么能一起进行build、cargo xbuild 到底作用范围是哪里？、但终归知道了怎么连接到一起的了、

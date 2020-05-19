@@ -739,3 +739,20 @@ cargo 使用相关知识 关于build.rs、等一些配置
 1. 进一步学习 https://os20-rcore-tutorial.github.io/rCore-Tutorial-deploy/ 
 1. 有问题直接在rcore2020微信群中提问，请其他同学帮忙。
 1. https://github.com/EatenBagpipe/rCore  这组同学在rcore上做了一些linux syscall的支持，并用musl libc的testcase 进行测试。你可以做为zcore上linux syscall支持的参考。
+
+
+> GCYYfun
+
+有些工作之外的情况、造成一些进度延迟、明天弥补
+
+1. 下载 rcore https://github.com/rcore-os/rCore   zcore https://github.com/rcore-os/zCore   |完成
+1. 编译运行rcore，zcore |未完成   (遇到的问题 放在zcore syscall detail 里)
+1. 下载 alpline linux 虚拟机 跑起来 |未完成
+1. 编译 musl libc test-case      |未完成
+1. 移植 rcore syscall 到zcore |未完成
+
+### 事件1：查看 rcore zcore 项目 
+
+把一些 名词 查看是干什么的、梳理结构、下载、准备东西
+
+### 事件2：处理了一些杂事
