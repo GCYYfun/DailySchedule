@@ -42,6 +42,7 @@
 * [Day  37    (2020-05-16)](#Day037)  
 * [Day  38    (2020-05-17)](#Day038)  
 * [Day  39    (2020-05-18)](#Day039)  
+* [Day  40    (2020-05-19)](#Day040)  
 
 <span id="Day0"></span>
 ## Day 0
@@ -720,3 +721,17 @@ cargo 使用相关知识 关于build.rs、等一些配置
 ### 事件2：为展示作准备
 
 整理了新的文档 、simple bootloader 库里
+
+<span id="Day040"></span>
+## Day 40 （2020-05-019）周二
+> chyyuu
+
+今天开始进行zcore的linux syscall支持的探索
+
+准备步骤如下：
+1. 下载 rcore https://github.com/rcore-os/rCore   zcore https://github.com/rcore-os/zCore
+1. 编译运行rcore, zcore
+1. 下载alpline linux，在虚拟机(kvm, virtualbox,...之一)中安装alpine linux，在alpine linux中编译生成musl libc的testcase (musl-libc 测例：http://nsz.repo.hu/git/?p=libc-test )，做为syscall测试用例
+1. rcore目前已经支持不少libc-test中的测试用例，尝试从简单到复杂把rcore的syscall支持移到zcore中。
+1. 在zcore的开发中，注意首先基于用户态模式的zcore进行开发，这样避免开发难度。
+
