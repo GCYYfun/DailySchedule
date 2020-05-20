@@ -43,3 +43,13 @@ https://www.virtualbox.org/
 
 安装 教程  
 https://wiki.alpinelinux.org/wiki/Alpine_Install:_from_a_disc_to_a_virtualbox_machine_single_only
+
+## 在alpine 里编译 libc-test 
+
+文档中 http://nsz.repo.hu/git/?p=libc-test 这个地址的url 无法clone、如果不是操作问题的话、看着这个页面不太会操作
+
+在搜索中 找到 https://wiki.musl-libc.org/libc-test.html 说 automatically synced git mirror: <git://repo.or.cz/libc-test>、这个库能clone 、看上去内容差不多
+
+clone 下来 make
+
+um...运行成功、但好像测试结果不理想、

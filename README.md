@@ -749,8 +749,6 @@ cargo 使用相关知识 关于build.rs、等一些配置
 1. 下载 rcore https://github.com/rcore-os/rCore   zcore https://github.com/rcore-os/zCore   |完成
 1. 编译运行rcore，zcore |完成   (遇到的问题 放在zcore syscall detail 里)
 1. 下载 alpline linux 虚拟机 跑起来 |完成
-1. 编译 musl libc test-case      |未完成
-1. 移植 rcore syscall 到zcore |未完成
 
 ### 事件1：查看 rcore zcore 项目 
 
@@ -760,3 +758,17 @@ cargo 使用相关知识 关于build.rs、等一些配置
 
 <span id="Day041"></span>
 ## Day 41 （2020-05-020）周三
+
+> GCYYfun
+
+1. 编译 musl libc test-case      |完成
+1. 移植 rcore syscall 到zcore    |未完成
+
+### 事件0:继续昨天的一些东西
+
+### 事件1:编译 musl-libc test case
+
+通过编译、结果测试全是fail、um...不知道对不对
+
+### 事件2:
+
