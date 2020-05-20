@@ -770,5 +770,10 @@ cargo 使用相关知识 关于build.rs、等一些配置
 
 通过编译、结果测试全是fail、um...不知道对不对
 
-### 事件2:
+### 事件2: 学习 rCore 新文档
 
+第零章  
+https://os20-rcore-tutorial.github.io/rCore-Tutorial-deploy/ 
+
+在 __使用QEMU运行__ 一节、 使用 #![feature(asm)] 而程序使用 llvm_asm!  
+按程序为准、应改为 #![feature(llvm_asm)]
