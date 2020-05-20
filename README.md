@@ -43,6 +43,7 @@
 * [Day  38    (2020-05-17)](#Day038)  
 * [Day  39    (2020-05-18)](#Day039)  
 * [Day  40    (2020-05-19)](#Day040)  
+* [Day  41    (2020-05-20)](#Day041)  
 
 <span id="Day0"></span>
 ## Day 0
@@ -747,7 +748,7 @@ cargo 使用相关知识 关于build.rs、等一些配置
 
 1. 下载 rcore https://github.com/rcore-os/rCore   zcore https://github.com/rcore-os/zCore   |完成
 1. 编译运行rcore，zcore |完成   (遇到的问题 放在zcore syscall detail 里)
-1. 下载 alpline linux 虚拟机 跑起来 |未完成
+1. 下载 alpline linux 虚拟机 跑起来 |完成
 1. 编译 musl libc test-case      |未完成
 1. 移植 rcore syscall 到zcore |未完成
 
@@ -756,3 +757,6 @@ cargo 使用相关知识 关于build.rs、等一些配置
 把一些 名词 查看是干什么的、梳理结构、下载、准备东西
 
 ### 事件2：处理了一些杂事
+
+<span id="Day041"></span>
+## Day 41 （2020-05-020）周三
