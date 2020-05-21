@@ -25,8 +25,6 @@
     Busybox：
         cargo run --release -p linux-loader /bin/busybox [args]
 
-完成后 对项目进行梳理
-
 
 ## 下载 virtual box
 
@@ -50,6 +48,16 @@ https://wiki.alpinelinux.org/wiki/Alpine_Install:_from_a_disc_to_a_virtualbox_ma
 
 在搜索中 找到 https://wiki.musl-libc.org/libc-test.html 说 automatically synced git mirror: <git://repo.or.cz/libc-test>、这个库能clone 、看上去内容差不多
 
+安装需要的包：  
+apk add git  
+apk add make  
+apk add gcc   
+apk add libc-dev  
+
 clone 下来 make
 
 um...运行成功、但好像测试结果不理想、
+
+如图：  
+
+![编译libc-testcase]](编译testcase.png)
