@@ -44,6 +44,7 @@
 * [Day  39    (2020-05-18)](#Day039)  
 * [Day  40    (2020-05-19)](#Day040)  
 * [Day  41    (2020-05-20)](#Day041)  
+* [Day  42    (2020-05-21)](#Day042)  
 
 <span id="Day0"></span>
 ## Day 0
@@ -777,3 +778,11 @@ https://os20-rcore-tutorial.github.io/rCore-Tutorial-deploy/
 
 在 __使用QEMU运行__ 一节、 使用 #![feature(asm)] 而程序使用 llvm_asm!  
 按程序为准、应改为 #![feature(llvm_asm)]
+
+
+<span id="Day042"></span>
+## Day 42 （2020-05-021）周四
+
+> GCYYfun
+
+um...没有什么实质的进展、还在弄清情况、琐碎的一天
