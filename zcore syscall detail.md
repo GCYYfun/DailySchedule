@@ -42,6 +42,10 @@ https://www.virtualbox.org/
 安装 教程  
 https://wiki.alpinelinux.org/wiki/Alpine_Install:_from_a_disc_to_a_virtualbox_machine_single_only
 
+过程简述 
+
+港币
+
 ## 在alpine 里编译 libc-test 
 
 文档中 http://nsz.repo.hu/git/?p=libc-test 这个地址的url 无法clone、如果不是操作问题的话、看着这个页面不太会操作

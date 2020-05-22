@@ -786,3 +786,10 @@ https://os20-rcore-tutorial.github.io/rCore-Tutorial-deploy/
 > GCYYfun
 
 um...没有什么实质的进展、还在弄清情况、琐碎的一天
+
+<span id="Day043"></span>
+## Day 43 （2020-05-022）周五
+
+> GCYYfun
+
+梳理流程、熟悉项目代码、大致有了下一步的方向、需要熟悉rcore代码、准备把rcore的教程在过一遍、熟悉了结构、和流程、好快速上手、
