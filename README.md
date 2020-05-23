@@ -45,6 +45,9 @@
 * [Day  40    (2020-05-19)](#Day040)  
 * [Day  41    (2020-05-20)](#Day041)  
 * [Day  42    (2020-05-21)](#Day042)  
+* [Day  43    (2020-05-22)](#Day043)  
+* [Day  44    (2020-05-23)](#Day044)  
+* [Day  45    (2020-05-24)](#Day045)  
 
 <span id="Day0"></span>
 ## Day 0
@@ -793,3 +796,44 @@ um...没有什么实质的进展、还在弄清情况、琐碎的一天
 > GCYYfun
 
 梳理流程、熟悉项目代码、大致有了下一步的方向、需要熟悉rcore代码、准备把rcore的教程在过一遍、熟悉了结构、和流程、好快速上手、
+
+
+<span id="Day044"></span>
+## Day 44 （2020-05-023）周六
+
+> GCYYfun
+
+### 事件1: 做rcore教程
+
+
+
+### 事件2：弄明白rcore 上跑 lib-test
+
+流程： 
+
+1. 为了移植rcore syscall 到 zcore 上、应该 正常能运行 rcore 是上syscall
+
+2. 为了能知道rcore 上 syscall 是否 能正确运行、应该有对应测试
+
+3. 为了有对应测试、应该把musl 的libc-test放到rcore里运行、
+
+4. 为了能使libc-test在rcore里运行、我们应该能把这个东西打包放入rcore
+
+5. 为了打包放入rcore，应该 先把 libc-test编译、因为c文件无法直接运行
+
+6. 为了编译libc-test，因该需要 musl环境、所以下了virtual box、安装了alpine
+
+所以说原来这件事是这么个意思、  
+
+我需要下一个 __libc-test__  、并且在musl环境下 __编译__ 、生成的东西、需要 __打包进入rcore__ 、然后在rcore里 __执行__ 编译出来的东西、就能测rcore 的syscall情况、对应补充syscall、然后在porting到zcore.
+
+原来如此.....才明白
+
+那么  
+1. 需要 会 从 vbox 、导出编译好的文件 、节省再去本机配置一个musl环境
+2. 需要 会 rcore 的打包、makefile的详情流程、
+3. 需要 会 运行 libc-test 测试、
+4. 需要 会 看结果
+
+要了解 项目 libc-test  
+要了解 项目 rcore
