@@ -65,3 +65,41 @@ um...运行成功、但好像测试结果不理想、
 如图：  
 
 ![编译libc-testcase](https://github.com/GCYYfun/DailySchedule/blob/master/%E7%BC%96%E8%AF%91testcase.png)
+
+
+源于无知  参考:issues  https://github.com/GCYYfun/DailySchedule/issues/1 
+
+## 从virtual box 里面 拿出 编译 好的 libc-test
+
+方法: scp 拷贝  
+需要: ssh 可以连接
+
+步骤1：  
+打开Virtual box 、我们安装的os的 __设置__ -> __网络__ -> __网卡1__ -> __高级__ -> __端口转发__  -> __添加规则__
+
+新建一个端口    
+名称：ssh|主机端口：2222|子系统端口：22
+
+步骤2：  
+在虚拟机里
+
+```
+    // 允许 root下 远程登陆
+    # echo "PermitRootLogin  yes"   >>  /etc/ssh/sshd_config
+    
+    // 重启 ssh服务
+    # service sshd restart
+```
+
+步骤3：
+从远程拷贝  
+
+    scp -r -P  端口号   用户名@IP地址:目标文件目录  本机目录
+
+比如 在我机器上 
+
+    scp -r -P 2222 root@127.0.0.1:/root/libc-test /home/own/VirtualShare/share
+
+<!-- 也可以 拷贝本机到远程
+
+    scp -r  本机目录  用户名@IP地址:目标文件目录 -->
