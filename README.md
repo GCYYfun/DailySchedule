@@ -845,4 +845,4 @@ um...没有什么实质的进展、还在弄清情况、琐碎的一天
 
 ### 事件1： rcore里运行 test-case
 
-![rcore跑test-case](https://github.com/GCYYfun/DailySchedule/blob/master/%E7%BC%96%E8%AF%91testcase.png)
+![rcore跑test-case](https://github.com/GCYYfun/DailySchedule/blob/master/rcore%E8%B7%91test-case.png)
