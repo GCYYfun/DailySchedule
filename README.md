@@ -843,10 +843,11 @@ um...没有什么实质的进展、还在弄清情况、琐碎的一天
 
 > GCYYfun
 
-### 事件1： rcore里运行 test-case
+### 事件1: rcore里运行 test-case
 
 结果 不理想 需要分别去 看下问题
 
+图例：  
 ![rcore跑test-case](https://github.com/GCYYfun/DailySchedule/blob/master/rcore%E8%B7%91test-case.png)
 
 ### 事件2: 了解下 test-case这个程序
