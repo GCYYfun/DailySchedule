@@ -837,3 +837,12 @@ um...没有什么实质的进展、还在弄清情况、琐碎的一天
 
 要了解 项目 libc-test  
 要了解 项目 rcore
+
+<span id="Day045"></span>
+## Day 45 （2020-05-024）周日
+
+> GCYYfun
+
+### 事件1： rcore里运行 test-case
+
+![rcore跑test-case](https://github.com/GCYYfun/DailySchedule/blob/master/%E7%BC%96%E8%AF%91testcase.png)
