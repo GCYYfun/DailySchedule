@@ -893,3 +893,5 @@ https://github.com/GCYYfun/DailySchedule/issues/3
 
 ### 事件3: 测 libc-test 
 
+结果在文档 libc-test case result
+
