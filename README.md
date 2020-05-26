@@ -873,11 +873,11 @@ um...没有什么实质的进展、还在弄清情况、琐碎的一天
 
 运行 流程的 具体细节之类、最后环境还有有一些问题
 
-<<<<<<< HEAD
 
 <span id="Day047"></span>
 ## Day 47 （2020-05-026）周二
 
+> GCYYfun
 
 ### 事件1: 思考了几个问题？？
 
@@ -898,6 +898,8 @@ https://github.com/GCYYfun/DailySchedule/issues/3
 
 结果在文档 libc-test case result
 
-=======
->>chyyuu 有进步。需要多总结，多思考，多系统地学习。
->>>>>>> d9af9e1f43fe5093259f719ff93af70bdf920cba
+https://github.com/GCYYfun/DailySchedule/blob/master/libc-test%20case%20result.md
+
+
+> chyyuu 有进步。需要多总结，多思考，多系统地学习。
+
