@@ -870,3 +870,26 @@ um...没有什么实质的进展、还在弄清情况、琐碎的一天
 ### 事件2: 沟通 syscall 
 
 运行 流程的 具体细节之类、最后环境还有有一些问题
+
+
+<span id="Day046"></span>
+## Day 46 （2020-05-025）周二
+
+
+### 事件1: 思考问题？？
+
+提了几个 issues 
+
+https://github.com/GCYYfun/DailySchedule/issues/2
+
+https://github.com/GCYYfun/DailySchedule/issues/3
+
+
+之后还有待解决
+
+### 事件2: 拯救环境
+
+半死不活 需要重做系统 
+
+### 事件3: 测 libc-test 
+
