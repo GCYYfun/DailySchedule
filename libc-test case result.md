@@ -50,6 +50,8 @@
 1.  ungetc
 1.  wcsstr
 1.  wcstol
+1.  asinh
+1.  asinhf
 1.  cbrt
 1.  cbrtf
 1.  cbrtl
