@@ -898,7 +898,7 @@ https://github.com/GCYYfun/DailySchedule/issues/3
 
 结果在文档 libc-test case result
 
-https://github.com/GCYYfun/DailySchedule/blob/master/libc-test%20case%20result.md
+https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/libc-test%20case%20result.md
 
 
 > chyyuu 有进步。需要多总结，多思考，多系统地学习。
