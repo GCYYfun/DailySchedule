@@ -101,9 +101,9 @@
 1.  round
 1.  roundf
 1.  roundl
-1.  t1. c
-1.  t1. cf
-1.  t1. cl
+1.  trunc
+1.  trunf
+1.  truncl
 1.  pleval-static
 1.  dn_expand-empty
 1.  dn_expand-ptr-0
