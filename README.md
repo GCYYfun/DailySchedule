@@ -903,3 +903,20 @@ https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/README.md
 
 > chyyuu 有进步。需要多总结，多思考，多系统地学习。
 
+
+<span id="Day048"></span>
+## Day 48 （2020-05-027）周三
+
+### 事情1:作了一个测例
+
+制作 过程中 遍历了 测例的 名字 
+
+同时 浏览了 libc-test 的 目录结构
+
+还没 开始 尝试、 因为 要下系统
+
+### 事件2:整理 文档 、
+
+准备 重做系统
+
+### 事件3:构思 auto test
