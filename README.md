@@ -920,3 +920,5 @@ https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/README.md
 准备 重做系统
 
 ### 事件3:构思 auto test
+
+https://github.com/GCYYfun/DailySchedule/blob/master/auto-test.md
