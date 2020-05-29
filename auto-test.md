@@ -54,3 +54,27 @@ rust um..
 最后 等着 开开心心的 获得 结果 
 
 um......    好好考虑下 
+
+
+
+## 分析 
+
+根据老师的初级要求 
+
+在 rCore 上 基于 qemu 自动测试 脚本 
+
+首先 确定 这件事情的 Input
+
+Input:
+
+    1. OVMF.fd
+    2. boot && kernel 
+    3. x86_64.qcow2
+
+
+host 主机 启动 脚本 
+
+生成   
+1. OVMF.fd 脚本
+2. 生成 boot 和 kernel 的 脚本
+3. 生成 文件系统的脚本

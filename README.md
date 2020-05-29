@@ -943,3 +943,21 @@ https://github.com/GCYYfun/DailySchedule/blob/master/auto-test.md
 ### 总结 
 
 还是要多读书、好好看、好好学、书上的的东西 真有用、😂
+
+
+<span id="Day050"></span>
+## Day 50 （2020-05-029）周五
+
+> GCYYfun 
+
+### 事件1: qemu的具体探索
+
+对qemu的探索 写了 一个 文档 
+
+https://github.com/GCYYfun/DailySchedule/blob/master/qemu.md
+
+目前 发现 有些 方法 不太适合
+
+### 事件2：写了 一个小脚本 
+
+剥离了 一些 命令 运行起来了 内核、 但是 传参 和 共享文件 遇到问题、在赵办法解决 
