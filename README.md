@@ -922,3 +922,22 @@ https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/README.md
 ### 事件3:构思 auto test
 
 https://github.com/GCYYfun/DailySchedule/blob/master/auto-test.md
+
+
+
+<span id="Day048"></span>
+## Day 48 （2020-05-028）周三
+
+> GCYYfun 
+
+### 事件1:尝试 git 一些 命令 了解 分支 
+
+看文档 https://git-scm.com/book/en/v2 深入 理解 分支 部分 
+
+### 事件2：继续 学习 qemu 的 使用
+
+看文档 https://www.qemu.org/docs/master/system/index.html  学习 一些 参数 、命令所起到了 功能、
+
+### 总结 
+
+还是要多读书、好好看、好好学、书上的的东西 真有用、🐶
