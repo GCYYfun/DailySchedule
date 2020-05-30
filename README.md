@@ -978,7 +978,16 @@ https://github.com/GCYYfun/DailySchedule/blob/master/doc/qemu.md
 
 如果以rCore为 基准OS
 
-找不到 传参 和 共享的好办法 
+找不到 __传参__ 和 __共享文件__ 的好办法 
+
 1. Plan9 需要 os 对这个协议的支持 在 os 里通过 mount 挂载
 
 2. 通过 ssh 同样也需要 os 的支持 才能使主机 连接
+
+3. 挂载 一个镜像 只能传输 到 qemu里无法取出 文件
+
+4. -kernel 需要 bootloader 和 kernel 打包成 一个 img  目前 rcore是 uefi启动  boot 和 kernel 分离
+
+### 事件3： 看系统编程手册
+
+第1-5页
