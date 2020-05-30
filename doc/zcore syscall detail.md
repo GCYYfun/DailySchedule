@@ -64,7 +64,7 @@ um...运行成功、但好像测试结果不理想、
 
 如图：  
 
-![编译libc-testcase](https://github.com/GCYYfun/DailySchedule/blob/master/%E7%BC%96%E8%AF%91testcase.png)
+![编译libc-testcase](https://github.com/GCYYfun/DailySchedule/blob/master/picture/%E7%BC%96%E8%AF%91testcase.png)
 
 
 源于无知  参考:issues  https://github.com/GCYYfun/DailySchedule/issues/1 

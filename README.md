@@ -161,7 +161,7 @@ Errr..今天处理了一些杂事、没能正经营业、接下来要抓紧时�
 ### 事件1：继续学习hypervisor
 
 再次参考https://www.cs.unc.edu/~porter/courses/comp790/s17/labs.html 一个小型的hypervisor构建过程、结合代码理解hypervisor、并制作一个简单流程图帮助理解、  
-![启动VMM流程图](https://github.com/GCYYfun/DailySchedule/blob/master/VMM%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%E5%9B%BE.png?raw=true)
+![启动VMM流程图](https://github.com/GCYYfun/DailySchedule/blob/master/picture/VMM%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%E5%9B%BE.png?raw=true)
 
 理解vmcs的作用及需要设置的大概内容、艰难阅读intel手册、效率不够理想、对此感到沮丧、
 
@@ -854,7 +854,7 @@ um...没有什么实质的进展、还在弄清情况、琐碎的一天
 结果 不理想 需要分别去 看下问题
 
 图例：  
-![rcore跑test-case](https://github.com/GCYYfun/DailySchedule/blob/master/rcore%E8%B7%91test-case.png)
+![rcore跑test-case](https://github.com/GCYYfun/DailySchedule/blob/master/picture/rcore%E8%B7%91test-case.png)
 
 ### 事件2: 了解下 test-case这个程序
 
@@ -923,7 +923,7 @@ https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/README.md
 
 ### 事件3:构思 auto test
 
-https://github.com/GCYYfun/DailySchedule/blob/master/auto-test.md
+https://github.com/GCYYfun/DailySchedule/blob/master/doc/auto-test.md
 
 
 
@@ -954,7 +954,7 @@ https://github.com/GCYYfun/DailySchedule/blob/master/auto-test.md
 
 对qemu的探索 写了 一个 文档 
 
-https://github.com/GCYYfun/DailySchedule/blob/master/qemu.md
+https://github.com/GCYYfun/DailySchedule/blob/master/doc/qemu.md
 
 目前 发现 有些 方法 不太适合
 
