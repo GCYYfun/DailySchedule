@@ -53,7 +53,7 @@
 * [Day  48    (2020-05-27)](#Day048)  
 * [Day  49    (2020-05-28)](#Day049)  
 * [Day  50    (2020-05-29)](#Day050)  
-
+* [Day  51    (2020-05-30)](#Day051)  
 
 <span id="Day0"></span>
 ## Day 0
@@ -961,3 +961,24 @@ https://github.com/GCYYfun/DailySchedule/blob/master/doc/qemu.md
 ### 事件2：写了 一个小脚本 
 
 剥离了 一些 命令 运行起来了 内核、 但是 传参 和 共享文件 遇到问题、在赵办法解决 
+
+
+<span id="Day051"></span>
+## Day 51 （2020-05-030）周六
+
+> GCYYfun 
+
+### 事件1: 重做系统 
+
+心情舒畅！
+
+### 事件2：使用 docker 运行 qemu  
+
+通过 测试 ：  
+
+如果以rCore为 基准OS
+
+找不到 传参 和 共享的好办法 
+1. Plan9 需要 os 对这个协议的支持 在 os 里通过 mount 挂载
+
+2. 通过 ssh 同样也需要 os 的支持 才能使主机 连接
