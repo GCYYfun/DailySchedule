@@ -54,6 +54,7 @@
 * [Day  49    (2020-05-28)](#Day049)  
 * [Day  50    (2020-05-29)](#Day050)  
 * [Day  51    (2020-05-30)](#Day051)  
+* [Day  52    (2020-05-31)](#Day052)  
 
 <span id="Day0"></span>
 ## Day 0
@@ -618,7 +619,7 @@ rust 部分 需要std 这好像就不是libc了、卡在对future掌握不全面
 本以为昨天就完成了、还是被卡住了、一直在试错、也还都不是什么大问题、比如什么objcopy 参数设置阿、link flie书写阿、被编辑器莫名缓存不正确的信息阿、等等一些吧、um... 逐渐在ddl来临之前高压下、进入疯狂..
 
 <span id="Day031"></span>
-## Day 31 （2020-05-010）周日
+## Day 31 （2020-05-10）周日
 
 
 ### 事件1： 完成bootloader ？
@@ -638,7 +639,7 @@ rust 部分 需要std 这好像就不是libc了、卡在对future掌握不全面
 
 
 <span id="Day032"></span>
-## Day 32 （2020-05-011）周一
+## Day 32 （2020-05-11）周一
 
 ### 事件1：看Async-std完、并写async简单应用
 
@@ -654,14 +655,14 @@ rust 部分 需要std 这好像就不是libc了、卡在对future掌握不全面
 创建一个最简单的kernel 、把boot和kernel文件 dd 到一个img里进行测试、没成功
 
 <span id="Day033"></span>
-## Day 33 （2020-05-012）周二
+## Day 33 （2020-05-12）周二
 
 ### 事件1:排查bootloader问题
 
 使用gdb debug 查看汇编打印变量找问题、未果
 
 <span id="Day034"></span>
-## Day 34 （2020-05-013）周三
+## Day 34 （2020-05-13）周三
 
 ### 事件1：感觉进入歧途、
 
@@ -672,7 +673,7 @@ gdb打印的指针变量总是不对、去仔细阅读rust语言关于指针的�
 试图在找新方法尝试
 
 <span id="Day035"></span>
-## Day 35 （2020-05-014）周四
+## Day 35 （2020-05-14）周四
 
 ### 事件1：重新在流程上进行整理、使用makefile
 
@@ -686,7 +687,7 @@ gdb打印的指针变量总是不对、去仔细阅读rust语言关于指针的�
 
 
 <span id="Day036"></span>
-## Day 36 （2020-05-015）周五
+## Day 36 （2020-05-15）周五
 
 ### 事件1:在rust-playground上复线代码、
 
@@ -697,7 +698,7 @@ gdb打印的指针变量总是不对、去仔细阅读rust语言关于指针的�
 
 
 <span id="Day037"></span>
-## Day 37 （2020-05-016）周六
+## Day 37 （2020-05-16）周六
 
 ### 事件1:上传bootloader仓库
 
@@ -710,7 +711,7 @@ https://github.com/GCYYfun/simple_bootloader 写了文档
 
 
 <span id="Day038"></span>
-## Day 38 （2020-05-017）周日
+## Day 38 （2020-05-17）周日
 
 ### 事件1：阅读cargo reference
 
@@ -723,7 +724,7 @@ cargo 使用相关知识 关于build.rs、等一些配置
 
 
 <span id="Day039"></span>
-## Day 39 （2020-05-018）周一
+## Day 39 （2020-05-18）周一
 
 ### 事件1：查漏补缺 bootloader
 
@@ -734,7 +735,7 @@ cargo 使用相关知识 关于build.rs、等一些配置
 整理了新的文档 、simple bootloader 库里
 
 <span id="Day040"></span>
-## Day 40 （2020-05-019）周二
+## Day 40 （2020-05-19）周二
 > chyyuu
 
 今天开始进行zcore的linux syscall支持的探索
@@ -767,7 +768,7 @@ cargo 使用相关知识 关于build.rs、等一些配置
 ### 事件2：处理了一些杂事
 
 <span id="Day041"></span>
-## Day 41 （2020-05-020）周三
+## Day 41 （2020-05-20）周三
 
 > GCYYfun
 
@@ -790,14 +791,14 @@ https://os20-rcore-tutorial.github.io/rCore-Tutorial-deploy/
 
 
 <span id="Day042"></span>
-## Day 42 （2020-05-021）周四
+## Day 42 （2020-05-21）周四
 
 > GCYYfun
 
 um...没有什么实质的进展、还在弄清情况、琐碎的一天
 
 <span id="Day043"></span>
-## Day 43 （2020-05-022）周五
+## Day 43 （2020-05-22）周五
 
 > GCYYfun
 
@@ -805,7 +806,7 @@ um...没有什么实质的进展、还在弄清情况、琐碎的一天
 
 
 <span id="Day044"></span>
-## Day 44 （2020-05-023）周六
+## Day 44 （2020-05-23）周六
 
 > GCYYfun
 
@@ -845,7 +846,7 @@ um...没有什么实质的进展、还在弄清情况、琐碎的一天
 要了解 项目 rcore
 
 <span id="Day045"></span>
-## Day 45 （2020-05-024）周日
+## Day 45 （2020-05-24）周日
 
 > GCYYfun
 
@@ -862,7 +863,7 @@ um...没有什么实质的进展、还在弄清情况、琐碎的一天
 
 
 <span id="Day046"></span>
-## Day 46 （2020-05-025）周一
+## Day 46 （2020-05-25）周一
 
 
 ### 事件1: 作了一些 rustlings
@@ -877,7 +878,7 @@ um...没有什么实质的进展、还在弄清情况、琐碎的一天
 
 
 <span id="Day047"></span>
-## Day 47 （2020-05-026）周二
+## Day 47 （2020-05-26）周二
 
 > GCYYfun
 
@@ -907,7 +908,7 @@ https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/README.md
 
 
 <span id="Day048"></span>
-## Day 48 （2020-05-027）周三
+## Day 48 （2020-05-27）周三
 
 ### 事情1:作了一个测例
 
@@ -928,7 +929,7 @@ https://github.com/GCYYfun/DailySchedule/blob/master/doc/auto-test.md
 
 
 <span id="Day049"></span>
-## Day 49 （2020-05-028）周四
+## Day 49 （2020-05-28）周四
 
 > GCYYfun 
 
@@ -946,7 +947,7 @@ https://github.com/GCYYfun/DailySchedule/blob/master/doc/auto-test.md
 
 
 <span id="Day050"></span>
-## Day 50 （2020-05-029）周五
+## Day 50 （2020-05-29）周五
 
 > GCYYfun 
 
@@ -964,7 +965,7 @@ https://github.com/GCYYfun/DailySchedule/blob/master/doc/qemu.md
 
 
 <span id="Day051"></span>
-## Day 51 （2020-05-030）周六
+## Day 51 （2020-05-30）周六
 
 > GCYYfun 
 
@@ -999,7 +1000,7 @@ https://github.com/GCYYfun/DailySchedule/blob/master/doc/qemu.md
 
 
 <span id="Day052"></span>
-## Day 52 （2020-05-031）周日
+## Day 52 （2020-05-31）周日
 
 > GCYYfun 
 
