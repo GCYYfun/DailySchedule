@@ -991,3 +991,24 @@ https://github.com/GCYYfun/DailySchedule/blob/master/doc/qemu.md
 ### 事件3： 看系统编程手册
 
 第1-5页
+
+### 总结 
+
+需要去沟通一下了、
+
+
+
+<span id="Day052"></span>
+## Day 52 （2020-05-031）周日
+
+> GCYYfun 
+
+### 事件1: 交互 问题 解决 
+
+哈哈 、早上 吃饭 换了一个思路 、想用python 代替 交互 、每没想到 shell 也有 就 省事 用了 一个 expect 的 库
+
+apt install expect 
+
+就安装好了 、真方便
+
+解决了、host 和 guest 的指令 交互 问题

@@ -78,3 +78,15 @@ host 主机 启动 脚本
 1. OVMF.fd 脚本
 2. 生成 boot 和 kernel 的 脚本
 3. 生成 文件系统的脚本
+
+
+## 设计 
+
+
+Code
+
+Input Generator
+
+Image
+
+pass in 
