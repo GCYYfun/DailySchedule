@@ -1013,3 +1013,7 @@ apt install expect
 就安装好了 、真方便
 
 解决了、host 和 guest 的指令 交互 问题
+
+### 事件2：好像真的无法简单的从qemu里取出文件
+
+尝试 openssh 安装在 rcore里 具有 传输功能、但是 可能是缺少syscall 的支持 、无法简单达成
