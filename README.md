@@ -1034,11 +1034,14 @@ https://github.com/GCYYfun/auto_test
 
 有一个 完整的 经验证的环境docker
 
-地址:
+地址:um...
+```
+own@Realm:~$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+gcyy/ubuntu20.04    latest              c625c127c3e1        2 minutes ago       8.32GB
+ubuntu              latest              1d622ef86b13        5 weeks ago         73.9MB
+```
+感觉 不太行 这也太大了
 
-
-
-
-
-
-
+>chyyuu 你把rcore/zcore想的功能太强了。建议与工程师聊聊。
+>GCYYfun :好的、好的、一不注意就陷进去了
