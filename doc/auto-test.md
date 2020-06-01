@@ -82,11 +82,30 @@ host 主机 启动 脚本
 
 ## 设计 
 
+部署 的 环境 
 
-Code
+Input : Image
 
-Input Generator
+Execute : Qemu
 
-Image
+Output : Result File ?
 
-pass in 
+生产 的 使用 
+
+UserAPP ： 用户 程序 
+
+Kernel ： 内核 程序 
+
+Root ： 引导程序
+
+
+## 解释
+用户程序、内核 程序 、引导程序 编译制作 需要 环境 
+
+而配置 环境 是 大问题 、
+
+所以 使用 docker 配置 一个 成熟 的 环境 来 编译 
+
+考虑到 有可能 同时测试多个 不同版版本的测试
+
+为了增加隔离性 、把qemu 也放到docker 上运行、、这时的测试只看container 就可以了

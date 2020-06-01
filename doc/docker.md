@@ -12,6 +12,8 @@ docker run --name ubuntu20.04 -it ubunut
 
 docker exec -it ubuntu20.04 /bin/bash
 
+docker start ubuntu20.04
+
 
 
 # Demo for Ubuntu 20.04

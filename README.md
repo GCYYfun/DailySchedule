@@ -55,6 +55,8 @@
 * [Day  50    (2020-05-29)](#Day050)  
 * [Day  51    (2020-05-30)](#Day051)  
 * [Day  52    (2020-05-31)](#Day052)  
+* [Day  53    (2020-06-01)](#Day053)  
+
 
 <span id="Day0"></span>
 ## Day 0
@@ -1017,3 +1019,26 @@ apt install expect
 ### 事件2：好像真的无法简单的从qemu里取出文件
 
 尝试 openssh 安装在 rcore里 具有 传输功能、但是 可能是缺少syscall 的支持 、无法简单达成
+
+
+<span id="Day053"></span>
+## Day 53 （2020-06-1）周一
+
+> GCYYfun 
+
+### 事件1: 构建 auto-test 流程
+
+制作一个仓库 
+
+https://github.com/GCYYfun/auto_test
+
+有一个 完整的 经验证的环境docker
+
+地址:
+
+
+
+
+
+
+
