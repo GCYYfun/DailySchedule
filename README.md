@@ -1017,3 +1017,5 @@ apt install expect
 ### 事件2：好像真的无法简单的从qemu里取出文件
 
 尝试 openssh 安装在 rcore里 具有 传输功能、但是 可能是缺少syscall 的支持 、无法简单达成
+
+>>chyyuu 你把rcore/zcore想的功能太强了。建议与工程师聊聊。
