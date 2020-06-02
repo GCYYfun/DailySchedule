@@ -56,6 +56,7 @@
 * [Day  51    (2020-05-30)](#Day051)  
 * [Day  52    (2020-05-31)](#Day052)  
 * [Day  53    (2020-06-01)](#Day053)  
+* [Day  54    (2020-06-02)](#Day054)  
 
 
 <span id="Day0"></span>
@@ -1022,7 +1023,7 @@ apt install expect
 
 
 <span id="Day053"></span>
-## Day 53 （2020-06-1）周一
+## Day 53 （2020-06-01）周一
 
 > GCYYfun 
 
@@ -1045,3 +1046,25 @@ ubuntu              latest              1d622ef86b13        5 weeks ago         
 
 >chyyuu 你把rcore/zcore想的功能太强了。建议与工程师聊聊。
 >GCYYfun :好的、好的、一不注意就陷进去了
+
+
+<span id="Day054"></span>
+## Day 54 （2020-06-02）周二
+
+> GCYYfun 
+
+### 事件1: 完善 auto-test 仓库
+
+可以 进行 自动测试了 、还没写文档、马上写
+
+配置好了 环境、不会因为 环境不同 而 无法运行了
+
+还没 有完全、但初步 算好了、继续继续扩展
+
+https://github.com/GCYYfun/auto_test
+
+这个库、多发几天、提高曝光度🦐！
+
+### 总结
+
+配置环境令人 头秃 （已秃..

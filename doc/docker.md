@@ -208,3 +208,16 @@ cross containers  no
 
 
 mount -t 9p -o trans=virtio,version=9p2000.L hostshare /libc-test
+
+
+
+
+docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+
+docker commit -a "GCYY" -m "os auto-test" main_test core_base
+
+
+qemu-system-riscv64 \
+  --machine virt \
+  --nographic \
+  --bios default
