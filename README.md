@@ -1068,3 +1068,17 @@ https://github.com/GCYYfun/auto_test
 ### 总结
 
 配置环境令人 头秃 （已秃..
+
+
+<span id="Day055"></span>
+## Day 55 （2020-06-03）周三
+
+> GCYYfun
+
+### 事件1: 对libctest 作测试 支持
+
+整理 、完善 仓库 文档、
+
+基本可运行、预计明天完成
+
+https://github.com/GCYYfun/auto_test
