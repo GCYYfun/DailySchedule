@@ -43,10 +43,13 @@ cd libc-test
 
 config.mak.def
 
-第一行 添加
+第一行 添加 
 
 >CC := x86_64-linux-musl-gcc
 
+换成musl 编译 默认好像是是gcc
+
+之后
 ```
 
 make
@@ -56,6 +59,8 @@ make |grep FAIL|wc -l
 结果显示数字 是失败个数 大约 10个左右
 
 把 https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case 地址下的 sh文件也复制到libc-test目录中
+
+备用
 
 
 ## 修改makefile
@@ -69,7 +74,7 @@ make |grep FAIL|wc -l
 ···
 
 
-build: libc-test        // 删除前面的 仅写这一项
+build: libc-test        // 删除前面的 仅写这一项、别的程序 环境不一定全影响 成功
 
 ···
 
