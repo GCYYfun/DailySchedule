@@ -5,9 +5,8 @@
 qemu
 
 git
-
 make
-
+wget
 
 ## 下载rcore
 
