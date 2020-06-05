@@ -109,6 +109,14 @@ $ make run ARCH=x86_64
 ```
 cd libc-test
 
+
+// 成功的
 src/common/runtest.exe -w '' src/functional/argv.exe >src/functional/argv.err && echo successed ; echo || echo argv failed ; echo
+
+// 失败的
+src/common/runtest.exe -w '' src/functional/fcntl.exe >src/functional/fcntl.err && echo successed ; echo || echo fcntl failed ; echo
+
+// 崩溃的
+src/common/runtest.exe -w '' src/functional/ipc_sem.exe >src/functional/ipc_sem.err && echo ipc_sem successed || echo ipc_sem failed
 ```
 可以看见 successed 就代表可以运行了
