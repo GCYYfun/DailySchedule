@@ -17,6 +17,7 @@ git clone https://github.com/rcore-os/rCore.git --recursive
 ```
 ## 下载musl 并安装
 
+libc-test 需要
 ```
 wget https://www.musl-libc.org/releases/musl-1.2.0.tar.gz
 
