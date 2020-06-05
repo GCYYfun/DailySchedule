@@ -1082,3 +1082,16 @@ https://github.com/GCYYfun/auto_test
 基本可运行、预计明天完成
 
 https://github.com/GCYYfun/auto_test
+
+<span id="Day056"></span>
+## Day 56 （2020-06-04）周四
+
+> GCYYfun
+
+处理了一些别的事情、没什么大的进展
+
+
+<span id="Day057"></span>
+## Day 57 （2020-06-05）周五
+
+> GCYYfun
