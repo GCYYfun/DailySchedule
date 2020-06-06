@@ -1110,8 +1110,8 @@ https://github.com/GCYYfun/auto_test
 可以简单的开始进行测试、自己测了一遍、除了时间太长、其他的都还可以接受、完成文档、介绍、感觉上可以使用
 
 
-<span id="Day057"></span>
-## Day 57 （2020-06-05）周五
+<span id="Day058"></span>
+## Day 58 （2020-06-06）周六
 
 > GCYYfun
 
