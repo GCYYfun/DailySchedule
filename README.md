@@ -1108,3 +1108,20 @@ https://github.com/GCYYfun/auto_test
 ### 事件1: 完成 auto-test库
 
 可以简单的开始进行测试、自己测了一遍、除了时间太长、其他的都还可以接受、完成文档、介绍、感觉上可以使用
+
+
+> chyyuu
+
+我建议你问清楚Linux syscall小组，用你的自动测试，也能检查他们的实现情况。然后，我们转向能测zcore。做完这个，我们开始参考rcore，在zcore上实现类似的linux syscall。这是第三个月的主要工作，预计持续两个月。中间可能有其他同学加入，到时一起合作做。
+
+准备步骤如下：
+1. 阅读wrj，pxq毕设论文
+1. 理解rcore, zcore的syscall的实现和os的大致架构
+1. 能基于zcore的用户态模式调试代码
+
+注意事项：
+1. 参考书籍“Linux/UNIX系统编程手册”了解linux syscall的使用
+1. 阅读libc-test的测试小例子，musl libc的源码，了解调用syscall用户态部分的代码实现
+1. 在zcore的开发中，注意首先基于用户态模式的zcore进行开发，这样避免开发难度。
+1. 从最简单的syscall理解开始，逐步掌握syscall的代码
+1. 参考书籍“linux内核情景分析”了解syscall的具体实现细节
