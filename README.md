@@ -1158,3 +1158,30 @@ um...做事情将近两个月了、
 按照理论上对的事情来作为参考执行、事物普遍知易行难、而过多的失败是没做到知行合一
 
 之后一段时期应以知行和一为目的、来改进做事方法、以观后效
+
+
+<span id="Day059"></span>
+## Day 59 （2020-06-07）周日
+
+> GCYYfun
+
+### 事件1:完成 libctest的测试
+
+可以通过 、结果 放在
+
+https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/README.md
+
+
+
+```
+successed 412
+failed 40
+Panic 23
+
+total ： 412+40+23 = 475
+```
+
+### 事件2：看论文说了些什么
+
+看论文 和 看代码、快速接入
+
