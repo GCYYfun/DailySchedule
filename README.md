@@ -1238,7 +1238,7 @@ total ： 412+40+23 = 475
 ### TODO LIST Phase 3 💎
 
 - [x] 阅读wrj，pxq毕设论文
-- [ ] 理解rcore, zcore的syscall的实现和os的大致架构
+- [x] 理解rcore, zcore的syscall的实现和os的大致架构
 - [ ] 能基于zcore的用户态模式调试代码
 
 ### 预计事务 📗
