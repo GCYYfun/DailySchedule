@@ -1276,3 +1276,37 @@ total ： 412+40+23 = 475
 
 3. 用qemu起 linux [可尝试]
 
+
+
+<span id="61"></span>
+## Day 61 （2020-06-09）周二
+
+> GCYYfun
+
+### TODO LIST Phase 3 💎
+
+- [x] 阅读wrj，pxq毕设论文
+- [x] 理解rcore, zcore的syscall的实现和os的大致架构
+- [ ] 能基于zcore的用户态模式调试代码 ？？？
+
+### 预计事务 📗
+
+
+| 目标 | 程度 |
+|--|--|
+| run hello in zCore linux | ❌ |
+| run libc-test in zCore linux | ❌ |
+| fix OSTEP_RUST | ❌ |
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+| 🈳 | 🈳 | 🈳 |
+
+
+### 事件 Ⓜ️
+
+#### 一、run 测试
+
