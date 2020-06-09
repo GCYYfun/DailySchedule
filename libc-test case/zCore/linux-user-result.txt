@@ -947,3 +947,10 @@
 474 /test/libc-test/src/regression/wcsstr-false-negative.exe
  successed
 475 /test/libc-test/src/regression/wcsstr-false-negative-static.exe failed
+
+
+successed    : 323
+failed       : 144
+10s_timeout  : 8
+
+total = 323 + 144 + 8 = 475
