@@ -1294,8 +1294,8 @@ total ： 412+40+23 = 475
 
 | 目标 | 程度 |
 |--|--|
-| run hello in zCore linux | ❌ |
-| run libc-test in zCore linux | ❌ |
+| run hello in zCore linux | ✔️ |
+| run libc-test in zCore linux | ✔️ |
 | fix OSTEP_RUST | ❌ |
 
 ### 具体情况 📘
@@ -1310,3 +1310,4 @@ total ： 412+40+23 = 475
 
 #### 一、run 测试
 
+在 zcore 上进行了 linux 用户态 libctest测试
