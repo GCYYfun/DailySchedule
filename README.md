@@ -952,7 +952,7 @@ https://github.com/GCYYfun/DailySchedule/issues/3
 
 结果在文档 libc-test case result
 
-https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/README.md
+https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/rCore/README.md
 
 
 > chyyuu 有进步。需要多总结，多思考，多系统地学习。
@@ -1212,7 +1212,7 @@ um...做事情将近两个月了、
 
 可以通过 、结果 放在
 
-https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/README.md
+https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/rCore/result.txt
 
 
 
@@ -1311,3 +1311,7 @@ total ： 412+40+23 = 475
 #### 一、run 测试
 
 在 zcore 上进行了 linux 用户态 libctest测试
+
+结果放在 
+
+https://github.com/GCYYfun/DailySchedule/blob/master/libc-test%20case/zCore/linux-user-result.txt

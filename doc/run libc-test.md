@@ -58,7 +58,7 @@ make |grep FAIL|wc -l
 ```
 结果显示数字 是失败个数 大约 10个左右
 
-把 https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case 地址下的 sh文件也复制到libc-test目录中
+把 https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/rCore/ 地址下的 sh文件也复制到libc-test目录中
 
 备用
 
