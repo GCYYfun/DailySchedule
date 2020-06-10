@@ -1337,7 +1337,7 @@ https://github.com/GCYYfun/DailySchedule/blob/master/libc-test%20case/zCore/linu
 
 | 目标 | 程度 |
 |--|--|
-| 完成auto-test整理 | ❌ |
+| 完成auto-test整理 | ✔️ |
 | 阅读文档、对比不同、理解用意 | ❌ |
 | 复现zcore增强版、并整理进阿test | ❌ |
 | fix OSTEP_RUST | ❌ |
@@ -1347,11 +1347,19 @@ https://github.com/GCYYfun/DailySchedule/blob/master/libc-test%20case/zCore/linu
 
 | 问题 | 思考 | 解决过程 |
 |--|--|--|
-| 🈳 | 🈳 | 🈳 |
+| sh的路径、在不同使用方式下、权限和寻找方式不同、可能有个工作目录的概念 | um..还是能找到这部分官方资料最好 | 找了半天、打开方式不对、暂时挂起了 |
 
 
 ### 事件 Ⓜ️
 
 #### 一、整理auto-test
 
-doing....
+修改完毕  达到 v0.0.2
+
+https://github.com/GCYYfun/auto_test
+
+还有好多任务还没做完..预计计划被延误很多、
+
+### 二、阅读文档
+
+未完成
