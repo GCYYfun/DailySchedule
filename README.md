@@ -1315,3 +1315,43 @@ total ： 412+40+23 = 475
 结果放在 
 
 https://github.com/GCYYfun/DailySchedule/blob/master/libc-test%20case/zCore/linux-user-result.txt
+
+### 二、合并 auto-test
+
+
+
+
+<span id="62"></span>
+## Day 62 （2020-06-10）周三
+
+> GCYYfun
+
+### TODO LIST Phase 3 💎
+
+- [x] 阅读wrj，pxq毕设论文
+- [x] 理解rcore, zcore的syscall的实现和os的大致架构
+- [ ] 能基于zcore的用户态模式调试代码 ？？？
+
+### 预计事务 📗
+
+
+| 目标 | 程度 |
+|--|--|
+| 完成auto-test整理 | ❌ |
+| 阅读文档、对比不同、理解用意 | ❌ |
+| 复现zcore增强版、并整理进阿test | ❌ |
+| fix OSTEP_RUST | ❌ |
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+| 🈳 | 🈳 | 🈳 |
+
+
+### 事件 Ⓜ️
+
+#### 一、整理auto-test
+
+doing....
