@@ -1362,4 +1362,46 @@ https://github.com/GCYYfun/auto_test
 
 ### 二、阅读文档
 
-未完成
+
+
+<span id="63"></span>
+## Day 63 （2020-06-11）周四
+
+> GCYYfun
+
+### TODO LIST Phase 3 💎
+
+- [ ] 学习zircon
+- [ ] 熟悉zCore
+- [ ] 完成zCore zircon 测试
+
+### 预计事务 📗
+
+
+| 目标 | 程度 |
+|--|--|
+| 阅读文档、对比不同、理解用意 | ❌ |
+| 复现zcore增强版、并整理进阿test | ❌ |
+| fix OSTEP_RUST | ❌ |
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+
+
+
+### 事件 Ⓜ️
+
+#### 一、看zircon 资料
+
+在之前 了解的基础上 在继续了解
+
+老师给的 资料
+* [许中兴fuchsia源码阅读笔记](https://github.com/xuzhongxing/fuchsia-notes)
+* [fuchsia 官方文档](https://fuchsia.dev/fuchsia-src/concepts) 需要翻墙
+* [一篇硕士论文 对linux/zircon general的比较分析](https://github.com/Allegra42/thesis-documentation-fuchsia/tree/master/build)
+* [一篇文章](https://blog.quarkslab.com/playing-around-with-the-fuchsia-operating-system.html)
+* 还有两篇pdf ...
+
