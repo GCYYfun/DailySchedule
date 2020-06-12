@@ -1405,3 +1405,7 @@ https://github.com/GCYYfun/auto_test
 * [一篇文章](https://blog.quarkslab.com/playing-around-with-the-fuchsia-operating-system.html)
 * 还有两篇pdf ...
 
+#### 二、尝试qemu 运行 linux
+
+发现好像确实没那么 直接、文件系统看样子是直接读取到内存、要改估计改成镜像
+
