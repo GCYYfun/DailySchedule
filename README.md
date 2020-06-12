@@ -1407,5 +1407,45 @@ https://github.com/GCYYfun/auto_test
 
 #### 二、尝试qemu 运行 linux
 
-发现好像确实没那么 直接、文件系统看样子是直接读取到内存、要改估计改成镜像
+发现好像确实没那么 直接、文件系统看样子是处理方式不一样、改动应该还是有一些的、不太熟悉实现、就搁置了、
 
+
+
+<span id="64"></span>
+## Day 64 （2020-06-12）周五
+
+> GCYYfun
+
+### TODO LIST Phase 3 💎
+
+- [ ] 学习zircon
+- [ ] 熟悉zCore
+- [ ] 完成zCore zircon 测试
+
+### 预计事务 📗
+
+
+| 目标 | 程度 |
+|--|--|
+| 阅读文档、对比不同、理解用意 | ❌ |
+| 复现zcore增强版、并整理进阿test | ❌ |
+| fix OSTEP_RUST | ❌ |
+
+
+- [ ] [许中兴fuchsia源码阅读笔记](https://github.com/xuzhongxing/fuchsia-notes)
+- [ ] [fuchsia 官方文档](https://fuchsia.dev/fuchsia-src/concepts) 需要翻墙
+- [ ] [一篇硕士论文 对linux/zircon general的比较分析](https://github.com/Allegra42/thesis-documentation-fuchsia/tree/master/build)
+- [ ] [一篇文章](https://blog.quarkslab.com/playing-around-with-the-fuchsia-operating-system.html)
+- [x] 还有两篇pdf ...
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+
+
+
+### 事件 Ⓜ️
+
+#### 一、继续学习一下zircon
