@@ -1512,3 +1512,9 @@ copy form fuchsia
 #### 二、尝试运行测例
 
 master 的 zcore 有些问题、下载 新的zcore 有些难以下载...
+
+下在新仓库 可以跑单测试
+
+接下来 运行 全部测试
+
+集成在auto-test
