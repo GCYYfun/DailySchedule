@@ -952,7 +952,7 @@ https://github.com/GCYYfun/DailySchedule/issues/3
 
 结果在文档 libc-test case result
 
-https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/README.md
+https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/rCore/README.md
 
 
 > chyyuu 有进步。需要多总结，多思考，多系统地学习。
@@ -1212,7 +1212,7 @@ um...做事情将近两个月了、
 
 可以通过 、结果 放在
 
-https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/README.md
+https://github.com/GCYYfun/DailySchedule/tree/master/libc-test%20case/rCore/result.txt
 
 
 
@@ -1238,7 +1238,7 @@ total ： 412+40+23 = 475
 ### TODO LIST Phase 3 💎
 
 - [x] 阅读wrj，pxq毕设论文
-- [ ] 理解rcore, zcore的syscall的实现和os的大致架构
+- [x] 理解rcore, zcore的syscall的实现和os的大致架构
 - [ ] 能基于zcore的用户态模式调试代码
 
 ### 预计事务 📗
@@ -1247,7 +1247,7 @@ total ： 412+40+23 = 475
 | 目标 | 程度 |
 |--|--|
 | 读完论文 | ✔️ |
-| 看完相关代码 | ❌ |
+| 浏览相关代码 | ✔️ |
 
 ### 具体情况 📘
 
@@ -1259,10 +1259,248 @@ total ： 412+40+23 = 475
 
 ### 事件 Ⓜ️
 
-#### 一、继续看论文
+#### 一、看论文
 
 ...知道了一个大概、通透一下还需要动手实践下、
 
 #### 二、尝试运行zCore
 
 看 readme、能运行单个命令 、还没找到用户态运行的方法、也在熟悉结构、有了前面看了一点rcore的经验、熟悉的快了一些、再找找、
+
+
+### 交流
+
+1. 自己写 hello word 放到 rootfs 开启 log 看结果 [可作]
+
+2. libc test 放到 root fs 跑、rcore 挪过去 [可作]
+
+3. 用qemu起 linux [可尝试]
+
+
+
+<span id="61"></span>
+## Day 61 （2020-06-09）周二
+
+> GCYYfun
+
+### TODO LIST Phase 3 💎
+
+- [x] 阅读wrj，pxq毕设论文
+- [x] 理解rcore, zcore的syscall的实现和os的大致架构
+- [ ] 能基于zcore的用户态模式调试代码 ？？？
+
+### 预计事务 📗
+
+
+| 目标 | 程度 |
+|--|--|
+| run hello in zCore linux | ✔️ |
+| run libc-test in zCore linux | ✔️ |
+| fix OSTEP_RUST | ❌ |
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+| 🈳 | 🈳 | 🈳 |
+
+
+### 事件 Ⓜ️
+
+#### 一、run 测试
+
+在 zcore 上进行了 linux 用户态 libctest测试
+
+结果放在 
+
+https://github.com/GCYYfun/DailySchedule/blob/master/libc-test%20case/zCore/linux-user-result.txt
+
+### 二、合并 auto-test
+
+
+
+
+<span id="62"></span>
+## Day 62 （2020-06-10）周三
+
+> GCYYfun
+
+### TODO LIST Phase 3 💎
+
+- [x] 阅读wrj，pxq毕设论文
+- [x] 理解rcore, zcore的syscall的实现和os的大致架构
+- [ ] 能基于zcore的用户态模式调试代码 ？？？
+
+### 预计事务 📗
+
+
+| 目标 | 程度 |
+|--|--|
+| 完成auto-test整理 | ✔️ |
+| 阅读文档、对比不同、理解用意 | ❌ |
+| 复现zcore增强版、并整理进阿test | ❌ |
+| fix OSTEP_RUST | ❌ |
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+| sh的路径、在不同使用方式下、权限和寻找方式不同、可能有个工作目录的概念 | um..还是能找到这部分官方资料最好 | 找了半天、打开方式不对、暂时挂起了 |
+
+
+### 事件 Ⓜ️
+
+#### 一、整理auto-test
+
+修改完毕  达到 v0.0.2
+
+https://github.com/GCYYfun/auto_test
+
+还有好多任务还没做完..预计计划被延误很多、
+
+### 二、阅读文档
+
+
+
+<span id="63"></span>
+## Day 63 （2020-06-11）周四
+
+> GCYYfun
+
+### TODO LIST Phase 3 💎
+
+- [ ] 学习zircon
+- [ ] 熟悉zCore
+- [ ] 完成zCore zircon 测试
+
+### 预计事务 📗
+
+
+| 目标 | 程度 |
+|--|--|
+| 阅读文档、对比不同、理解用意 | ❌ |
+| 复现zcore增强版、并整理进阿test | ❌ |
+| fix OSTEP_RUST | ❌ |
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+
+
+
+### 事件 Ⓜ️
+
+#### 一、看zircon 资料
+
+在之前 了解的基础上 在继续了解
+
+老师给的 资料
+* [许中兴fuchsia源码阅读笔记](https://github.com/xuzhongxing/fuchsia-notes)
+* [fuchsia 官方文档](https://fuchsia.dev/fuchsia-src/concepts) 需要翻墙
+* [一篇硕士论文 对linux/zircon general的比较分析](https://github.com/Allegra42/thesis-documentation-fuchsia/tree/master/build)
+* [一篇文章](https://blog.quarkslab.com/playing-around-with-the-fuchsia-operating-system.html)
+* 还有两篇pdf ...
+
+#### 二、尝试qemu 运行 linux
+
+发现好像确实没那么 直接、文件系统看样子是处理方式不一样、改动应该还是有一些的、不太熟悉实现、就搁置了、
+
+
+
+<span id="64"></span>
+## Day 64 （2020-06-12）周五
+
+> GCYYfun
+
+### TODO LIST Phase 3 💎
+
+- [ ] 学习zircon
+- [ ] 熟悉zCore
+- [ ] 完成zCore zircon 测试
+
+### 预计事务 📗
+
+
+| 目标 | 程度 |
+|--|--|
+| 阅读文档、对比不同、理解用意 | ✔️ |
+| 复现zcore增强版、并整理进阿test | ❌ |
+| fix OSTEP_RUST | ❌ |
+
+
+- [ ] [许中兴fuchsia源码阅读笔记](https://github.com/xuzhongxing/fuchsia-notes)
+- [ ] [fuchsia 官方文档](https://fuchsia.dev/fuchsia-src/concepts) 需要翻墙
+- [ ] [一篇硕士论文 对linux/zircon general的比较分析](https://github.com/Allegra42/thesis-documentation-fuchsia/tree/master/build)
+- [x] [一篇文章](https://blog.quarkslab.com/playing-around-with-the-fuchsia-operating-system.html)
+- [x] 还有两篇pdf ...
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+
+
+
+### 事件 Ⓜ️
+
+#### 一、继续学习一下zircon
+
+写了一篇 学习笔记、没有写完、越写越多、后续补充、留作以后对比、不然转头就忘了
+
+https://github.com/GCYYfun/DailySchedule/tree/master/doc/os.md
+
+还没整理zircon内容、要整理下、巩固下、
+
+#### 二、沟通测试和syscall事情
+
+大致了解 情况 、明天试一下、
+也沟通syscall的怎么作、也试一下、
+
+
+<span id="65"></span>
+## Day 65 （2020-06-13）周六
+
+> GCYYfun
+
+### TODO LIST Phase 3 💎
+
+- [ ] 学习zircon
+- [ ] 熟悉zCore
+- [ ] 完成zCore zircon 测试
+
+### 预计事务 📗
+
+
+| 目标 | 程度 |
+|--|--|
+| 看那个linux和zircon对比的论文 | ❌ |
+| 整理一些syscall |❌|
+| 复现zcore增强版、并整理进阿test | ❌ |
+| fix OSTEP_RUST | ❌ |
+
+
+- [ ] [许中兴fuchsia源码阅读笔记](https://github.com/xuzhongxing/fuchsia-notes)
+- [ ] [fuchsia 官方文档](https://fuchsia.dev/fuchsia-src/concepts) 需要翻墙
+- [ ] [一篇硕士论文 对linux/zircon general的比较分析](https://github.com/Allegra42/thesis-documentation-fuchsia/tree/master/build)
+- [x] [一篇文章](https://blog.quarkslab.com/playing-around-with-the-fuchsia-operating-system.html)
+- [x] 还有两篇pdf ...
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+
+
+
+### 事件 Ⓜ️
+
+#### 一、看zircon的syscall
+
+doing
+
