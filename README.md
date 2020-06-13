@@ -1427,7 +1427,7 @@ https://github.com/GCYYfun/auto_test
 
 | 目标 | 程度 |
 |--|--|
-| 阅读文档、对比不同、理解用意 | ❌ |
+| 阅读文档、对比不同、理解用意 | ✔️ |
 | 复现zcore增强版、并整理进阿test | ❌ |
 | fix OSTEP_RUST | ❌ |
 
@@ -1435,7 +1435,7 @@ https://github.com/GCYYfun/auto_test
 - [ ] [许中兴fuchsia源码阅读笔记](https://github.com/xuzhongxing/fuchsia-notes)
 - [ ] [fuchsia 官方文档](https://fuchsia.dev/fuchsia-src/concepts) 需要翻墙
 - [ ] [一篇硕士论文 对linux/zircon general的比较分析](https://github.com/Allegra42/thesis-documentation-fuchsia/tree/master/build)
-- [ ] [一篇文章](https://blog.quarkslab.com/playing-around-with-the-fuchsia-operating-system.html)
+- [x] [一篇文章](https://blog.quarkslab.com/playing-around-with-the-fuchsia-operating-system.html)
 - [x] 还有两篇pdf ...
 
 ### 具体情况 📘
@@ -1449,3 +1449,6 @@ https://github.com/GCYYfun/auto_test
 ### 事件 Ⓜ️
 
 #### 一、继续学习一下zircon
+
+写了一篇 学习笔记、
+
