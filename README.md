@@ -1478,8 +1478,8 @@ https://github.com/GCYYfun/DailySchedule/tree/master/doc/os.md
 
 | 目标 | 程度 |
 |--|--|
+| 整理一些syscall |✔️|
 | 看那个linux和zircon对比的论文 | ❌ |
-| 整理一些syscall |❌|
 | 复现zcore增强版、并整理进阿test | ❌ |
 | fix OSTEP_RUST | ❌ |
 
@@ -1502,5 +1502,13 @@ https://github.com/GCYYfun/DailySchedule/tree/master/doc/os.md
 
 #### 一、看zircon的syscall
 
-doing
+列好了一个 表格
+[zircon syscall 表格](doc/syscall.md) 
 
+copy form fuchsia 
+
+同时也阅读学习下
+
+#### 二、尝试运行测例
+
+master 的 zcore 有些问题、下载 新的zcore 有些难以下载...
