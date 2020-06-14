@@ -346,28 +346,28 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 | 15  | thread_create                       |                                                                              | ✅    |
 | 16  | thread_exit                         |                                                                              |
 | 17  | thread_read_state                   |                                                                              |
-| 18  | thread_start                        |                                                                              | ✅    |
+| 18  | thread_start                        | cause a new thread to start executing                                        | ✅    |
 | 19  | thread_write_state                  |                                                                              |
-| 20 | process_create       |             | ✅    |
-| 21 | process_read_memory  |             |
-| 22 | process_start        |             | ✅    |
-| 23 | process_write_memory |             |
-| 24 | process_exit         |             |
-| 25 | job_create       |             | ✅    |
-| 26 | job_set_critical |             |
-| 27 | job_set_policy   |             |
-| 28 | task_create_exception_channel |             |
-| 29 | task_kill                     |             |
-| 30 | task_suspend                  |             | ✅？   |
+| 20  | process_create                      | create a new process within a job                                            | ✅    |
+| 21  | process_read_memory                 |                                                                              |
+| 22  | process_start                       | cause a new process to start executing                                       | ✅    |
+| 23  | process_write_memory                |                                                                              |
+| 24  | process_exit                        |                                                                              |
+| 25  | job_create                          | create a new job within a job                                                | ✅    |
+| 26  | job_set_critical                    |                                                                              |
+| 27  | job_set_policy                      |                                                                              |
+| 28  | task_create_exception_channel       |                                                                              |
+| 29  | task_kill                           |                                                                              |
+| 30  | task_suspend                        |                                                                              | ✅？   |
 | 31  | profile_create                      |                                                                              |
 | 32  | exception_get_thread                |                                                                              |
 | 33  | exception_get_process               |                                                                              |
-| 34 | channel_call      |             | ✅？   |
-| 35 | channel_create    |             | ✅    |
-| 36 | channel_read      |             | ✅    |
-| 37 | channel_read_etc  |             |
-| 38 | channel_write     |             | ✅    |
-| 39 | channel_write_etc |             |
+| 34  | channel_call                        |                                                                              | ✅？   |
+| 35  | channel_create                      |                                                                              | ✅    |
+| 36  | channel_read                        |                                                                              | ✅    |
+| 37  | channel_read_etc                    |                                                                              |
+| 38  | channel_write                       |                                                                              | ✅    |
+| 39  | channel_write_etc                   |                                                                              |
 | 40  | socket_create                       |                                                                              |
 | 41  | socket_read                         |                                                                              |
 | 42  | socket_shutdown                     |                                                                              |
@@ -381,32 +381,32 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 | 50  | fifo_create                         |                                                                              |
 | 51  | fifo_read                           |                                                                              |
 | 52  | fifo_write                          |                                                                              |
-| 53 | event_create     |             | ✅    |
-| 54 | eventpair_create |             |
-| 55 | system_get_event |             |
-| 56 | port_create    |             | ✅    |
-| 57 | port_queue     |             |
-| 58 | port_wait      |             | ✅    |
-| 59 | port_cancel    |             |
-| 60 | futex_wait     |             | ✅    |
-| 61 | futex_wake     |             | ✅    |
-| 62 | futex_requeue  |             |
-| 63 | vmo_create                |             | ✅    |
-| 64 | vmo_read                  |             | ✅    |
-| 65 | vmo_write                 |             |
-| 66 | vmo_create_child          |             |
-| 67 | vmo_get_size              |             |
-| 68 | vmo_set_size              |             | ✅    |
-| 69 | vmo_op_range              |             |
-| 70 | vmo_replace_as_executable |             | ✅    |
-| 71 | vmo_create_physical       |             |
-| 72 | vmo_set_cache_policy      |             |
-| 73 | vmar_allocate  |             | ✅    |
-| 74 | vmar_map       |             | ✅    |
-| 75 | vmar_unmap     |             | ✅    |
-| 76 | vmar_protect   |             |
-| 77 | vmar_op_range  |             |
-| 78 | vmar_destroy   |             | ✅    |
+| 53  | event_create                        |                                                                              | ✅    |
+| 54  | eventpair_create                    |                                                                              |
+| 55  | system_get_event                    |                                                                              |
+| 56  | port_create                         |                                                                              | ✅    |
+| 57  | port_queue                          |                                                                              |
+| 58  | port_wait                           |                                                                              | ✅    |
+| 59  | port_cancel                         |                                                                              |
+| 60  | futex_wait                          |                                                                              | ✅    |
+| 61  | futex_wake                          |                                                                              | ✅    |
+| 62  | futex_requeue                       |                                                                              |
+| 63  | vmo_create                          |                                                                              | ✅    |
+| 64  | vmo_read                            |                                                                              | ✅    |
+| 65  | vmo_write                           |                                                                              |
+| 66  | vmo_create_child                    |                                                                              |
+| 67  | vmo_get_size                        |                                                                              |
+| 68  | vmo_set_size                        |                                                                              | ✅    |
+| 69  | vmo_op_range                        |                                                                              |
+| 70  | vmo_replace_as_executable           |                                                                              | ✅    |
+| 71  | vmo_create_physical                 |                                                                              |
+| 72  | vmo_set_cache_policy                |                                                                              |
+| 73  | vmar_allocate                       |                                                                              | ✅    |
+| 74  | vmar_map                            |                                                                              | ✅    |
+| 75  | vmar_unmap                          |                                                                              | ✅    |
+| 76  | vmar_protect                        |                                                                              |
+| 77  | vmar_op_range                       |                                                                              |
+| 78  | vmar_destroy                        |                                                                              | ✅    |
 | 79  | pager_create                        |                                                                              |
 | 80  | pager_create_vmo                    |                                                                              |
 | 81  | pager_detach_vmo                    |                                                                              |
@@ -414,16 +414,16 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 | 83  | pager_op_range                      |                                                                              |
 | 84  | cprng_add_entropy                   |                                                                              |
 | 85  | cprng_draw                          |                                                                              |
-| 86 | nanosleep           |             |
-| 87 | clock_get           |             |
-| 88 | clock_get_monotonic |             | ✅
-| 89 | ticks_get           |             |
-| 90 | ticks_per_second    |             |
-| 91 | deadline_after      |             |
-| 92 | clock_adjust        |             |
-| 93 | timer_create   |             | ✅    |
-| 94 | timer_set      |             | ✅    |
-| 95 | timer_cancel   |             |
+| 86  | nanosleep                           |                                                                              |
+| 87  | clock_get                           |                                                                              |
+| 88  | clock_get_monotonic                 |                                                                              | ✅    |
+| 89  | ticks_get                           |                                                                              |
+| 90  | ticks_per_second                    |                                                                              |
+| 91  | deadline_after                      |                                                                              |
+| 92  | clock_adjust                        |                                                                              |
+| 93  | timer_create                        |                                                                              | ✅    |
+| 94  | timer_set                           |                                                                              | ✅    |
+| 95  | timer_cancel                        |                                                                              |
 | 96  | guest_create                        |                                                                              |
 | 97  | guest_set_trap                      |                                                                              |
 | 98  | vcpu_create                         |                                                                              |
@@ -437,7 +437,7 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 | 106 | system_get_num_cpus                 |                                                                              |
 | 107 | system_get_physmem                  |                                                                              |
 | 108 | system_get_version_string           |                                                                              |
-| 109 | debuglog_create                     |                                                                              | ✅
+| 109 | debuglog_create                     |                                                                              | ✅    |
 | 110 | debuglog_write                      |                                                                              |
 | 111 | debuglog_read                       |                                                                              |
 | 112 | debug_read                          |                                                                              |
