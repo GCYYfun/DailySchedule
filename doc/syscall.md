@@ -58,14 +58,14 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 ### Objects  (3/10)
 | id | zircon syscall      | description                                       | zcore |
 |----|---------------------|---------------------------------------------------|-------|
-| 5  | object_get_child    | find the child of an object by its koid           | ⚠      |
-| 6  | object_get_info     | obtain information about an object                | ⚠️     |
-| 7  | object_get_property | read an object property                           | ⚠️     |
+| 5  | object_get_child    | find the child of an object by its koid           | ⚠️    |
+| 6  | object_get_info     | obtain information about an object                | ⚠️    |
+| 7  | object_get_property | read an object property                           | ⚠️    |
 | 8  | object_set_profile  | apply a profile to a thread                       |       |
-| 9  | object_set_property | modify an object property                         | ⚠️     |
-| 10 | object_signal       | set or clear the user signals on an object        | ⚠️     |
+| 9  | object_set_property | modify an object property                         | ⚠️    |
+| 10 | object_signal       | set or clear the user signals on an object        | ⚠️    |
 | 11 | object_signal_peer  | set or clear the user signals in the opposite end | ✅    |
-| 12 | object_wait_many    | wait for signals on multiple objects              | ⚠️     |
+| 12 | object_wait_many    | wait for signals on multiple objects              | ⚠️    |
 | 13 | object_wait_one     | wait for signals on one object                    | ✅    |
 | 14 | object_wait_async   | asynchronous notifications on signal change       | ✅    |
 
@@ -73,10 +73,10 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 | id | zircon syscall     | description | zcore |
 |----|--------------------|-------------|-------|
 | 15 | thread_create      |             | ✅    |
-| 16 | thread_exit        |             | ⚠️
+| 16 | thread_exit        |             | ⚠️    |
 | 17 | thread_read_state  |             |
 | 18 | thread_start       |             | ✅    |
-| 19 | thread_write_state |             | ⚠️
+| 19 | thread_write_state |             | ⚠️    |
 
 ### Processes  (2/5)
 | id | zircon syscall       | description | zcore |
@@ -85,21 +85,21 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 | 21 | process_read_memory  |             |
 | 22 | process_start        |             | ✅    |
 | 23 | process_write_memory |             |
-| 24 | process_exit         |             | ⚠️
+| 24 | process_exit         |             | ⚠️    |
                              
 ### Jobs (1/3)
 | id | zircon syscall   | description | zcore |
 |----|------------------|-------------|-------|
 | 25 | job_create       |             | ✅    |
-| 26 | job_set_critical |             | ⚠️
-| 27 | job_set_policy   |             | ⚠️
+| 26 | job_set_critical |             | ⚠️    |
+| 27 | job_set_policy   |             | ⚠️    |
                            
 ### Tasks  (1/3)
 | id | zircon syscall                | description | zcore |
 |----|-------------------------------|-------------|-------|
-| 28 | task_create_exception_channel |             | ⚠️
+| 28 | task_create_exception_channel |             | ⚠️    |
 | 29 | task_kill                     |             |
-| 30 | task_suspend                  |             | ✅？   |
+| 30 | task_suspend                  |             | ✅？  |
                             
 ### Profiles 
 | id | zircon syscall | description | zcore |
@@ -115,7 +115,7 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 ### Channels  (4/6)
 | id | zircon syscall    | description | zcore |
 |----|-------------------|-------------|-------|
-| 34 | channel_call      |             | ✅？   |
+| 34 | channel_call      |             | ✅？  |
 | 35 | channel_create    |             | ✅    |
 | 36 | channel_read      |             | ✅    |
 | 37 | channel_read_etc  |             | ⚠️
@@ -174,14 +174,14 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 |----|---------------------------|--------------------------------------------------------------------------------|-------|
 | 63 | vmo_create                |                                                                                | ✅    |
 | 64 | vmo_read                  |                                                                                | ✅    |
-| 65 | vmo_write                 |                                                                                | ⚠️
-| 66 | vmo_create_child          |                                                                                | ⚠️     |
-| 67 | vmo_get_size              |                                                                                | ⚠️
+| 65 | vmo_write                 |                                                                                | ⚠️    |
+| 66 | vmo_create_child          |                                                                                | ⚠️    |
+| 67 | vmo_get_size              |                                                                                | ⚠️    |
 | 68 | vmo_set_size              |                                                                                | ✅    |
-| 69 | vmo_op_range              |                                                                                | ⚠️
+| 69 | vmo_op_range              |                                                                                | ⚠️    |
 | 70 | vmo_replace_as_executable |                                                                                | ✅    |
 | 71 | vmo_create_physical       | create a VM object referring to a specific contiguous range of physical memory | ✅    |
-| 72 | vmo_set_cache_policy      |                                                                                | ⚠️
+| 72 | vmo_set_cache_policy      |                                                                                | ⚠️    |
 
 ### Virtual Memory Address Regions (VMARs)  (4/6)
 | id | zircon syscall | description | zcore |
