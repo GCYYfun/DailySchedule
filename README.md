@@ -1642,3 +1642,13 @@ https://github.com/rcore-os/zCore/wiki/Zircon-Syscall
 #### 一、整理 auto-test 测试  
 
 完成 并 提交了 pr
+
+>> chyyuu 2020.06.16
+
+接下来，可以为直接改进zcore做准备了。我觉得要做的事情是：
+1. 阅读fuchsia/zircon的文档（我会发给你），特别是理解zircon的kernel object的设计思路和kernel syscall的大致含义
+1. 阅读wrj,pql毕设论文
+1. 阅读linux/zircon对比的硕士论文
+1. 再次理解pql昨天做的写syscall的报告，并尝试分析不同obj syscall的具体实现，写出你对部分syscall的实现分析报告
+
+这些事情大约在本周日前完成。我们争取从下周一开始，能选择一些简单的syscall开始尝试实现。
