@@ -1589,8 +1589,6 @@ https://github.com/rcore-os/zCore/wiki/Zircon-Syscall
 | fix OSTEP_RUST | ❌ |
 
 - [ ] [一篇硕士论文 对linux/zircon general的比较分析](https://github.com/Allegra42/thesis-documentation-fuchsia/tree/master/build)
-- [x] [一篇文章](https://blog.quarkslab.com/playing-around-with-the-fuchsia-operating-system.html)
-- [x] 还有两篇pdf ...
 
 ### 具体情况 📘
 
@@ -1624,13 +1622,12 @@ https://github.com/rcore-os/zCore/wiki/Zircon-Syscall
 
 | 目标 | 程度 |
 |--|--|
-| 看那个linux和zircon对比的论文 | ❌ |
+| 看一节linux和zircon对比的论文 | ❌ |
 | 复现zcore增强版、并整理进阿test | ✔️ |
 | fix 一点 OSTEP_RUST | ❌ |
+| 推进 一点 Summer of OS | ❌ |
 
 - [ ] [一篇硕士论文 对linux/zircon general的比较分析](https://github.com/Allegra42/thesis-documentation-fuchsia/tree/master/build)
-- [x] [一篇文章](https://blog.quarkslab.com/playing-around-with-the-fuchsia-operating-system.html)
-- [x] 还有两篇pdf ...
 
 ### 具体情况 📘
 
