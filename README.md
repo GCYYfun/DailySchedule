@@ -1642,3 +1642,11 @@ https://github.com/rcore-os/zCore/wiki/Zircon-Syscall
 #### 一、整理 auto-test 测试  
 
 完成 并 提交了 pr
+
+#### 二、整理了 syscall 的新情况
+
+https://github.com/rcore-os/zCore/wiki/Status:-Syscalls
+
+#### 三、看一点 论文
+
+时间总比预期花费的多、抓紧看一点、算个开始
