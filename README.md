@@ -1564,3 +1564,82 @@ https://github.com/rcore-os/zCore/wiki/Zircon-Syscall
 尚未完全
 
 #### 二、跑全部测例？
+
+遇到只能手动测试的问题、需要改进
+
+
+<span id="67"></span>
+## Day 67 （2020-06-15）周一
+
+> GCYYfun
+
+### TODO LIST Phase 3 💎
+
+- [ ] 学习zircon
+- [ ] 熟悉zCore
+- [ ] 完成zCore zircon 测试
+
+### 预计事务 📗
+
+
+| 目标 | 程度 |
+|--|--|
+| 看那个linux和zircon对比的论文 | ❌ |
+| 复现zcore增强版、并整理进阿test | ❌ |
+| fix OSTEP_RUST | ❌ |
+
+- [ ] [一篇硕士论文 对linux/zircon general的比较分析](https://github.com/Allegra42/thesis-documentation-fuchsia/tree/master/build)
+- [x] [一篇文章](https://blog.quarkslab.com/playing-around-with-the-fuchsia-operating-system.html)
+- [x] 还有两篇pdf ...
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+
+
+
+### 事件 Ⓜ️
+
+#### 一、改成zcore可以自测 
+
+改动 zcore 可以读写文件测试 、看到可行性
+
+
+<span id="68"></span>
+## Day 68 （2020-06-16）周二
+
+> GCYYfun
+
+### TODO LIST Phase 3 💎
+
+- [ ] 学习zircon
+- [ ] 熟悉zCore
+- [x] 完成zCore zircon 测试
+
+### 预计事务 📗
+
+由于原先任务颗粒度太粗略、导致不易执行、现在降低难度、在细分一些
+
+| 目标 | 程度 |
+|--|--|
+| 看那个linux和zircon对比的论文 | ❌ |
+| 复现zcore增强版、并整理进阿test | ✔️ |
+| fix 一点 OSTEP_RUST | ❌ |
+
+- [ ] [一篇硕士论文 对linux/zircon general的比较分析](https://github.com/Allegra42/thesis-documentation-fuchsia/tree/master/build)
+- [x] [一篇文章](https://blog.quarkslab.com/playing-around-with-the-fuchsia-operating-system.html)
+- [x] 还有两篇pdf ...
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+
+
+
+### 事件 Ⓜ️
+
+#### 一、整理 auto-test 测试  
