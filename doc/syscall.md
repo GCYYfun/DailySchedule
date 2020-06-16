@@ -1,5 +1,6 @@
-# Zircon Syscall
+The map of zircon sycall and zCore syscall 
 
+[temp doc]
 
 ## 内核对象划分
 
@@ -122,10 +123,10 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 ### Sockets   
 | id | zircon syscall  | description | zcore |
 |----|-----------------|-------------|-------|
-| 40 | socket_create   |             |
-| 41 | socket_read     |             |
-| 42 | socket_shutdown |             |
-| 43 | socket_write    |             |
+| 40 | socket_create   |             | ✅
+| 41 | socket_read     |             | ✅
+| 42 | socket_shutdown |             | ✅
+| 43 | socket_write    |             | ✅
                              
 ### Stream     
 | id | zircon syscall   | description | zcore |
@@ -157,7 +158,7 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 | 56 | port_create    |             | ✅    |
 | 57 | port_queue     |             |
 | 58 | port_wait      |             | ✅    |
-| 59 | port_cancel    |             |
+| 59 | port_cancel    |             | ✅?
                
 ### Futexes       
 | id | zircon syscall | description | zcore |
@@ -172,12 +173,12 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 | 63 | vmo_create                |             | ✅    |
 | 64 | vmo_read                  |             | ✅    |
 | 65 | vmo_write                 |             |
-| 66 | vmo_create_child          |             |
+| 66 | vmo_create_child          |             | ✅?
 | 67 | vmo_get_size              |             |
 | 68 | vmo_set_size              |             | ✅    |
 | 69 | vmo_op_range              |             |
 | 70 | vmo_replace_as_executable |             | ✅    |
-| 71 | vmo_create_physical       |             |
+| 71 | vmo_create_physical       | create a VM object referring to a specific contiguous range of physical memory            | ✅
 | 72 | vmo_set_cache_policy      |             |
 
 ### Virtual Memory Address Regions (VMARs) 
@@ -221,7 +222,7 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 |----|----------------|-------------|-------|
 | 93 | timer_create   |             | ✅    |
 | 94 | timer_set      |             | ✅    |
-| 95 | timer_cancel   |             |
+| 95 | timer_cancel   |             | ✅    |
                           
 ### Hypervisor guests  
 | id | zircon syscall | description | zcore |
@@ -274,18 +275,18 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 ### DDK                                    
 | id  | zircon syscall         | description | zcore |
 |-----|------------------------|-------------|-------|
-| 120 | bti_create             |             |
-| 121 | bti_pin                |             |
-| 122 | bti_release_quarantine |             |
+| 120 | bti_create             |             | ✅
+| 121 | bti_pin                |             | ✅
+| 122 | bti_release_quarantine |             | ✅
 | 123 | cache_flush            |             |
-| 124 | interrupt_ack          |             |
-| 125 | interrupt_bind         |             |
-| 126 | interrupt_create       |             |
-| 127 | interrupt_destroy      |             |
-| 128 | interrupt_trigger      |             |
-| 129 | interrupt_wait         |             |
-| 130 | iommu_create           |             |
-| 131 | pmt_unpin              |             |
+| 124 | interrupt_ack          |             | ✅
+| 125 | interrupt_bind         |             | ✅
+| 126 | interrupt_create       |             | ✅
+| 127 | interrupt_destroy      |             | ✅
+| 128 | interrupt_trigger      |             | ✅
+| 129 | interrupt_wait         |             | ✅
+| 130 | iommu_create           |             | ✅
+| 131 | pmt_unpin              |             | ✅
 | 132 | resource_create        |             |
 | 133 | smc_call               |             |
 
@@ -309,16 +310,16 @@ total = 4 + 10 + 5 + 5 + 3 + 3 + 1 + 2 + 6 + 4 + 6 + 3 + 3 + 4 + 3 + 10 + 6 + 5 
 |-----|---------------------------|-------------|-------|
 | 140 | ioports_release           |             |
 | 141 | pc_firmware_tables        |             |
-| 142 | pci_add_subtract_io_range |             |
-| 143 | pci_cfg_pio_rw            |             |
-| 144 | pci_config_read           |             |
-| 145 | pci_config_write          |             |
-| 146 | pci_enable_bus_master     |             |
-| 147 | pci_get_bar               |             |
-| 148 | pci_get_nth_device        |             |
-| 149 | pci_init                  |             |
-| 150 | pci_map_interrupt         |             |
-| 151 | pci_query_irq_mode        |             |
+| 142 | pci_add_subtract_io_range |             | ✅
+| 143 | pci_cfg_pio_rw            |             | ✅
+| 144 | pci_config_read           |             | ✅
+| 145 | pci_config_write          |             | ✅
+| 146 | pci_enable_bus_master     |             | ✅
+| 147 | pci_get_bar               |             | ✅
+| 148 | pci_get_nth_device        |             | ✅
+| 149 | pci_init                  |             | ✅
+| 150 | pci_map_interrupt         |             | ✅
+| 151 | pci_query_irq_mode        |             | ✅
 | 152 | pci_reset_device          |             |
 | 153 | pci_set_irq_mode          |             |
           
