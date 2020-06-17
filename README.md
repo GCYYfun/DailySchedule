@@ -1696,3 +1696,5 @@ https://github.com/rcore-os/zCore/wiki/Status:-Syscalls
 ### 事件 Ⓜ️
 
 #### 一 、 仔细看zircon 文档 
+
+#### ....有些问题、状态不佳、调整一下、明天继续
