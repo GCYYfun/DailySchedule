@@ -1668,10 +1668,12 @@ https://github.com/rcore-os/zCore/wiki/Status:-Syscalls
 
 > GCYYfun
 
-### TODO LIST Phase 3 💎
+### TODO LIST Phase 4 💎
 
-- [ ] 学习zircon
-- [ ] 熟悉zCore
+- [ ] 阅读fuchsia/zircon的文档
+- [ ] 阅读wrj,pql毕设论文
+- [ ] 阅读linux/zircon对比的硕士论文
+- [ ] 再次理解pql昨天做的写syscall的报告，并尝试分析不同obj syscall的具体实现，写出你对部分syscall的实现分析报告
 
 ### 预计事务 📗
 
@@ -1705,10 +1707,13 @@ https://github.com/rcore-os/zCore/wiki/Status:-Syscalls
 
 > GCYYfun
 
-### TODO LIST Phase 3 💎
+### TODO LIST Phase 4 💎
 
-- [ ] 学习zircon
-- [ ] 熟悉zCore
+- [ ] 阅读fuchsia/zircon的文档
+- [ ] 阅读wrj,pql毕设论文
+- [ ] 阅读linux/zircon对比的硕士论文
+- [ ] 再次理解pql昨天做的写syscall的报告，并尝试分析不同obj syscall的具体实现，写出你对部分syscall的实现分析报告
+
 
 ### 预计事务 📗
 
@@ -1748,10 +1753,13 @@ https://github.com/rcore-os/zCore/wiki/Status:-Syscalls
 
 > GCYYfun
 
-### TODO LIST Phase 3 💎
+### TODO LIST Phase 4 💎
 
-- [ ] 学习zircon
-- [ ] 熟悉zCore
+- [ ] 阅读fuchsia/zircon的文档
+- [ ] 阅读wrj,pql毕设论文
+- [ ] 阅读linux/zircon对比的硕士论文
+- [ ] 再次理解pql昨天做的写syscall的报告，并尝试分析不同obj syscall的具体实现，写出你对部分syscall的实现分析报告
+
 
 ### 预计事务 📗
 
@@ -1762,7 +1770,7 @@ https://github.com/rcore-os/zCore/wiki/Status:-Syscalls
 | 看fuhsia 文档 | ❌ |
 | 看一节linux和zircon对比的论文 | ❌ |
 | fix 一点 OSTEP_RUST | ❌ |
-| 推进 一点 Summer of OS | ❌ |
+| 推进 一点 Summer of OS | ✔️ |
 
 - [ ] [一篇硕士论文 对linux/zircon general的比较分析](https://github.com/Allegra42/thesis-documentation-fuchsia/tree/master/build)
 
