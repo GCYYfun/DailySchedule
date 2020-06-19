@@ -1755,9 +1755,9 @@ https://github.com/rcore-os/zCore/wiki/Status:-Syscalls
 
 ### TODO LIST Phase 4 💎
 
-- [ ] 阅读fuchsia/zircon的文档
+- [x] 阅读一点fuchsia/zircon的文档
 - [ ] 阅读wrj,pql毕设论文
-- [ ] 阅读linux/zircon对比的硕士论文
+- [x] 阅读一点linux/zircon对比的硕士论文
 - [ ] 再次理解pql昨天做的写syscall的报告，并尝试分析不同obj syscall的具体实现，写出你对部分syscall的实现分析报告
 
 
@@ -1767,8 +1767,8 @@ https://github.com/rcore-os/zCore/wiki/Status:-Syscalls
 
 | 目标 | 程度 |
 |--|--|
-| 看fuhsia 文档 | ❌ |
-| 看一节linux和zircon对比的论文 | ❌ |
+| 看fuhsia 文档 | ✔️ |
+| 看一节linux和zircon对比的论文 | ✔️ |
 | fix 一点 OSTEP_RUST | ❌ |
 | 推进 一点 Summer of OS | ✔️ |
 
@@ -1787,11 +1787,50 @@ https://github.com/rcore-os/zCore/wiki/Status:-Syscalls
 
 #### 一、 论文
 
-Doing ...
+论文 共 5 章
+
+4 结论 5 展望
+
+主要目的说 驱动 顺带 对比
+
+1 叙述目的
+
+2，3 是主要内容 
+
+2 是 内核 模块 对比
+
+3 是 驱动 部分 对比
+
+目前 看到 2.2
 
 #### 二、 文档
 
-TODO
+目前 零零散散 有 看了 
+
+Concepts
+> fidl
+>> overview
+
+> kernel
+>> handel  
+>> right  
+>> signals
+
+Reference
+
+> object
+>> channel
+>> stream
+>> vmo
+>> vmar
+
+> syscall 
+>> channel
+
+还没能宏观的理解清晰  
+看 文档 没有例子、感觉差点意思、结合代码、调用关系有点差强人意、明天集中看下、看看是否会有改变
+
+
 
 #### 三、 fix code
 
@@ -1799,6 +1838,6 @@ TODO
 
 #### 四、 summer of os
 
-TODO
+完成 1，2小结
 
 
