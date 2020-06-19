@@ -1716,7 +1716,7 @@ https://github.com/rcore-os/zCore/wiki/Status:-Syscalls
 
 | 目标 | 程度 |
 |--|--|
-| 看fuhsia 文档 | ❌ |
+| 看fuhsia 文档 | ✔️ |
 | 看一节linux和zircon对比的论文 | ❌ |
 | fix 一点 OSTEP_RUST | ❌ |
 | 推进 一点 Summer of OS | ✔️ |
@@ -1741,4 +1741,56 @@ https://github.com/rcore-os/zCore/wiki/Status:-Syscalls
 #### 三、 学了点英语 、
 
 关键是文档看不快、不能即快速有高质量的阅读、方法有问题、
+
+
+<span id="71"></span>
+## Day 71 （2020-06-19）周五
+
+> GCYYfun
+
+### TODO LIST Phase 3 💎
+
+- [ ] 学习zircon
+- [ ] 熟悉zCore
+
+### 预计事务 📗
+
+由于原先任务颗粒度太粗略、导致不易执行、现在降低难度、在细分一些
+
+| 目标 | 程度 |
+|--|--|
+| 看fuhsia 文档 | ❌ |
+| 看一节linux和zircon对比的论文 | ❌ |
+| fix 一点 OSTEP_RUST | ❌ |
+| 推进 一点 Summer of OS | ❌ |
+
+- [ ] [一篇硕士论文 对linux/zircon general的比较分析](https://github.com/Allegra42/thesis-documentation-fuchsia/tree/master/build)
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+
+
+
+### 事件 Ⓜ️
+
+
+#### 一、 论文
+
+Doing ...
+
+#### 二、 文档
+
+TODO
+
+#### 三、 fix code
+
+TODO
+
+#### 四、 summer of os
+
+TODO
+
 
