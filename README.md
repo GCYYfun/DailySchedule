@@ -1862,10 +1862,10 @@ TODO
 
 | 目标 | 程度 |
 |--|--|
-| 看fuhsia 文档 | ❌ |
+| 看fuhsia 文档 | ✔️ |
 | 看一节linux和zircon对比的论文 | ❌ |
 | fix 一点 OSTEP_RUST | ❌ |
-| 推进 一点 Summer of OS | ✔❌ |
+| 推进 一点 Summer of OS | ❌ |
 
 - [ ] [一篇硕士论文 对linux/zircon general的比较分析](https://github.com/Allegra42/thesis-documentation-fuchsia/tree/master/build)
 
@@ -1880,19 +1880,46 @@ TODO
 ### 事件 Ⓜ️
 
 
-#### 一、 论文
-
-TODO
-
-#### 二、 文档
-
-Doing
+#### 一、 看文档
 
 
-#### 三、 fix code
+#### 二、 结合文档看代码
 
-TODO
 
-#### 四、 summer of os
+<span id="73"></span>
+## Day 73 （2020-06-21）周日
 
-TODO
+> GCYYfun
+
+### TODO LIST Phase 4 💎
+
+- [x] 阅读fuchsia/zircon的文档
+- [ ] 阅读wrj,pql毕设论文
+- [ ] 阅读linux/zircon对比的硕士论文
+- [ ] 再次理解pql昨天做的写syscall的报告，并尝试分析不同obj syscall的具体实现，写出你对部分syscall的实现分析报告
+
+
+### 预计事务 📗
+
+由于原先任务颗粒度太粗略、导致不易执行、现在降低难度、在细分一些
+
+| 目标 | 程度 |
+|--|--|
+| 看一节linux和zircon对比的论文 | ❌ |
+
+- [ ] [一篇硕士论文 对linux/zircon general的比较分析](https://github.com/Allegra42/thesis-documentation-fuchsia/tree/master/build)
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+
+
+
+### 事件 Ⓜ️
+
+
+
+#### 一、 结合文档看代码
+
