@@ -2007,3 +2007,10 @@ TODO
 #### 一、 syscall
 
 Doing read and write
+
+对 process 相关 task 这一类 结构熟悉与调用、
+
+还没找到 aspace 的对应 实现 、明天问下、如果object 不存在、还需补充、
+其中涉及到 vm_mapping vmo 相关流程
+
+明天整理清晰、完成syscall
