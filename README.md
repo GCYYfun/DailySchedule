@@ -1973,8 +1973,8 @@ TODO
 
 
 ----------------------------------------
-<span id="74"></span>
-## Day 74 （2020-06-22）周一
+<span id="75"></span>
+## Day 75 （2020-06-23）周二
 
 > GCYYfun
 
@@ -2005,3 +2005,5 @@ TODO
 
 
 #### 一、 syscall
+
+Doing read and write
