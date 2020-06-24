@@ -2014,3 +2014,53 @@ Doing read and write
 其中涉及到 vm_mapping vmo 相关流程
 
 明天整理清晰、完成syscall
+
+
+----------------------------------------
+<span id="76"></span>
+## Day 76 （2020-06-24）周三
+
+> GCYYfun
+
+### TODO LIST Phase 5 💎
+
+- [] Implement process_{read, write}_memory
+
+### 预计事务 📗
+
+
+| 目标 | 程度 |
+|--|--|
+|syscall 实现||
+|test CI||
+
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+
+
+
+### 事件 Ⓜ️
+
+
+
+#### 一、 添加 libctest in zcore
+
+本次测试 可以了、push 后 ci 上猜测是路径的问题、导致执行不对
+
+### 二、 syscall 进展 中
+
+关键的问题 切片的方式 千丝万缕的关系中 未能很清晰的整理出相互的结构关系 、方法不太对、要改进
+
+还是要仔细 的 看下、 从头缕一下 结构、一点一点的记录、把基础结构这块要完全搞搞清楚、
+
+预计 要有   
+tasks ： job process thread
+vm    : vmo vmar
+
+不然很难进行、都会关联到 这里
+
+
