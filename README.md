@@ -2064,3 +2064,41 @@ vm    : vmo vmar
 不然很难进行、都会关联到 这里
 
 
+----------------------------------------
+<span id="76"></span>
+## Day 76 （2020-06-24）周三
+
+> GCYYfun
+
+### TODO LIST Phase 5 💎
+
+- [] Implement process_{read, write}_memory
+
+### 预计事务 📗
+
+
+| 目标 | 程度 |
+|--|--|
+|syscall 实现||
+|test CI||
+
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+
+
+
+### 事件 Ⓜ️
+
+
+
+#### 一、 syscall 
+
+找到了 合适的文档
+
+原先 只关注了 concepts 和 reference
+
+读文档的打开方式不对
