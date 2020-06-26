@@ -357,7 +357,7 @@ stage4
 
 
 
-
+TODO or GIVEUP in an entangled state
 
 
 

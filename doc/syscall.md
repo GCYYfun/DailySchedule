@@ -488,3 +488,8 @@ do_but_not_sure = 31
 | 151 | pci_query_irq_mode                  |                                                                                | ✅    |
 | 152 | pci_reset_device                    |                                                                                |
 | 153 | pci_set_irq_mode                    |                                                                                |
+
+
+
+
+TODO or GIVEUP in an entangled state

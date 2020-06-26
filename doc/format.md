@@ -58,3 +58,6 @@
 6:00 ~ 7:00
 
 7:00
+
+https://github.com/caiyongji/emoji-list
+https://gitmoji.carloscuesta.me/

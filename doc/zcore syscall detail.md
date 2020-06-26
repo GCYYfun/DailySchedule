@@ -103,3 +103,7 @@ um...运行成功、但好像测试结果不理想、
 <!-- 也可以 拷贝本机到远程
 
     scp -r  本机目录  用户名@IP地址:目标文件目录 -->
+
+
+
+TODO or GIVEUP in an entangled state

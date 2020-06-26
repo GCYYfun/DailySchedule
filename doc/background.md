@@ -35,3 +35,6 @@ output :
 管道 |
 
 input | output
+
+
+TODO or GIVEUP in an entangled state

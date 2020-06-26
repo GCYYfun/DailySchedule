@@ -86,3 +86,7 @@ kernel 也需要支持
 
 
 目前 传命令 和  共享 文件 都不可以 唉...
+
+
+
+TODO or GIVEUP in an entangled state

@@ -221,3 +221,6 @@ qemu-system-riscv64 \
   --machine virt \
   --nographic \
   --bios default
+
+
+TODO or GIVEUP in an entangled state

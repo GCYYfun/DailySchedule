@@ -109,3 +109,6 @@ Root ： 引导程序
 考虑到 有可能 同时测试多个 不同版版本的测试
 
 为了增加隔离性 、把qemu 也放到docker 上运行、、这时的测试只看container 就可以了
+
+
+TODO or GIVEUP in an entangled state
