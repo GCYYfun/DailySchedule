@@ -32,3 +32,5 @@ fork() 执行 测试程序
 以一条命令为例
 
 src/common/runtest.exe -w '' src/functional/argv.exe >src/functional/argv.err 
+
+TODO or GIVEUP in an entangled state
