@@ -213,7 +213,7 @@ Errr..今天处理了一些杂事、没能正经营业、接下来要抓紧时�
 ### 事件1：继续学习hypervisor
 
 再次参考https://www.cs.unc.edu/~porter/courses/comp790/s17/labs.html 一个小型的hypervisor构建过程、结合代码理解hypervisor、并制作一个简单流程图帮助理解、  
-![启动VMM流程图](https://github.com/GCYYfun/DailySchedule/blob/master/picture/VMM%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%E5%9B%BE.png?raw=true)
+![启动VMM流程图](picture/VMM启动流程图.png)
 
 理解vmcs的作用及需要设置的大概内容、艰难阅读intel手册、效率不够理想、对此感到沮丧、
 
@@ -906,7 +906,7 @@ um...没有什么实质的进展、还在弄清情况、琐碎的一天
 结果 不理想 需要分别去 看下问题
 
 图例：  
-![rcore跑test-case](https://github.com/GCYYfun/DailySchedule/blob/master/picture/rcore%E8%B7%91test-case.png)
+![rcore跑test-case](picture/rcore跑test-case.png)
 
 ### 事件2: 了解下 test-case这个程序
 
@@ -2128,7 +2128,7 @@ ci的环境 也是 ubuntu20.04 失去了新的怀疑方向
 
 | 目标 | 程度 |
 |--|--|
-|syscall 实现||
+|syscall 实现|✔️|
 |test CI||
 
 
@@ -2137,7 +2137,8 @@ ci的环境 也是 ubuntu20.04 失去了新的怀疑方向
 
 | 问题 | 思考 | 解决过程 |
 |--|--|--|
-
+|fuchsia的结构多、运行逻辑无法快速找出、c++实现是在挑战回忆|要慢下来看代码理解背后逻辑对应zcore|去看代码对应
+|zcore的结构实现程度也也有一定程度、运行逻辑不能一眼找出、Rust 实现还好处于cache区|要看代码理解意思对于应fuchsia的哪一部分|去看代码
 
 
 ### 事件 Ⓜ️
@@ -2145,3 +2146,10 @@ ci的环境 也是 ubuntu20.04 失去了新的怀疑方向
 
 
 #### 一、 syscall  read write
+
+初步完成 syscall process read write memory  
+并通过测试 
+
+![测试结果](picture/ProcessDebugTest.png)
+
+有待继续整理、清晰整理结构
