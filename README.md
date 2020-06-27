@@ -2176,15 +2176,15 @@ ci的环境 也是 ubuntu20.04 失去了新的怀疑方向
 
 ### TODO LIST Phase 5 💎
 
-- [ ] review process_{read, write}_memory
+- [x] review process_{read, write}_memory
 
 ### 预计事务 📗
 
 
 | 目标 | 程度 |
 |--|--|
-|Review code||
-|Archive info||
+| Review code | ✔️ |
+| Archive info | ✔️ |
 
 
 ### 具体情况 📘
@@ -2201,3 +2201,32 @@ ci的环境 也是 ubuntu20.04 失去了新的怀疑方向
 
 又梳理了一下结构 、感觉不太有效、
 整理好 后 提交一个pr
+
+
+----------------------------------------
+<span id="80"></span>
+## Day 80 （2020-06-28）周日
+
+> GCYYfun
+
+### TODO LIST Phase 5 💎
+
+
+### 预计事务 📗
+
+
+| 目标 | 程度 |
+|--|--|
+
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+
+
+### 事件 Ⓜ️
+
+
+#### 一、 
