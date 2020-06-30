@@ -2295,6 +2295,10 @@ ci的环境 也是 ubuntu20.04 失去了新的怀疑方向
 
 #### 一、 draw vmo diagram
 
+VMO VMAR 图
+
+![VM图](picture/zcore.png)
+
 #### 二、 recode rcore
 
 
