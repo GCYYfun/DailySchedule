@@ -2281,7 +2281,7 @@ ci的环境 也是 ubuntu20.04 失去了新的怀疑方向
 |--|--|
 |fix ostep 熟悉下rust||
 |recode rcore_tutorial 熟悉下os||
-|draw a diagram for zcore||
+|draw a diagram for zcore vmo |✔️|
 
 ### 具体情况 📘
 
@@ -2293,5 +2293,39 @@ ci的环境 也是 ubuntu20.04 失去了新的怀疑方向
 ### 事件 Ⓜ️
 
 
-#### 一、 
+#### 一、 draw vmo diagram
 
+#### 二、 recode rcore
+
+
+
+----------------------------------------
+<span id="82"></span>
+## Day 81 （2020-06-30）周二
+
+> GCYYfun
+
+### TODO LIST Phase 6 💎
+
+- [ ] write a development blog
+
+### 预计事务 📗
+
+
+| 目标 | 程度 |
+|--|--|
+|fix ostep 熟悉下rust||
+|recode rcore_tutorial 熟悉下os||
+|draw a diagram for zcore task||
+
+### 具体情况 📘
+
+
+| 问题 | 思考 | 解决过程 |
+|--|--|--|
+
+
+### 事件 Ⓜ️
+
+
+#### 一、 收拾沟通
