@@ -39,7 +39,9 @@ zcore的syscall的开发、参照了fuchsia的zircon的sycall、
 
 处理从用户态来的syscall上下文信息函数  // TODO
 
-调用内核的syscall函数 通过上下文指定的系统调用号、来找具体syscall
+调用内核的syscall函数 通过上下文指定的系统调用号 来找具体syscall \\TODO
 
-找到 syscall
+找到 syscall // TODO
+
+执行 // TODO
 
