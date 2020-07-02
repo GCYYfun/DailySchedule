@@ -2376,7 +2376,7 @@ VMO VMAR 图
 
 ### TODO LIST Phase 6 💎
 
-- [ ] write a development blog
+- [x] write a development blog
 
 ### 预计事务 📗
 
