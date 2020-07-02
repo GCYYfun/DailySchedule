@@ -2397,4 +2397,6 @@ VMO VMAR 图
 ### 事件 Ⓜ️
 
 
-#### 一、
+#### 一、写 blog
+
+[初稿版](doc/blog/A_development_of_zCore_sycall.md)
