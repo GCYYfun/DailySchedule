@@ -2509,6 +2509,7 @@ VMO VMAR 图
 |fix 一点点 ostep 熟悉下rust||
 |recode 一点点 rcore_tutorial 熟悉下os||
 |整理 暑期 计划|✔️|
+
 ### 具体情况 📘
 
 
@@ -2536,7 +2537,7 @@ VMO VMAR 图
 
 | 目标 | 程度 |
 |--|--|
-|fix 一点点 ostep 熟悉下rust||
+|fix 一点点 ostep relocation 熟悉下rust|✔️|
 |recode 一点点 rcore_tutorial 熟悉下os||
 |阅读 zCore 整理 整体 结构||
 
@@ -2551,3 +2552,9 @@ VMO VMAR 图
 
 
 #### 一、整理暑期计划
+
+落实 整体 结构 填充信息
+
+#### 二、fix ostep relocation
+
+整理代码、确认逻辑 测试
