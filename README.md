@@ -2508,7 +2508,7 @@ VMO VMAR 图
 |--|--|
 |fix 一点点 ostep 熟悉下rust||
 |recode 一点点 rcore_tutorial 熟悉下os||
-|整理 暑期 计划||
+|整理 暑期 计划|✔️|
 ### 具体情况 📘
 
 
