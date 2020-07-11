@@ -1,0 +1,313 @@
+ConditionalVariableTest.BroadcastSignalThreadWait
+ConditionalVariableTest.SignalThreadWait
+ConditionalVariableTest.ConditionalVariablesTimeout
+C11MutexTest.MultiThreadedContention
+C11MutexTest.TryMutexMultiThreadedContention
+C11MutexTest.InitalizeLocalMutex
+C11MutexTest.StaticInitalizerSameBytesAsAuto
+C11MutexTest.TimeoutElapsed
+C11ThreadTest.ThreadLocalErrno
+C11ThreadTest.NullNameThreadShouldSucceed
+C11ThreadTest.CreateAndVerifyThreadHandle
+C11ThreadTest.DetachedThreadKeepsRunning
+C11ThreadTest.LongNameSucceeds
+C11ThreadTest.SelfDetachAndFree
+CppThreadTest.CreateAndVerifyThreadHandle
+ChannelInternalTest.CallFinishWithoutPreviouslyCallingCallReturnsBadState
+ChannelInternalTest.TransferChannelWithPendingCallInSourceProcess
+ChannelTest.CreateIsOkAndEndpointsAreRelated
+ChannelTest.IsWriteableByDefault
+ChannelTest.WriteToEndpointCausesOtherToBecomeReadable
+ChannelTest.WriteConsumesAllHandles
+ChannelTest.WaitManyIsSignaledOnAnyElementWrite
+ChannelTest.WaitManyIsSignaledForBothWrites
+ChannelTest.ReadWhenEmptyReturnsShouldWait
+ChannelTest.ReadWhenEmptyAndClosedReturnsPeerClosed
+ChannelTest.ReadRemainingMessagesWhenPeerIsClosed
+ChannelTest.CloseSignalsPeerClosed
+ChannelTest.CloseClearsSignalsWriteable
+ChannelTest.CloseSignalsPeerReturnsPeerClosed
+ChannelTest.OnFlightHandlesSignalledWhenPeerIsClosed
+ChannelTest.WriteNonTransferableHandleReturnsAccessDeniedAndClosesHandle
+ChannelTest.WriteRepeatedHandlesReturnsBadHandlesAndClosesHandle
+ChannelTest.ConcurrentReadsConsumeUniqueElements
+ChannelTest.ReadMayDiscardWithNullBuffersReturnsBufferTooSmall
+ChannelTest.ReadMayDiscardWithNullBufferDiscardsDataReturnsBufferTooSmall
+ChannelTest.ReadMayDiscardWithNullBufferDiscardHandlesReturnsBufferTooSmall
+ChannelTest.ReadMayDiscardWithZeroSizeBuffersDiscardHandlesAndDataReturnsBufferTooSmall
+ChannelTest.ReadMayDiscardWithSmallerBufferDiscardHandlesAndDateReturnsBufferTooSmall
+ChannelTest.CallWrittenBytesSmallerThanZxTxIdReturnsInvalidArgs
+ChannelTest.CallResponseBiggerThanRdNumBytesReturnsBufferTooSmall
+ChannelTest.CallResponseBiggerThanRdNumHandlesReturnsBufferTooSmall
+ChannelTest.CallBytesFitIsOk
+ChannelTest.CallHandlesFitIsOk
+ChannelTest.CallHandleAndBytesFitsIsOk
+ChannelTest.CallNullptrNumBytesIsInvalidArgs
+ChannelTest.CallNullptrNumHandlesInvalidArgs
+ChannelTest.CallPendingTransactionsUseDifferentIds
+ChannelTest.CallDeadlineExceededReturnsTimedOut
+ChannelTest.CallConsumesHandlesOnSuccess
+ChannelTest.CallConsumesHandlesOnError
+ChannelTest.CallNotifiedOnPeerClosed
+ChannelTest.NestingIsOk
+ChannelTest.WriteSelfHandleReturnsNotSupported
+ChannelTest.ReadEtcHandleInfoValidation
+ChannelTest.ReadAndWriteWithMultipleSizes
+ChannelWriteEtcTest.MultipleHandlesSomeInvalidResultsReportedCorrectly
+ChannelWriteEtcTest.ImproperlyInitalizedResultsArgReportedBackAsOriginallyInitalized
+ChannelWriteEtcTest.FailureDoesNotResultInReceivedPacket
+ChannelWriteEtcTest.SentHandleReferrsToSameObject
+ChannelWriteEtcTest.InvalidOpArgShouldFail
+ChannelWriteEtcTest.HandleArgNotAChannelHandleShouldFail
+ChannelWriteEtcTest.ChannelHandleNotValidShouldFail
+ChannelWriteEtcTest.ChannelHandleWithoutWriteRightShouldFail
+ChannelWriteEtcTest.HandleWithoutTransferRightShouldFail
+ChannelWriteEtcTest.InvalidHandleInTransferredHandlesShouldFail
+ChannelWriteEtcTest.RepeatedHandlesWithOpMoveHandlesShouldFail
+ChannelWriteEtcTest.DuplicateHandlesInTransferredHandlesShouldSucceed
+ChannelWriteEtcTest.HandleDoesNotMatchTypeShouldFail
+ChannelWriteEtcTest.OptionsArgNonZeroShouldFail
+ChannelWriteEtcTest.ChannelHandleInTransferredHandlesShouldFail
+ChannelWriteEtcTest.OppositeChannelEndClosedShouldFail
+ChannelWriteEtcTest.HandleCountBoundaryChecks
+ChannelWriteEtcTest.HandleCountAndDataCountBothZeroShouldSucceed
+ChannelWriteEtcTest.MaximumNumberHandlesWithZeroCountArrayArgShouldSucceed
+ChannelWriteEtcTest.ByteCountIsMaxShouldSucceed
+ChannelWriteEtcTest.ByteCountIsMaxPlusOneShouldFail
+ChannelWriteEtcTest.NullptrArgWhenSizeNonZeroShouldFail
+ChannelWriteEtcTest.RemoveAllHandleRightsShouldSucceed
+ChannelWriteEtcTest.RemovingSomeHandleRightsShouldSucceed
+ChannelWriteEtcTest.SameHandleRightsBitsShouldSucceed
+ChannelWriteEtcTest.SameHandleRightsFlagShouldSucceed
+ChannelWriteEtcTest.HandleWithoutDuplicateRightsMoveOpSucceedsDuplicateOpFails
+
+
+
+Pager 92
+PortTest 16
+PortStressTest 1
+ProcessTest 27
+ProcessDebugUtilsTest 1
+ProcessDebugTest 4
+ProcessDebugVDSO 1
+Pthread 5
+PThreadBarrierTest 2
+PthreadTls 1
+SocketTest 26
+StackTest 2
+StreamTestCase 11
+SyncCompletionTest 11
+SyncCondition 2
+SyncMutex 3
+
+
+*-JobTest.OneCriticalProcessKillsOneJobIfRetcodeNonzero,JobTest.WaitTest,JobGetInfoTest.InfoJobProcessesPartiallyUnmappedBufferIsInvalidArgs,JobGetInfoTest.InfoJobChildrenPartiallyUnmappedBufferIsInvalidArgs,AsyncWaitInvalidOption,PortTest.AsyncWaitInvalidOption,PortTest.Timestamp,PortStressTest.WaitSignalCancel,PortStressTest.SignalCloseWait,ProcessTest.ProcessWaitAsyncCancelSelf,Pthread.Basic,SyncMutex.NoRecursion,Threads.ThreadStartWithZeroInstructionPointer,PThreadBarrierTest.SingleThreadWinsBarrierObjectResetsBetweenIterations,Threads.SuspendMultiple,Threads.KillSuspendedThread,Threads.StartSuspendedThread
+
+
+
+
+,ConditionalVariableTest.*
+,C11MutexTest.*
+,C11ThreadTest.*
+,CppThreadTest.*
+,ChannelInternalTest.*
+,ChannelTest.*
+,ChannelWriteEtcTest.*
+,ClockTest.*
+,ExecutableTlsTest.*
+,EventPairTest.*
+,FifoTest.*
+,FPUTest.*
+,FutexTest.*
+,HandleCloseTest.*
+,HandleDup.*
+,HandleInfoTest.*
+,HandleTransferTest.*
+,HandleWaitTest.*
+,JobTest.*
+
+MemoryMappingTest
+ObjectChildTest
+ObjectGetInfoTest
+JobGetInfoTest
+
+
+
+
+
+Threads
+
+
+
+,MemoryMappingTest.*
+,ObjectChildTest.*
+,ProcessGetInfoTest.*  
+,TaskGetInfoTest.*
+,ThreadGetInfoTest.*
+,VmarGetInfoTest.*
+,ObjectWaitManyTest.*
+,Thread.*
+,TicksTest.*
+,VersionTest.*
+,VmoCloneTestCase.*
+,VmoClone2TestCase.*
+,VmoCloneResizeTests.ResizeOriginal.*
+,ProgressiveCloneDiscardTests.*
+,VmoSliceTestCase.ZeroChildren.*
+,VmoZeroTestcase.*
+,DebugLogTest.*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Bti|⚠️ 7/8|
+|ConditionalVariableTest|✅ 3/3|
+|C11MutexTest|✅ 5/5|
+|C11ThreadTest|✅ 6/6|
+|ChannelInternalTest|✅ 2/2|
+|ChannelTest|✅ 38/38|
+|ChannelWriteEtcTest|✅ 27/27|
+|ClockTest|✅ 2/2|
+|ProcessDebugUtilsTest|✅ 1/1|
+|ProcessDebugTest|✅ 4/4|
+|ExecutableTlsTest|✅ 12/12|
+|EventPairTest|✅ 8/8|
+|FifoTest|✅ 9/9|
+|FPUTest|✅ 1/1|
+|FutexTest|✅ 14/14|
+|HandleCloseTest|⚠️ 2/3|
+|HandleDup|✅ 4/4|
+|HandleInfoTest|✅ 4/4|
+|HandleTransferTest|✅ 2/2|
+|HandleWaitTest|✅ 2/2|
+|InterruptTest|⚠️ 6/7|
+|JobTest|⚠️ 8/26|
+
+
+
+|MemoryMappingTest|⚠️ 5/8|
+|ObjectChildTest|✅ 1/1|
+|ObjectGetInfoTest|✅ 4/4|
+|JobGetInfoTest|⚠️ 24/39|
+|ProcessGetInfoTest|⚠️ 25/69|
+|TaskGetInfoTest|⚠️ 11/12|
+|ThreadGetInfoTest|⚠️ 26/41|
+|VmarGetInfoTest|⚠️ 19/21|
+|ObjectWaitOneTest|✅ 5/5|
+|ObjectWaitManyTest|✅ 5/5|
+|Pager|❌ 0/76|
+|PortTest|⚠️ 13/18|
+|PortStressTest|⚠️ 1/3|
+|ProcessTest|⚠️ 11/26|
+|SchedulerProfileTest|❌ 0/14|
+|Pthread|✅ 6/6|
+|PThreadBarrierTest|✅ 3/3|
+|PthreadTls|✅ 1/1|
+
+
+
+|Resource|❌ 0/11|
+|SocketTest|⚠️ 24/26|
+|StackTest|✅ 2/2|
+|StreamTestCase|✅ 11/11|
+|SyncCompletionTest|✅ 11/11|
+|SyncCondition|✅ 2/2|
+|SyncMutex|✅ 3/3|
+|SystemEvent|❌ 0/9|
+|Threads|⚠️ 16/36|
+|TicksTest|✅ 1/1|
+|Vmar|⚠️ 4/33|
+|VmoCloneTestCase|✅ 6/6|
+|VmoClone2TestCase|⚠️ 32/41|
+|VmoCloneDisjointClonesTests|✅ 2/2|
+|VmoCloneResizeTests|⚠️ 2/4|
+|ProgressiveCloneDiscardTests|✅ 2/2|
+|VmoSignalTestCase|✅ 3/3|
+|VmoSliceTestCase|✅ 15/15|
+|VmoZeroTestCase|✅ 12/12|
+|VmoTestCase|⚠️ 13/27|
+
+
+
+
+
+
+
+
+
+
+
+
+BadAccessTest.*
+CppThreadTest.*
+CpuMaskProfile.*
+DefaultExceptionHandlerTest.*
+DebugLogTest.*
+MsiTest.*
+ProcessDebugUtilsTest.*
+ProcessDebugTest.*
+ProcessDebugVDSO.*
+ProfileTest.*
+Thread.*
+VersionTest.*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vmar.ProtectOverDemandPagedTest
+VmoTestCase.ReadOnlyMap
