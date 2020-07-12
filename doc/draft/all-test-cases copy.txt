@@ -231,7 +231,7 @@ HandleTransferTest.CancelsWait
 HandleWaitTest.HandleWaitTest
 HandleWaitTest.HandleWaitMultipleThreads
 
-#InterruptTest.* 1/8 -2
+#InterruptTest.* 1/8  ？ /11
 InterruptTest.NonBindablePort
 InterruptTest.BindTriggeredIrqToPorts
 InterruptTest.BindPort
@@ -239,6 +239,10 @@ InterruptTest.UnBindPort
 InterruptTest.VirtualInterrupts
 InterruptTest.WaitThreadFunctionsAfterSuspendResume
 InterruptTest.MAYBE_BindVcpuTest
+InterruptTest.UnableToBindVirtualInterruptToVcpu
+InterruptTest.MAYBE_UnableToBindToVcpuAfterPort
+InterruptTest.NullOutputTimestamp
+InterruptTest.AllocationAndCreation
 
 #JobTest.* 9/28 -21
 JobTest.BasicTest
