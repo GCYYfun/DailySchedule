@@ -605,7 +605,7 @@ Resource.VmoCreationSmaller
 Resource.VmoCreationUnaligned 
 Resource.VmoReplaceAsExecutable 
 Resource.CreateResourceSlice 
-Resource.Ioports 
+Resource.Ioports
 
 
 #SocketTest.* 26/26
