@@ -21,7 +21,11 @@ docker start ubuntu20.04
 
 mv /etc/apt/sources.list /etc/apt/sources.list.bak
 
+20.04  
 echo deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse >> /etc/apt/sources.list
+
+18.04
+echo deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse >> /etc/apt/sources.list
 
 apt install git 
 
@@ -224,3 +228,24 @@ qemu-system-riscv64 \
 
 
 TODO or GIVEUP in an entangled state
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+gitlab 
+
+apt-get install gpgv2
+apt-get remove gpgv
