@@ -2813,3 +2813,8 @@ VMO VMAR 图
 rust 测试
 
 ![gitlab](picture/gitlab-rust.png)
+
+#### 二、理解出现了偏差 、及时更正
+
+添加了 新的py脚本
+可以 监控 commit 及时执行、明天放到 服务器上
