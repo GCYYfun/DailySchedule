@@ -24,17 +24,19 @@ import git
 import os
 
 
+# need to be config
+# =============================================================
+## 仓库地址 暂时没用、不想加入clone了、价值不大
 REPO_URL = 'https://github.com.cnpmjs.org/rcore-os/zCore'
-## zCore
+## zCore 路径
 LOCAL_REPO_PATH = '/home/own/Work Realm/test/5realm/zCore'
-
-TEST_PYFILE = ['/home/own/Work\000Realm/test/4realm/zCore/scripts/']
-
+## 结果文件
 LAST_RESULT_FILE = "/home/own/zCore/scripts/test-result-last.txt"
+## 上次结果文件
 CURR_RESULT_FILE = "/home/own/zCore/scripts/test-result.txt"
 
 DIFF = "/home/own/zCore/scripts/diff.txt"
-
+# ==============================================================
 CURR_INFO_DIR = {}
 LAST_INFO_DIR = {}
 # 定义你要周期运行的函数
@@ -44,7 +46,7 @@ def job():
 
 def check_update(info):
 
-    ## Now ! Just for master . Version Alpha ! Soon Will be Removed.
+    ## Now ! Just for everytest-by-qemu . Version Alpha ! Soon Will be Removed.
     if str(info.ref) != 'origin/everytest-by-qemu':
         return
 
@@ -71,8 +73,13 @@ def check_update(info):
                         else:
                             with open(DIFF, 'w') as f:
                                 f.write("last : "+l+"    "+"curr : "+c)
+                            
+                            os.chdir('/home/own/zCore/scripts/')
+                            os.system('mv diff.txt /home/zcore/diff/diff'+str(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))+'.txt')
             else:
-                print("first gen") # TODO
+                print("first gen no diff") # TODO
+                os.chdir('/home/own/zCore/scripts/')
+                os.system('mv test-result.txt test-result-last.txt')
         else:
             print('Fail')
     elif CURR_INFO_DIR[str(info.ref)] != LAST_INFO_DIR[str(info.ref)]:
@@ -80,8 +87,26 @@ def check_update(info):
         os.chdir('/home/own/zCore/scripts/')
         res = os.system("python3 /home/own/zCore/scripts/core-tests-qemu.py")
         LAST_INFO_DIR[str(info.ref)] = str(info.commit)
+
         if res == 0:
             print('Ok')
+            if os.path.exists(LAST_RESULT_FILE):
+                with open(LAST_RESULT_FILE, 'r') as last, open(CURR_RESULT_FILE, 'r') as curr:
+                    last_lines = last.readlines()
+                    curr_lines = curr.readlines()
+                    for l,c in zip(last_lines,curr_lines):
+                        if l==c:
+                            continue
+                        else:
+                            with open(DIFF, 'w') as f:
+                                f.write("last : "+l+"    "+"curr : "+c)
+                            
+                            os.chdir('/home/own/zCore/scripts/')
+                            os.system('mv diff.txt /home/zcore/diff/diff'+str(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))+'.txt')
+            else:
+                print("first gen no diff") # TODO
+                os.chdir('/home/own/zCore/scripts/')
+                os.system('mv test-result.txt test-result-last.txt')
         else:
             print('Fail')
     elif CURR_INFO_DIR[str(info.ref)] == LAST_INFO_DIR[str(info.ref)]:
@@ -95,10 +120,8 @@ def repo_pull():
     remote = repo.remote()
     pullinfo  =  remote.pull()
     print('-----------')
-    # print(pullinfo)
     for info in pullinfo:
         check_update(info)
-        # print(str(info.ref)+" "+str(info.commit))
 
 
 
@@ -114,3 +137,19 @@ schedule.every(5).seconds.do(repo_pull)
 while True:
     schedule.run_pending()   # 运行所有可以运行的任务
 #     # time.sleep(1)
+
+
+# 算了、够用就行
+
+class Config():
+    base_path=''
+    local_repo_path=''
+    last_result_file=''
+    curr_result_file=''
+    diff=''
+
+    def __init__(self,local_repo_path='/home/zcore/zCore',last_result_file='/home/zcore/zCore/scripts/test-result.txt',curr_result_file='/home/zcore/zCore/scripts/test-result.txt',diff='/home/zcore/zCore/scripts/diff.txt'):
+        local_repo_path = local_repo_path
+        last_result_file = last_result_file
+        curr_result_file = curr_result_file
+        diff = diff
