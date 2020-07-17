@@ -128,13 +128,19 @@ https://www.cnblogs.com/cosiray/archive/2012/03/02/2377099.html
 
 ## git
 
+
+apt-get install make libssl-dev libghc-zlib-dev libcurl4-gnutls-dev libexpat1-dev gettext unzip
+
+
+
 　wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.27.0.tar.gz
 
 
-　tar -zxvf git-2.8.3.tar.gz
+　 tar -zxvf git-2.27.0.tar.gz 
 
 
-　　　　cd git-2.8.3
+cd git-2.27.0/
+
 
 ./configure prefix=/usr/local/git/
 
@@ -150,5 +156,13 @@ export PATH=$PATH:/usr/local/git/bin
 
 
 sudo rm -rf git*
-
+ 
 which -a git
+
+
+## git lfs
+
+tar -zxvf git-lfs-linux-amd64-v2.9.0.tar.gz
+
+
+scp -P 1307 git-lfs-linux-arm64-v2.11.0.tar.gz root@210.22.22.150:/root/software
