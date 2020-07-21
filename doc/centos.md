@@ -166,3 +166,36 @@ tar -zxvf git-lfs-linux-amd64-v2.9.0.tar.gz
 
 
 scp -P 1307 git-lfs-linux-arm64-v2.11.0.tar.gz root@210.22.22.150:/root/software
+
+
+
+
+### kvm
+
+
+virt-install \
+--name=ubuntu-kvm \
+--ram=2048 --vcpus=2 \
+--disk path=/home/own/vmm/data/img/ubuntu-kvm.qcow2 \
+--cdrom ubuntu-20.04-live-server-amd64.iso \
+--vnc --vncport=5920 --vnclisten=0.0.0.0 \
+--network bridge=virbr0 \
+--extra-args='console=tty0 console=ttyS0,115200n8 serial' \
+--force \
+-d
+
+
+
+virt-install \
+--connect qemu:///system \
+--name ubuntu \
+--memory=2048 \
+--os-type generic \
+--vcpus 2 \
+--cdrom=/home/own/vmm/data/iso/ubuntu-20.04-live-server-amd64.iso \
+--disk path=/home/own/vmm/data/img/ubuntu.img,size=10 \
+--bridge=virbr0 \
+--graphics none--console \
+--console=pty,target_type=serial \
+--extra-args='console=tty0 console=ttyS0' \
+-d
