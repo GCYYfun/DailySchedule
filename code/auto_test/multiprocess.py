@@ -1,9 +1,12 @@
 import multiprocessing
+import pexpect
 import time
 
 def func(i,j,k):
     
     print("msg:", i,j,k)
+    child = pexpect.run('ls -a')
+    print(child)
     # time.sleep(3)
     # print("end")
 
@@ -22,12 +25,19 @@ if __name__ == "__main__":
     start = time.time() 
     for i in range(3):
         
-        # msg = "hello %d" %(i)
-        # print("msg:", msg)
-        time.sleep(3)
+        msg = "hello %d" %(i)
+        print("msg:", msg)
+        # time.sleep(3)
         # print("end")
     end = time.time()
     print('不使用多进程程--timestamp:{:.3f}'.format(end-start))
     print("Mark~ Mark~ Mark~~~~~~~~~~~~~~~~~~~~~~")
     
     print("Sub-process(es) done.")
+
+    a = ["a","b","c","d","e","f","g","h","i","j"]
+
+    for (i,line) in enumerate(a):
+        batch = int(i/2)%2
+        print('batch ' + str(batch))
+        print(i,line)

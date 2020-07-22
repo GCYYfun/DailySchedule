@@ -69,7 +69,26 @@ export PATH=$PWD/x86_64-softmmu:$PWD/riscv64-softmmu:$PATH
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 
+### rust
 
+
+echo export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup >> /root/.bashrc \
+    && /bin/bash -c "source /root/.bashrc" \
+    && curl https://sh.rustup.rs -sSf | sh -s -- -y \
+    && cat .cargo/env >> .bashrc \
+    && /bin/bash -c "source /root/.bashrc" \
+    && echo '[source.crates-io]' >> .cargo/config \
+    && echo 'replace-with = "tuna"' >> .cargo/config \
+    && echo '[source.tuna]' >> .cargo/config \
+    && echo 'registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"' >> .cargo/config
+
+
+编辑 ~/.cargo/config 文件，添加以下内容：
+[source.crates-io]
+replace-with = 'tuna'
+
+[source.tuna]
+registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 
 
 Qemu 
