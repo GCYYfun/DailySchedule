@@ -268,3 +268,28 @@ gitlab
 
 apt-get install gpgv2
 apt-get remove gpgv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###### init 
+
+mv /etc/apt/sources.list /etc/apt/sources.list.bak
+
+20.04  
+echo deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse >> /etc/apt/sources.list
+
+apt update
+
+apt install git git-lfs
