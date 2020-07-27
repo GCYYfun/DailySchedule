@@ -6,7 +6,7 @@ LOCAL_REPO_PATH = '/home/own/Work Realm/test/5realm/zCore'
 ZCORE_URL = 'https://github.com.cnpmjs.org/rcore-os/zCore'
 
 def zcore_clone():
-    url = ZCORE_URL
+    # url = ZCORE_URL
     # 第一次
     # 1. clone
     # 2. build
