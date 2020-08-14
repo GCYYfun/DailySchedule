@@ -1,0 +1,50 @@
+[
+  {
+    "name": "everytest-by-qemu",
+    "commit": {
+      "sha": "e4ebef022f61e2fa7fb7fbc6b5bf06500b3eef5e",
+      "url": "https://api.github.com/repos/rcore-os/zCore/commits/e4ebef022f61e2fa7fb7fbc6b5bf06500b3eef5e"
+    },
+    "protected": false
+  },
+  {
+    "name": "gh-pages",
+    "commit": {
+      "sha": "49f32ca04a5534834e8ee37e3d6042bf9c20dc7a",
+      "url": "https://api.github.com/repos/rcore-os/zCore/commits/49f32ca04a5534834e8ee37e3d6042bf9c20dc7a"
+    },
+    "protected": false
+  },
+  {
+    "name": "ioports",
+    "commit": {
+      "sha": "5cc704f0fef6233f22c9a3ae1f3466f50f970afe",
+      "url": "https://api.github.com/repos/rcore-os/zCore/commits/5cc704f0fef6233f22c9a3ae1f3466f50f970afe"
+    },
+    "protected": false
+  },
+  {
+    "name": "master",
+    "commit": {
+      "sha": "d737834f20689d7c547a280ad2ab9f4478bc23a2",
+      "url": "https://api.github.com/repos/rcore-os/zCore/commits/d737834f20689d7c547a280ad2ab9f4478bc23a2"
+    },
+    "protected": true
+  },
+  {
+    "name": "mipsel",
+    "commit": {
+      "sha": "6e3444acb9906156cc544eb59756af9608d87de5",
+      "url": "https://api.github.com/repos/rcore-os/zCore/commits/6e3444acb9906156cc544eb59756af9608d87de5"
+    },
+    "protected": false
+  },
+  {
+    "name": "net",
+    "commit": {
+      "sha": "8e322769a43f10e6af329de0ab8c0219be6e914f",
+      "url": "https://api.github.com/repos/rcore-os/zCore/commits/8e322769a43f10e6af329de0ab8c0219be6e914f"
+    },
+    "protected": false
+  }
+]
