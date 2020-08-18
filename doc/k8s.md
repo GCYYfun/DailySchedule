@@ -23,12 +23,13 @@ sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 
+
+
+## ===================================================
+
 ## Start
-
-
-
-kubeadm init
-
+kubeadm init  
+sudo kubeadm init --pod-network-cidr=192.168.0.0/16
 ## 普通 用户 运行 kubectl
   mkdir -p $HOME/.kube  
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config  
@@ -130,6 +131,7 @@ kubectl port-forward -n kubernetes-dashboard service/kubernetes-dashboard 8080:4
 
 外网访问 
 https://github.com/kubernetes/dashboard/blob/master/docs/user/accessing-dashboard/README.md#login-not-available
+
 ## 记住 token
 
 列出 令牌
@@ -153,14 +155,9 @@ kubeadm join --token <token> <control-plane-host>:<control-plane-port> --discove
 
 
 
-
-
-
 ## 切换 控制权
 
 拷贝 kubeconfig
-
-
 
 
 scp root@<control-plane-host>:/etc/kubernetes/admin.conf .
