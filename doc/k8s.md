@@ -192,3 +192,25 @@ systemctl restart docker
 systemctl status docker
 
 
+
+
+
+## 常用 
+
+查看 指定 名字的 服务？
+
+kubectl -n kubernetes-dashboard get service kubernetes-dashboard
+
+编辑？
+
+kubectl -n kubernetes-dashboard edit service kubernetes-dashboard
+
+
+集群信息？
+
+kubectl cluster-info
+
+
+获得 所有 pods 命名 空间
+
+kubectl get pods --all-namespaces -o wide
