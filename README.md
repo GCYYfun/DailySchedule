@@ -3763,3 +3763,30 @@ cpu 72核  1T内存
 | No. | Event | Result | Comment |
 |--|--|--|--|
 | 1 | 学习 | |
+
+
+<span id="136"></span>
+## Day 136 （2020-08-23）周日
+
+> GCYYfun
+
+### 今日事项
+
+ 
+| No. | Event | Result | Comment |
+|--|--|--|--|
+| 1 | 学习 | |
+
+
+<span id="137"></span>
+## Day 137 （2020-08-24）周一
+
+> GCYYfun
+
+### 今日事项
+
+ 
+| No. | Event | Result | Comment |
+|--|--|--|--|
+| 1 | 构思 测试 | |
+| 2 | 探究 使用 方式  | |
