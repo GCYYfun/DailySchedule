@@ -30,6 +30,9 @@ sudo apt-mark hold kubelet kubeadm kubectl
 ## Start
 kubeadm init  
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16
+
+多网卡 指定
+ kubeadm init --apiserver-advertise-address $(hostname -i) --pod-network-cidr 10.5.0.0/16
 ## 普通 用户 运行 kubectl
   mkdir -p $HOME/.kube  
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config  
@@ -214,3 +217,20 @@ kubectl cluster-info
 获得 所有 pods 命名 空间
 
 kubectl get pods --all-namespaces -o wide
+
+kubectl 
+
+get 
+
+controller :   
+deployment
+replicaSet
+DaemonSet
+StatefuleSet
+Job
+
+Pod
+
+Service
+
+Namespace
