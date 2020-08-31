@@ -3868,3 +3868,17 @@ cpu 72核  1T内存
 | No. | Event | Result | Comment |
 |--|--|--|--|
 |1|学习|
+
+
+<span id="144"></span>
+## Day 144 （2020-08-31）周一
+
+> GCYYfun
+
+### 今日事项
+
+ 
+| No. | Event      | Result | Comment |
+|-----|------------|--------|---------|
+| 1   | 整理 zcore   |
+| 2   | 整理 fuchsia |
