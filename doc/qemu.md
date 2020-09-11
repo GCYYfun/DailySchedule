@@ -89,4 +89,22 @@ kernel 也需要支持
 
 
 
+## qemu 的 安装
+
+ERROR: "cc" either does not exist or does not work
+
+gcc 
+
+ERROR: glib-2.48 gthread-2.0 is required to compile QEMU
+
+libglib2.0-dev
+
+ERROR: pixman >= 0.21.8 not present.
+       Please install the pixman devel package.
+
+sudo apt install libpixman-1-dev
+
+http://www.docin.com/p-1365613861.html
+
+
 TODO or GIVEUP in an entangled state

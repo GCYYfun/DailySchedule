@@ -1,0 +1,1227 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1161px" height="4571px" viewBox="-0.5 -0.5 1161 4571" content="&lt;mxfile host=&quot;c7ad0d8f-bc04-4f38-bfb6-03ff0f364b8e&quot; modified=&quot;2020-09-03T07:47:06.352Z&quot; agent=&quot;5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.2 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36&quot; etag=&quot;KOJ_5de-wFAZcjZP23-w&quot; version=&quot;13.1.3&quot;&gt;&lt;diagram id=&quot;6hGFLwfOUW9BJ-s0fimq&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="610" y="0" width="550" height="3800" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 548px; height: 1px; padding-top: 7px; margin-left: 612px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;droid sans mono&quot; , monospace , monospace , &quot;droid sans fallback&quot; ; font-weight: normal ; font-size: 14px ; line-height: 19px">
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Handles
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            handle_close-关闭一个句柄
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            handle_close_many-关闭多个句柄
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            handle_duplicate-创建重复的句柄（可选地，减少权限）
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            handle_replace-创建一个新的句柄（可选地，减少权限）并销毁旧的句柄
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Objects
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            object_get_child-通过对象的对象找到子对象
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            object_get_info-获取有关对象的信息·
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            object_get_property-读取对象属性·
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            object_set_profile-将配置文件应用于线程 *
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            object_set_property-修改对象属性·
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            object_signal-设置或清除对象上的用户信号·
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            object_signal_peer-设置或清除另一端的用户信号·
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            object_wait_many-等待多个对象上的信号·
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            object_wait_one-等待一个对象上的信号·
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            object_wait_async-信号更改的异步通知·
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Threads
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            thread_create-在进程中创建新线程
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            thread_exit-退出当前线程
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            thread_read_state-从线程读取寄存器状态
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            thread_start-导致新线程开始执行
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            thread_write_state-修改线程的寄存器状态
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Processes
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            process_create-在作业中创建新流程
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            process_read_memory-从进程的地址空间读取
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            process_start-使新进程开始执行
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            process_write_memory-写入进程的地址空间
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            process_exit-退出当前进程
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Jobs
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            job_create-在工作中创建新工作
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            job_set_critical-将流程设置为对作业至关重要
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            job_set_policy-修改作业及其后代的策略
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Tasks (Thread, Process, or Job)
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            task_create_exception_channel-在任务上创建异常通道
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            task_kill-导致任务停止运行
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            task_suspend-导致任务被挂起
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Profiles
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            profile_create-创建一个新的配置文件对象
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Exceptions
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            exception_get_thread-为异常线程创建一个句柄
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            exception_get_process-为异常进程创建一个句柄
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Channels
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            channel_call-同步发送消息并接收回复
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            channel_call_etc-同步发送消息并接收带有句柄信息的回复
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            channel_create-创建一个新频道
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            channel_read-接收来自频道的消息
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            channel_read_etc-从通道接收带有句柄信息的消息
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            channel_write-将消息写入通道
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            channel_write_etc-将消息写入通道并修改句柄
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Sockets
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            socket_create-创建一个新的套接字
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            socket_read-从套接字读取数据
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            socket_shutdown-防止读写
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            socket_write-将数据写入套接字
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Stream
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            zx_stream_create() -从VMO创建流
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            zx_stream_readv() -以当前寻道偏移量从流中读取数据
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            zx_stream_readv_at() -以给定的偏移量从流中读取数据
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            zx_stream_writev() -以当前寻道偏移量将数据写入流
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            zx_stream_writev_at() -以给定的偏移量将数据写入流
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            zx_stream_seek() -修改流的当前寻道偏移量
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Fifos
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            fifo_create-创建一个新的fifo
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            fifo_read-从fifo读取数据
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            fifo_write-将数据写入fifo
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Events and Event Pairs
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            event_create-创建一个事件
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            eventpair_create-创建一对关联的事件
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            system_get_event-检索系统事件的句柄
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Ports
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            port_create-创建一个端口
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            port_queue-将数据包发送到端口
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            port_wait-等待数据包到达端口
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            port_cancel-从async_wait取消通知
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Futexes
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            futex_wait-等待一个futex
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            futex_wake-在futex上唤醒服务员
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            futex_requeue-唤醒一些服务员并重新排队其他服务员
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Virtual Memory Objects (VMOs)
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmo_create-创建一个新的vmo
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmo_read-从vmo读取
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmo_write-写入vmo
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmo_create_child-创建vmo的子级
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmo_get_size-获取vmo的大小
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmo_set_size-调整vmo的大小
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmo_op_range-在vmo的范围上执行操作
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmo_replace_as_executable-向vmo添加执行权限
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmo_create_physical-创建一个VM对象，该对象引用物理内存的特定连续范围
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmo_set_cache_policy-为VMO保留的页面设置缓存策略
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Virtual Memory Address Regions (VMARs)
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmar_allocate-创建一个新的子VMAR
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmar_map-将VMO映射到进程
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmar_unmap-从进程取消映射内存区域
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmar_protect-调整内存访问权限
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmar_op_range-对映射到VMAR范围中的VMO执行操作
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmar_destroy-销毁VMAR及其所有子项
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Userspace Pagers
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pager_create-创建一个新的寻呼机对象
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pager_create_vmo-创建一个寻呼机拥有的vmo
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pager_detach_vmo-从vmo分离寻呼机
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pager_supply_pages-将页面供应到寻呼机拥有的vmo中
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pager_op_range-对具有寻呼机的vmo的范围执行操作
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Cryptographically Secure RNG
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            cprng_add_entropy
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            cprng_draw
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Time
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            nanosleep-睡眠数纳秒
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            clock_get-读取系统时钟
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            clock_get_monotonic-读取单调系统时钟
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            ticks_get-读取高精度计时器刻度
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            ticks_per_second-每秒读取高精度计时器的刻度数
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            deadline_after -将相对于现在的时间转换为绝对期限
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            clock_adjust
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Timers
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            timer_create-创建一个计时器对象
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            timer_set-启动计时器
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            timer_cancel-取消计时器
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Hypervisor guests
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            guest_create-创建虚拟机监控程序来宾
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            guest_set_trap-在虚拟机管理程序来宾中设置陷阱
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Virtual CPUs
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vcpu_create-创建一个虚拟cpu
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vcpu_resume-恢复执行虚拟cpu
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vcpu_interrupt-在虚拟cpu上引发中断
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vcpu_read_state-从虚拟cpu读取状态
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vcpu_write_state-将状态写入虚拟cpu
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            interrupt_bind_vcpu-将中断对象绑定到VCPU
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Global system information
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            system_get_dcache_line_size
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            system_get_features-获取特定于硬件的功能
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            system_get_num_cpus-获取CPU数量
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            system_get_physmem-获取物理内存大小
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            system_get_version_string-获取版本字符串
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Debug Logging
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            debuglog_create-创建内核管理的debuglog读取器或写入器
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            debuglog_write-将日志条目写入debuglog
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            debuglog_read-从debuglog读取日志条目
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            debug_read-待办事项（fxbug.dev/32938）
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            debug_write -TODO（fxbug.dev/32938）
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            debug_send_command -TODO（fxbug.dev/32938）
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Multi-function
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            vmar_unmap_handle_close_thread_exit-三合一
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            futex_wake_handle_close_thread_exit-三合一
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## System
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            system_mexec-使用新的内核和引导映像软重启系统
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            system_mexec_payload_get-返回一个ZBI，其中包含启动该系统所需的ZBI条目
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            system_powerctl
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## DDK
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            bti_create-创建一个新的总线事务启动器
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            bti_pin-固定页面并授予设备访问权限
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            bti_release_quarantine-释放所有隔离的PMT
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            cache_flush-刷新CPU数据和/或指令缓存
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            interrupt_ack-确认中断对象
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            interrupt_bind-将中断对象绑定到端口
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            interrupt_create-创建物理或虚拟中断对象
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            interrupt_destroy-销毁中断对象
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            interrupt_trigger-触发虚拟中断对象
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            interrupt_wait-等待中断对象
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            iommu_create-在内核中创建一个新的IOMMU对象
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pmt_unpin-取消固定页面并撤消设备对其的访问
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            resource_create-创建资源对象
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            smc_call-从用户空间进行SMC呼叫
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Display drivers
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            framebuffer_get_info
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            framebugger_set_range
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Tracing
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            ktrace_control
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            ktrace_read
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            ktrace_write
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            mtrace_control
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #569cd6 ; font-weight: bold">
+                                            ## Others/Work in progress
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            ioports_release
+                                        </span>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pc_firmware_tables
+                                        </span>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pci_add_subtract_io_range
+                                        </span>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pci_cfg_pio_rw
+                                        </span>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pci_config_read
+                                        </span>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pci_config_write
+                                        </span>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pci_enable_bus_master
+                                        </span>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pci_get_bar
+                                        </span>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pci_get_nth_device
+                                        </span>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pci_init
+                                        </span>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pci_map_interrupt
+                                        </span>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pci_query_irq_mode
+                                        </span>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pci_reset_device
+                                        </span>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            pci_set_irq_mode
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="612" y="19" fill="#000000" font-family="Helvetica" font-size="12px">
+                    ## Handles...
+                </text>
+            </switch>
+        </g>
+        <rect x="0" y="4240" width="240" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 238px; height: 1px; padding-top: 4247px; margin-left: 2px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;droid sans mono&quot; , monospace , monospace , &quot;droid sans fallback&quot; ; font-weight: normal ; font-size: 14px ; line-height: 19px">
+                                    <div>
+                                        <span style="color: #d4d4d4">
+                                            ProcessWaitAsyncCancelSelf
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="2" y="4259" fill="#000000" font-family="Helvetica" font-size="12px">
+                    ProcessWaitAsyncCancelSelf
+                </text>
+            </switch>
+        </g>
+        <rect x="350" y="3990" width="190" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 188px; height: 1px; padding-top: 3997px; margin-left: 352px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;droid sans mono&quot; , monospace , monospace , &quot;droid sans fallback&quot; ; font-weight: normal ; font-size: 14px ; line-height: 19px">
+                                    <div>
+                                        <span style="color: #4ec9b0">
+                                            zx
+                                        </span>
+                                        <span style="color: #d4d4d4">
+                                            ::
+                                        </span>
+                                        <span style="color: #4ec9b0">
+                                            process
+                                        </span>
+                                        <span style="color: #d4d4d4">
+                                            ::
+                                        </span>
+                                        <span style="color: #dcdcaa">
+                                            create
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="352" y="4009" fill="#000000" font-family="Helvetica" font-size="12px">
+                    zx::process::create
+                </text>
+            </switch>
+        </g>
+        <rect x="350" y="4090" width="180" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 178px; height: 1px; padding-top: 4097px; margin-left: 352px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;droid sans mono&quot; , monospace , monospace , &quot;droid sans fallback&quot; ; font-weight: normal ; font-size: 14px ; line-height: 19px">
+                                    <div>
+                                        <span style="color: #4ec9b0">
+                                            zx
+                                        </span>
+                                        <span style="color: #d4d4d4">
+                                            ::
+                                        </span>
+                                        <span style="color: #4ec9b0">
+                                            thread
+                                        </span>
+                                        <span style="color: #d4d4d4">
+                                            ::
+                                        </span>
+                                        <span style="color: #dcdcaa">
+                                            create
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="352" y="4109" fill="#000000" font-family="Helvetica" font-size="12px">
+                    zx::thread::create
+                </text>
+            </switch>
+        </g>
+        <rect x="350" y="4160" width="170" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 168px; height: 1px; padding-top: 4167px; margin-left: 352px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;droid sans mono&quot; , monospace , monospace , &quot;droid sans fallback&quot; ; font-weight: normal ; font-size: 14px ; line-height: 19px">
+                                    <div>
+                                        <span style="color: #9cdcfe">
+                                            process
+                                        </span>
+                                        <span style="color: #d4d4d4">
+                                            .
+                                        </span>
+                                        <span style="color: #dcdcaa">
+                                            duplicate
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="352" y="4179" fill="#000000" font-family="Helvetica" font-size="12px">
+                    process.duplicate
+                </text>
+            </switch>
+        </g>
+        <rect x="350" y="4230" width="210" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 208px; height: 1px; padding-top: 4237px; margin-left: 352px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;droid sans mono&quot; , monospace , monospace , &quot;droid sans fallback&quot; ; font-weight: normal ; font-size: 14px ; line-height: 19px">
+                                    <div>
+                                        <span style="color: #dcdcaa">
+                                            start_mini_process_etc
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="352" y="4249" fill="#000000" font-family="Helvetica" font-size="12px">
+                    start_mini_process_etc
+                </text>
+            </switch>
+        </g>
+        <rect x="350" y="4310" width="200" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 198px; height: 1px; padding-top: 4317px; margin-left: 352px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;droid sans mono&quot; , monospace , monospace , &quot;droid sans fallback&quot; ; font-weight: normal ; font-size: 14px ; line-height: 19px">
+                                    <div>
+                                        <span style="color: #dcdcaa">
+                                            mini_process_cmd_send
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="352" y="4329" fill="#000000" font-family="Helvetica" font-size="12px">
+                    mini_process_cmd_send
+                </text>
+            </switch>
+        </g>
+        <rect x="350" y="4400" width="160" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 158px; height: 1px; padding-top: 4407px; margin-left: 352px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;droid sans mono&quot; , monospace , monospace , &quot;droid sans fallback&quot; ; font-weight: normal ; font-size: 14px ; line-height: 19px">
+                                    <div>
+                                        <span style="color: #9cdcfe">
+                                            process
+                                        </span>
+                                        <span style="color: #d4d4d4">
+                                            .
+                                        </span>
+                                        <span style="color: #dcdcaa">
+                                            get_info
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="352" y="4419" fill="#000000" font-family="Helvetica" font-size="12px">
+                    process.get_info
+                </text>
+            </switch>
+        </g>
+        <rect x="350" y="4470" width="140" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 138px; height: 1px; padding-top: 4477px; margin-left: 352px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;droid sans mono&quot; , monospace , monospace , &quot;droid sans fallback&quot; ; font-weight: normal ; font-size: 14px ; line-height: 19px">
+                                    <div>
+                                        <span style="color: #9cdcfe">
+                                            process
+                                        </span>
+                                        <span style="color: #d4d4d4">
+                                            .
+                                        </span>
+                                        <span style="color: #dcdcaa">
+                                            kill
+                                        </span>
+                                        <span style="color: #d4d4d4">
+                                            ()
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="352" y="4489" fill="#000000" font-family="Helvetica" font-size="12px">
+                    process.kill()
+                </text>
+            </switch>
+        </g>
+        <rect x="350" y="4540" width="160" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 158px; height: 1px; padding-top: 4547px; margin-left: 352px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;droid sans mono&quot; , monospace , monospace , &quot;droid sans fallback&quot; ; font-weight: normal ; font-size: 14px ; line-height: 19px">
+                                    <div>
+                                        <span style="color: #9cdcfe">
+                                            process
+                                        </span>
+                                        <span style="color: #d4d4d4">
+                                            .
+                                        </span>
+                                        <span style="color: #dcdcaa">
+                                            wait_one
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="352" y="4559" fill="#000000" font-family="Helvetica" font-size="12px">
+                    process.wait_one
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>
