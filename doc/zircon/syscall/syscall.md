@@ -16,6 +16,8 @@ object_signal_peer-设置或清除另一端的用户信号·
 object_wait_many-等待多个对象上的信号·
 object_wait_one-等待一个对象上的信号·
 object_wait_async-信号更改的异步通知·
+
+
 ## Threads
 thread_create-在进程中创建新线程
 thread_exit-退出当前线程
@@ -38,9 +40,11 @@ task_kill-导致任务停止运行
 task_suspend-导致任务被挂起
 ## Profiles
 profile_create-创建一个新的配置文件对象
+
 ## Exceptions
 exception_get_thread-为异常线程创建一个句柄
 exception_get_process-为异常进程创建一个句柄
+
 ## Channels
 channel_call-同步发送消息并接收回复
 channel_call_etc-同步发送消息并接收带有句柄信息的回复
@@ -74,10 +78,12 @@ port_create-创建一个端口
 port_queue-将数据包发送到端口
 port_wait-等待数据包到达端口
 port_cancel-从async_wait取消通知
+
 ## Futexes
 futex_wait-等待一个futex
 futex_wake-在futex上唤醒服务员
 futex_requeue-唤醒一些服务员并重新排队其他服务员
+
 ## Virtual Memory Objects (VMOs)
 vmo_create-创建一个新的vmo
 vmo_read-从vmo读取
@@ -102,6 +108,7 @@ pager_create_vmo-创建一个寻呼机拥有的vmo
 pager_detach_vmo-从vmo分离寻呼机
 pager_supply_pages-将页面供应到寻呼机拥有的vmo中
 pager_op_range-对具有寻呼机的vmo的范围执行操作
+
 ## Cryptographically Secure RNG
 cprng_add_entropy
 cprng_draw
@@ -147,6 +154,7 @@ futex_wake_handle_close_thread_exit-三合一
 system_mexec-使用新的内核和引导映像软重启系统
 system_mexec_payload_get-返回一个ZBI，其中包含启动该系统所需的ZBI条目
 system_powerctl
+
 ## DDK
 bti_create-创建一个新的总线事务启动器
 bti_pin-固定页面并授予设备访问权限
