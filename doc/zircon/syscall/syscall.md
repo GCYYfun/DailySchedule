@@ -229,7 +229,221 @@ syscall_test_wrapper
 
 syscall_test_handle_create
 
-系统调用生成
-Syscall支持由生成//zircon/syscalls。首先运行该目录中的FIDL文件fidlc，生成中间格式。这种中间格式被kazoo占用，后者以多种语言为内核和用户空间生成输出。此输出包括用于内核和用户空间的C或C ++头，系统调用入口点，其他语言绑定，等等。
 
-该工具作为构建的一部分被调用，而不是检查其输出。
+
+## Unfinish
+
+### Objects  (3/10)
+| id | zircon syscall | description | zcore |
+|--|--|--|--|
+| 5 | object_get_child | find the child of an object by its koid | ⚠️ |
+| 6 | object_get_info | obtain information about an object | ⚠️ |
+| 7 | object_get_property | read an object property | ⚠️ |
+| 8 | object_set_profile | apply a profile to a thread |  |
+| 9 | object_set_property | modify an object property | ⚠️ |
+| 10 | object_signal | set or clear the user signals on an object | ⚠️ |
+| 11 | object_signal_peer | set or clear the user signals in the 
+| 12 | object_wait_many | wait for signals on multiple objects | ⚠️ |
+
+
+
+### Threads  (2/5)
+| id | zircon syscall | description | zcore |
+|--|--|--|--|
+| 16 | thread_exit |  | ⚠️ |
+| 17 | thread_read_state |  |
+| 19 | thread_write_state |  | ⚠️ |
+
+
+### Processes  (2/5)
+| id | zircon syscall       | description | zcore |
+|----|----------------------|-------------|-------|
+| 24 | process_exit         |             | ⚠️    |
+
+
+### Jobs (1/3)
+| id | zircon syscall   | description | zcore |
+|----|------------------|-------------|-------|
+| 26 | job_set_critical |             | ⚠️    |
+| 27 | job_set_policy   |             | ⚠️    |
+
+### Tasks  (1/3)
+| id | zircon syscall | description | zcore |
+|--|--|--|--|
+| 28 | task_create_exception_channel |  | ⚠️ |
+| 29 | task_kill |  |
+
+### Profiles 
+| id | zircon syscall | description | zcore |
+|----|----------------|-------------|-------|
+| 31 | profile_create |             |
+
+
+### Exceptions  
+| id | zircon syscall        | description | zcore |
+|----|-----------------------|-------------|-------|
+| 32 | exception_get_thread  |             |
+| 33 | exception_get_process |             |
+                           
+
+### Channels  (4/6)
+| id | zircon syscall    | description | zcore |
+|----|-------------------|-------------|-------|
+| 37 | channel_read_etc  |             | ⚠️
+| 39 | channel_write_etc |             | ⚠️
+
+
+### Stream     
+| id | zircon syscall   | description | zcore |
+|----|------------------|-------------|-------|
+| 44 | stream_create    |             |
+| 45 | stream_readv     |             |
+| 46 | stream_readv_at  |             |
+| 47 | stream_writev    |             |
+| 48 | stream_writev_at |             |
+| 49 | stream_seek      |             |
+
+
+### Fifos           
+| id | zircon syscall | description | zcore |
+|----|----------------|-------------|-------|
+| 50 | fifo_create    |             | ⚠️
+| 51 | fifo_read      |             | ⚠️
+| 52 | fifo_write     |             | ⚠️
+
+
+### Events and Event Pairs  (1/3)
+| id | zircon syscall   | description | zcore |
+|----|------------------|-------------|-------|
+| 54 | eventpair_create |             | ⚠️
+| 55 | system_get_event |             |
+
+
+### Ports  (3/4)
+| id | zircon syscall | description | zcore |
+|----|----------------|-------------|-------|
+| 57 | port_queue     |             | ⚠️
+| 59 | port_cancel    |             | 
+
+
+### Futexes (2/3)
+| id | zircon syscall | description | zcore |
+|----|----------------|-------------|-------|
+| 62 | futex_requeue  |             | ⚠️
+
+
+### Virtual Memory Objects (VMOs)  (5/10)
+| id | zircon syscall | description | zcore |
+|--|--|--|--|
+| 65 | vmo_write |  | ⚠️ |
+| 66 | vmo_create_child |  | ⚠️ |
+| 67 | vmo_get_size |  | ⚠️ |
+| 69 | vmo_op_range |  | ⚠️ |
+| 72 | vmo_set_cache_policy |  | ⚠️ |
+
+
+### Virtual Memory Address Regions (VMARs)  (4/6)
+| id | zircon syscall | description | zcore |
+|----|----------------|-------------|-------|
+| 76 | vmar_protect   |             | ⚠️
+| 77 | vmar_op_range  |             |
+
+
+### Userspace Pagers             
+| id | zircon syscall     | description | zcore |
+|----|--------------------|-------------|-------|
+| 79 | pager_create       |             |
+| 80 | pager_create_vmo   |             |
+| 81 | pager_detach_vmo   |             |
+| 82 | pager_supply_pages |             |
+| 83 | pager_op_range     |             |
+
+
+### Cryptographically Secure RNG  
+| id | zircon syscall    | description | zcore |
+|----|-------------------|-------------|-------|
+| 84 | cprng_add_entropy |             |
+| 85 | cprng_draw        |             |
+         
+
+### Time  (1/7)
+| id | zircon syscall      | description | zcore |
+|----|---------------------|-------------|-------|
+| 86 | nanosleep           |             | ⚠️
+| 87 | clock_get           |             | ⚠️
+| 89 | ticks_get           |             |
+| 90 | ticks_per_second    |             |
+| 91 | deadline_after      |             |
+| 92 | clock_adjust        |             | ⚠️
+
+
+### Virtual CPUs           
+| id  | zircon syscall      | description | zcore |
+|-----|---------------------|-------------|-------|
+| 103 | interrupt_bind_vcpu |             |
+
+
+### Global system information  
+| id  | zircon syscall              | description | zcore |
+|-----|-----------------------------|-------------|-------|
+| 104 | system_get_dcache_line_size |             |
+| 105 | system_get_features         |             |
+| 106 | system_get_num_cpus         |             |
+| 107 | system_get_physmem          |             |
+| 108 | system_get_version_string   |             |
+
+
+### Debug Logging  (1/6)
+| id  | zircon syscall     | description | zcore |
+|-----|--------------------|-------------|-------|
+| 110 | debuglog_write     |             | ⚠️
+| 111 | debuglog_read      |             |
+| 112 | debug_read         |             |
+| 113 | debug_write        |             |
+| 114 | debug_send_command |             |
+
+
+### Multi-function 
+| id | zircon syscall | description | zcore |
+|--|--|--|--|
+| 115 | vmar_unmap_handle_close_thread_exit |  |
+| 116 | futex_wake_handle_close_thread_exit |  |
+                        
+### System     
+| id | zircon syscall | description | zcore |
+|--|--|--|--|
+| 117 | system_mexec |  |
+| 118 | system_mexec_payload_get |  |
+| 119 | system_powerctl |  |
+
+
+### DDK  (11/14)                                 
+| id  | zircon syscall         | description | zcore |
+|-----|------------------------|-------------|-------|
+| 123 | cache_flush            |             |
+| 132 | resource_create        |             |
+| 133 | smc_call               |             |
+
+
+### Display drivers  
+| id  | zircon syscall        | description | zcore |
+|-----|-----------------------|-------------|-------|
+| 134 | framebuffer_get_info  |             |
+| 135 | framebugger_set_range |             |
+
+### Tracing               
+| id  | zircon syscall | description | zcore |
+|-----|----------------|-------------|-------|
+| 136 | ktrace_control |             |
+| 137 | ktrace_read    |             |
+| 138 | ktrace_write   |             |
+| 139 | mtrace_control |             |
+
+
+### Others/Work in progress  (10/14)               
+| id  | zircon syscall            | description | zcore |
+|-----|---------------------------|-------------|-------|
+| 140 | ioports_release           |             |
+| 141 | pc_firmware_tables        |             | ⚠️
+| 152 | pci_reset_device          |             |
+| 153 | pci_set_irq_mode          |             |
