@@ -60,7 +60,7 @@ os 内部各功能的 开发实现、内核里的各个模块 添加改进与完
 
 zcore 中 有 两套 syscall 一个 是 linux的 一个 是 zircon 的
 
-先说 zircon 的 
+### zircon syscall 的  情况
 
 一共 有 154 个 syscall
 
@@ -232,3 +232,453 @@ zcore 中 有 两套 syscall 一个 是 linux的 一个 是 zircon 的
     Sys::PCI_RESET_DEVICE => unimplemented!("pci_reset_device"),
 ```
 
+测试 用例 情况 统计 
+
+目前大约 有 290 和 测试 用例 没有 通过
+
+问题 出现 在 有的 syscall 没有实现
+
+或者 有的 topic 没有定义
+
+或者 实现 有些 边界 没有 catch 
+
+其中 内存 和 进程 部分  占有 100 个左右
+
+剩下 的 其他 功能 占有 60左右
+
+get info 有 38 个 左右
+
+pager 92个 
+
+```
+unimplemented 111 
+
+unimplemented: PAGER_CREATE 82 + 
+
+unimplemented: PROFILE_CREATE 19 +
+
+unimplemented: IOPORTS_RELEASE 3
+
+unimplemented: VMAR_OP_RANGE 6
+
+unimplemented: COUNT ？？？？ 
+
+
+pager 92
+
+getinfo 38 zircon/system/utest/core/object-info
+
+
+topic  10
+
+// 内存 42
+
+VmoTestCase 13 
+
+VmoClone2TestCase 3
+
+VmoSliceTestCase 1
+
+vmar 22 
+
+MemoryMappingTest 3
+
+
+// 进程 57
+
+ProcessTest 15
+
+Threads 20
+
+ThreadGetInfoTest 8
+
+JobTest 14
+
+
+// port 7
+
+PortTest 5   PORT_CANCEL
+
+PortStressTest 2 PORT_CANCEL
+
+
+// 杂七杂八 51
+
+PROFILE_CREATE 19
+
+systemEvent 9
+
+SocketTest 2
+
+resource 11
+
+BadAccessTest 4
+
+DefaultExceptionHandlerTest 1
+
+HandleCloseTest.ManyDuplicateTest  1
+
+SyncMutex.NoRecursion  1
+
+Bti 2 
+```
+
+这些 信息 要怎么 使用 报错 信息 来帮助 开发
+
+参见 [fix](A_core_test_fix_introduction.md)
+
+
+补全 改进 syscall 是 有 一定 套路 但是 更 具体的 需要 对 那个 object 有一些 了解 、建议 根据 object 选择 一些 syscall 进行 完善
+
+比如 SocketTest 就属于 socket object 而且只有两个 、看起来 应该 比较容易 上手 
+
+可以 切片式的 去 看下 那个 object 进而 查找问题
+
+那...举个例子 就去看下 这个 socket
+
+```
+
+197 ============================== SocketTest.ReadIntoBadBuffer ==============================
+[ RUN      ] SocketTest.ReadIntoBadBuffer
+../../zircon/system/utest/core/socket/socket.cc:715: Failure: Expected zx::vmar::root_self()->map(0, vmo, 0, kSize, 0, &addr) is ZX_OK. 
+    Expected: ZX_OK
+    Which is: ZX_OK(0)
+    Actual  : zx::vmar::root_self()->map(0, vmo, 0, kSize, 0, &addr)
+    Which is: ZX_ERR_INVALID_ARGS(-10)
+[  FAILED  ] SocketTest.ReadIntoBadBuffer (2 ms)
+============================== End ==============================
+
+
+198 ============================== SocketTest.WriteFromBadBuffer ==============================
+[ RUN      ] SocketTest.WriteFromBadBuffer
+../../zircon/system/utest/core/socket/socket.cc:750: Failure: Expected zx::vmar::root_self()->map(0, vmo, 0, kSize, 0, &addr) is ZX_OK. 
+    Expected: ZX_OK
+    Which is: ZX_OK(0)
+    Actual  : zx::vmar::root_self()->map(0, vmo, 0, kSize, 0, &addr)
+    Which is: ZX_ERR_INVALID_ARGS(-10)
+[  FAILED  ] SocketTest.WriteFromBadBuffer (3 ms)
+============================== End ==============================
+```
+
+啊 、看到 这个 报错 信息 发现 好像 跟 socket 没什么 关系、像是 vmar map 的 问题
+
+根据提示 去 到 fuchsia 代码里 看看这两行
+
+方便起见 我把 fuchsia 的 代码 占了过来
+
+
+```
+703    TEST(SocketTest, ReadIntoBadBuffer) {
+704      zx::socket a, b;
+705      ASSERT_OK(zx::socket::create(0, &a, &b));
+706
+707      ASSERT_OK(a.write(0, "A", 1, nullptr));
+708      constexpr size_t kSize = 4096;
+709      zx::vmo vmo;
+710      ASSERT_OK(zx::vmo::create(kSize, 0, &vmo));
+711    
+712      zx_vaddr_t addr;
+713    
+714      // Note, no options means the buffer is not writable.
+715      ASSERT_OK(zx::vmar::root_self()->map(0, vmo, 0, kSize, 0, &addr));
+716    
+717      size_t actual = 99;
+718      void* buffer = reinterpret_cast<void*>(addr);
+719      ASSERT_NE(nullptr, buffer);
+720    
+721      // Will fail because buffer points at memory that isn't writable.
+722      EXPECT_EQ(ZX_ERR_INVALID_ARGS, b.read(0, buffer, 1, &actual));
+723    
+724      // See that it's unmodified.
+725      //
+726      // N.B. this test is actually stricter than what is promised by the interface.  The contract
+727      // does not explicitly promise that |actual| is unmodified on error.  If you find that this test
+728      // has failed, it does not necessarily indicate a bug.
+729      EXPECT_EQ(99, actual);
+730    }
+
+
+
+
+
+739    TEST(SocketTest, WriteFromBadBuffer) {
+740      zx::socket a, b;
+741      ASSERT_OK(zx::socket::create(0, &a, &b));
+742
+743      constexpr size_t kSize = 4096;
+744      zx::vmo vmo;
+745      ASSERT_OK(zx::vmo::create(kSize, 0, &vmo));
+746
+747      zx_vaddr_t addr;
+748
+749      // Note, no options means the buffer is not readable.
+750      ASSERT_OK(zx::vmar::root_self()->map(0, vmo, 0, kSize, 0, &addr));
+751
+752      void* buffer = reinterpret_cast<void*>(addr);
+753      ASSERT_NE(nullptr, buffer);
+754
+755      // Will fail because buffer points at memory that isn't readable.
+756      size_t actual;
+757      EXPECT_EQ(ZX_ERR_INVALID_ARGS, b.write(0, buffer, 1, &actual));
+758        }
+```
+
+找到 715 和 750 
+
+如下
+
+```
+// Note, no options means the buffer is not writable.
+  ASSERT_OK(zx::vmar::root_self()->map(0, vmo, 0, kSize, 0, &addr));
+
+// Note, no options means the buffer is not readable.
+  ASSERT_OK(zx::vmar::root_self()->map(0, vmo, 0, kSize, 0, &addr));
+```
+
+看来 跟这个 测试 名字 一样 就是对 读写 的一些 边界 条件 作 测试 最后 验证 socket 是否能正常读写
+
+这里是 不给 读写 权限 看看 是否 可以 通过
+
+再接下来 就是 深入 的 去看 zcore的源代码 
+
+需要 对 socket 和 vmar 有一些 了解 、更便于开发
+
+
+
+### linux  syscall 的 情况
+
+
+rcore 实现  
+不到 172 个 （包括 显式标注的未实现）
+ 
+zcore 实现 
+不到 149  个 （包括 显式标注的未实现）
+
+有  30个 rcore  实现 但 zcore 还未 完成 （包括 注释）
+
+如下 
+```
+
+            SYS_RT_SIGRETURN => self.sys_rt_sigreturn(),
+            SYS_KILL => self.sys_kill(args[0] as isize, args[1]),
+
+
+            // socket
+            SYS_SOCKET => self.sys_socket(args[0], args[1], args[2]),
+            SYS_CONNECT => self.sys_connect(args[0], args[1] as *const SockAddr, args[2]),
+            SYS_ACCEPT => self.sys_accept(args[0], args[1] as *mut SockAddr, args[2] as *mut u32),
+            SYS_ACCEPT4 => self.sys_accept(args[0], args[1] as *mut SockAddr, args[2] as *mut u32), // use accept for accept4
+            SYS_SENDTO => self.sys_sendto(
+                args[0],
+                args[1] as *const u8,
+                args[2],
+                args[3],
+                args[4] as *const SockAddr,
+                args[5],
+            ),
+            SYS_RECVFROM => self.sys_recvfrom(
+                args[0],
+                args[1] as *mut u8,
+                args[2],
+                args[3],
+                args[4] as *mut SockAddr,
+                args[5] as *mut u32,
+            ),
+            SYS_RECVMSG => self.sys_recvmsg(args[0], args[1] as *mut MsgHdr, args[2]),
+            SYS_SHUTDOWN => self.sys_shutdown(args[0], args[1]),
+            SYS_BIND => self.sys_bind(args[0], args[1] as *const SockAddr, args[2]),
+            SYS_LISTEN => self.sys_listen(args[0], args[1]),
+            SYS_GETSOCKNAME => {
+                self.sys_getsockname(args[0], args[1] as *mut SockAddr, args[2] as *mut u32)
+            }
+            SYS_GETPEERNAME => {
+                self.sys_getpeername(args[0], args[1] as *mut SockAddr, args[2] as *mut u32)
+            }
+            SYS_SETSOCKOPT => {
+                self.sys_setsockopt(args[0], args[1], args[2], args[3] as *const u8, args[4])
+            }
+            SYS_GETSOCKOPT => self.sys_getsockopt(
+                args[0],
+                args[1],
+                args[2],
+                args[3] as *mut u8,
+                args[4] as *mut u32,
+            ),
+
+            // process
+
+            SYS_TKILL => self.sys_tkill(args[0], args[1]),
+
+
+            // system
+            SYS_GETPGID => self.sys_getpgid(args[0]),
+            SYS_SETPGID => self.sys_setpgid(args[0], args[1]),
+            SYS_SETPRIORITY => self.sys_set_priority(args[0]),
+            SYS_REBOOT => self.sys_reboot(
+                args[0] as u32,
+                args[1] as u32,
+                args[2] as u32,
+                args[3] as *const u8,
+            ),
+
+            // kernel module
+            SYS_INIT_MODULE => {
+                self.sys_init_module(args[0] as *const u8, args[1] as usize, args[2] as *const u8)
+            }
+            SYS_FINIT_MODULE => {
+                debug!("[LKM] sys_finit_module is unimplemented");
+                Err(SysError::ENOSYS)
+            }
+            SYS_DELETE_MODULE => self.sys_delete_module(args[0] as *const u8, args[1] as u32),
+
+            // custom
+            SYS_MAP_PCI_DEVICE => self.sys_map_pci_device(args[0], args[1]),
+            SYS_GET_PADDR => {
+                self.sys_get_paddr(args[0] as *const u64, args[1] as *mut u64, args[2])
+            }
+
+    }
+
+    #[cfg(target_arch = "x86_64")]
+    async fn x86_64_syscall(&mut self, id: usize, args: [usize; 6]) -> Option<SysResult> {
+        let ret = match id {
+            SYS_SYMLINK => self.sys_symlink(args[0] as *const u8, args[1] as *const u8),
+            SYS_EPOLL_CREATE => self.sys_epoll_create(args[0]),
+            SYS_EPOLL_WAIT => {
+                self.sys_epoll_wait(args[0], args[1] as *mut EpollEvent, args[2], args[3])
+            }
+
+
+```
+linux 的 syscall  就建议 先 根 rcore 看齐、根据 需要 跑得应用 在 相应的 添加、
+
+这里 给出 libc-test的 测试 结果
+
+根 据 失败的 测例 去找 源代码 看是 那里 除了问题
+
+失败
+```
+FAILED:
+/libc-test/src/functional/socket.exe
+/libc-test/src/functional/ipc_sem.exe
+/libc-test/src/regression/pthread-robust-detach.exe
+/libc-test/src/functional/ipc_msg.exe
+/libc-test/src/functional/utime.exe
+/libc-test/src/math/fmal.exe
+/libc-test/src/functional/tls_align.exe
+/libc-test/src/math/powf.exe
+/libc-test/src/functional/strtod_long.exe
+/libc-test/src/functional/strptime.exe
+/libc-test/src/functional/ipc_shm.exe
+/libc-test/src/regression/getpwnam_r-crash.exe
+/libc-test/src/regression/pthread_exit-dtor.exe
+/libc-test/src/regression/sigreturn.exe
+/libc-test/src/functional/pthread_cancel-points.exe
+/libc-test/src/functional/pthread_robust.exe
+/libc-test/src/functional/fcntl.exe
+/libc-test/src/common/runtest.exe
+/libc-test/src/regression/pthread_atfork-errno-clobber.exe
+/libc-test/src/regression/getpwnam_r-errno.exe
+/libc-test/src/regression/daemon-failure.exe
+/libc-test/src/functional/vfork.exe
+/libc-test/src/regression/fflush-exit.exe
+/libc-test/src/functional/tls_align_dlopen.exe
+/libc-test/src/regression/statvfs.exe
+```
+
+超时
+```
+TIMEOUT:
+/libc-test/src/regression/pthread_cond_wait-cancel_ignored.exe
+/libc-test/src/functional/tls_local_exec.exe
+/libc-test/src/functional/pthread_mutex.exe
+/libc-test/src/functional/pthread_mutex_pi.exe
+/libc-test/src/functional/wcsstr.exe
+/libc-test/src/regression/pthread_cond-smasher.exe
+/libc-test/src/functional/time.exe
+/libc-test/src/functional/dirname.exe
+/libc-test/src/functional/inet_pton.exe
+/libc-test/src/functional/pthread_cancel.exe
+/libc-test/src/functional/sem_open.exe
+/libc-test/src/functional/search_lsearch.exe
+/libc-test/src/regression/pthread_once-deadlock.exe
+/libc-test/src/regression/pthread_condattr_setclock.exe
+/libc-test/src/regression/raise-race.exe
+/libc-test/src/functional/tls_init_dlopen.exe
+/libc-test/src/functional/string_strstr.exe
+```
+
+
+比如 /libc-test/src/functional/socket.exe
+
+libc-test 代码 
+```
+int main(void)
+{
+	struct sockaddr_in sa = { .sin_family = AF_INET };
+	int s, c, t;
+	char buf[100];
+
+	TESTE((s=socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP))>=0);
+	TESTE(bind(s, (void *)&sa, sizeof sa)==0);
+	TESTE(getsockname(s, (void *)&sa, (socklen_t[]){sizeof sa})==0);
+
+	TESTE(setsockopt(s, SOL_SOCKET, SO_RCVTIMEO,
+		&(struct timeval){.tv_usec=1}, sizeof(struct timeval))==0);
+
+	TESTE((c=socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP))>=0);
+	sa.sin_addr.s_addr = htonl(0x7f000001);
+	TESTE(sendto(c, "x", 1, 0, (void *)&sa, sizeof sa)==1);
+	TESTE(recvfrom(s, buf, sizeof buf, 0, (void *)&sa, (socklen_t[]){sizeof sa})==1);
+	TEST(buf[0]=='x', "'%c'\n", buf[0]);
+
+	close(c);
+	close(s);
+
+	memset(&sa, 0, sizeof sa);
+	sa.sin_family = AF_INET;
+	TESTE((s=socket(PF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_TCP))>=0);
+	TEST(fcntl(s, F_GETFD)&FD_CLOEXEC, "SOCK_CLOEXEC did not work\n");
+	TESTE(bind(s, (void *)&sa, sizeof sa)==0);
+	TESTE(getsockname(s, (void *)&sa, (socklen_t[]){sizeof sa})==0);
+	sa.sin_addr.s_addr = htonl(0x7f000001);
+
+	TESTE(listen(s, 1)==0);
+
+	TESTE((c=socket(PF_INET, SOCK_STREAM|SOCK_NONBLOCK, IPPROTO_TCP))>=0);
+	TEST(fcntl(c, F_GETFL)&O_NONBLOCK, "SOCK_NONBLOCK did not work\n");
+
+	TESTE(connect(c, (void *)&sa, sizeof sa)==0 || errno==EINPROGRESS);
+
+	TESTE((t=accept(s, (void *)&sa, &(socklen_t){sizeof sa}))>=0);
+
+	close(t);
+	close(c);
+	close(s);
+
+	return t_status;
+}
+
+```
+
+在其中 找出 可能 的 错误 
+
+看测试用例 调用了 什么 syscall
+
+比如这个 可能就有 
+
+```
+41 socket
+49 bind
+51 getsockname
+54 setsockopt
+44 sendto
+45 recvfrom
+3 close
+72 fcntl
+50 listen
+43 accept
+
+```
+
+这些 syscall 排查改进和完善
