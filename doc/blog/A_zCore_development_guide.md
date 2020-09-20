@@ -216,7 +216,6 @@ zcore 中 有 两套 syscall 一个 是 linux的 一个 是 zircon 的
 
 目前大约 有 290 和 测试 用例 没有 通过 [错误log信息](info.txt)
 
-
 问题 出现 在 有的 syscall 没有实现
 
 或者 有的 topic 没有定义
