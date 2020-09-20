@@ -112,14 +112,11 @@ zcore 中 有 两套 syscall 一个 是 linux的 一个 是 zircon 的
     // 1 Handles 4/4
 
     // 2 Objects 9/10
- 
     Sys::OBJECT_SET_PROFILE => unimplemented!("object_set_property"),
-
 
     // 3 Threads 5/5
 
     // 4 Processes 5/5
-
 
     // 5 Jobs 3/3
  
@@ -130,22 +127,17 @@ zcore 中 有 两套 syscall 一个 是 linux的 一个 是 zircon 的
 
     // 8 Exceptions 2/2
 
-
     // 9 Channels 5/7
     Sys::CHANNEL_CALL => unimplemented!("channel_call")
     Sys::CHANNEL_CALL_ETC => unimplemented!("channel_call_ETC")
 
-
     // 10 Sockets 4/4
 
-
     // 11 Stream 6/6
-
 
     // 12 Fifos 3/3
 
     // 13 Events and Event Pairs 3/3
-
 
     // 14 Ports 3/4
     Sys::PORT_CANCEL => {
@@ -155,14 +147,10 @@ zcore 中 有 两套 syscall 一个 是 linux的 一个 是 zircon 的
 
     // 15 Futexes 4/3
 
-
-
     // 16 Virtual Memory Objects (VMOs) 11/10
 
     // 17 Virtual Memory Address Regions (VMARs) 5/6
-
     Sys::VMAR_OP_RANGE => unimplemented!("vmar_op_range"),
-
 
     // 18 Userspace Pagers 0/5
     Sys::PAGER_CREATE => unimplemented!("pager_create"),
@@ -176,20 +164,16 @@ zcore 中 有 两套 syscall 一个 是 linux的 一个 是 zircon 的
     Sys::CPRNG_DRAW => unimplemented!("cprng_draw")
 
     // 20 Time 0/7
-
     Sys::CLOCK_GET_MONOTONIC => unimplemented!("clock_get_monotonic"),
     Sys::TICKS_GET => unimplemented!("ticks_get"),
     Sys::TICKS_PER_SECOND => unimplemented!("ticks_per_second"),
     Sys::DEADLINE_AFTER => unimplemented!("deadline_after"),
 
-
     // 21 Timers 3/3
 
     // 22 Hypervisor guests 2/2
 
-
     // 23 Virtual CPUs 5/6
-
     Sys::INTERRUPT_BIND_VCPU => unimplemented!("interrupt_bind_vcpu"), 
 
     // 24 Global system information 0/5
@@ -200,11 +184,9 @@ zcore 中 有 两套 syscall 一个 是 linux的 一个 是 zircon 的
     Sys::SYSTEM_GET_VERSION_STRING => unimplemented!("system_get_version_string"),
 
     // 25 Debug Logging 5/6
-
     Sys::DEBUG_SEND_COMMAND => unimplemented!("debug_send_command"),
 
     // 26 Multi-function 2/2
-
 
     // 27 System 0/3
     Sys::SYSTEM_MEXEC => unimplemented!("system_mexec"),
@@ -213,8 +195,6 @@ zcore 中 有 两套 syscall 一个 是 linux的 一个 是 zircon 的
 
     // 28 DDK 13/14
     Sys::CACHE_FLUSH => unimplemented!("cache_flush"),
-
-
     Sys::SMC_CALL => unimplemented!("smc_call"),
 
     // 29 Display drivers
@@ -234,7 +214,8 @@ zcore 中 有 两套 syscall 一个 是 linux的 一个 是 zircon 的
 
 测试 用例 情况 统计 
 
-目前大约 有 290 和 测试 用例 没有 通过
+目前大约 有 290 和 测试 用例 没有 通过 [错误log信息](info.txt)
+
 
 问题 出现 在 有的 syscall 没有实现
 
@@ -364,7 +345,7 @@ Bti 2
 
 根据提示 去 到 fuchsia 代码里 看看这两行
 
-方便起见 我把 fuchsia 的 代码 占了过来
+方便起见 我把 fuchsia 的 代码 展示再这里
 
 
 ```
@@ -439,7 +420,7 @@ Bti 2
 
 这里是 不给 读写 权限 看看 是否 可以 通过
 
-再接下来 就是 深入 的 去看 zcore的源代码 
+再接下来 就是 深入 的 去看 zcore的源代码 、也可找fuchsia C++ 代码作参考、
 
 需要 对 socket 和 vmar 有一些 了解 、更便于开发
 
@@ -474,6 +455,8 @@ Socket是双向流传输。与channels不同，socket只能移动数据（而不
 
 ```
 
+根据 object 的 意思 看zcore 实现、补充完善syscll、
+
 在这个测试用例 里 也 涉及到 socket 读写的syscall 
 
 可以 查阅   socket_read 具体 定义  
@@ -499,12 +482,12 @@ https://fuchsia.dev/fuchsia-src/reference/syscalls
 
 
 rcore 实现  
-不到 172 个 （包括 显式标注的未实现）
+不到 172 个 （包括 显式标注的未实现的syscall）
  
 zcore 实现 
-不到 149  个 （包括 显式标注的未实现）
+不到 149  个 （包括 显式标注的未实现syscall）
 
-有  30个 rcore  实现 但 zcore 还未 完成 （包括 注释）
+有  30个 rcore  实现 但 zcore 还未 完成
 
 如下 
 ```
@@ -514,82 +497,43 @@ zcore 实现
 
 
             // socket
-            SYS_SOCKET => self.sys_socket(args[0], args[1], args[2]),
-            SYS_CONNECT => self.sys_connect(args[0], args[1] as *const SockAddr, args[2]),
-            SYS_ACCEPT => self.sys_accept(args[0], args[1] as *mut SockAddr, args[2] as *mut u32),
-            SYS_ACCEPT4 => self.sys_accept(args[0], args[1] as *mut SockAddr, args[2] as *mut u32), // use accept for accept4
-            SYS_SENDTO => self.sys_sendto(
-                args[0],
-                args[1] as *const u8,
-                args[2],
-                args[3],
-                args[4] as *const SockAddr,
-                args[5],
-            ),
-            SYS_RECVFROM => self.sys_recvfrom(
-                args[0],
-                args[1] as *mut u8,
-                args[2],
-                args[3],
-                args[4] as *mut SockAddr,
-                args[5] as *mut u32,
-            ),
-            SYS_RECVMSG => self.sys_recvmsg(args[0], args[1] as *mut MsgHdr, args[2]),
-            SYS_SHUTDOWN => self.sys_shutdown(args[0], args[1]),
-            SYS_BIND => self.sys_bind(args[0], args[1] as *const SockAddr, args[2]),
-            SYS_LISTEN => self.sys_listen(args[0], args[1]),
-            SYS_GETSOCKNAME => {
-                self.sys_getsockname(args[0], args[1] as *mut SockAddr, args[2] as *mut u32)
-            }
-            SYS_GETPEERNAME => {
-                self.sys_getpeername(args[0], args[1] as *mut SockAddr, args[2] as *mut u32)
-            }
-            SYS_SETSOCKOPT => {
-                self.sys_setsockopt(args[0], args[1], args[2], args[3] as *const u8, args[4])
-            }
-            SYS_GETSOCKOPT => self.sys_getsockopt(
-                args[0],
-                args[1],
-                args[2],
-                args[3] as *mut u8,
-                args[4] as *mut u32,
-            ),
+            SYS_SOCKET =>
+            SYS_CONNECT => 
+            SYS_ACCEPT => 
+            SYS_ACCEPT4 => 
+            SYS_SENDTO 
+            SYS_RECVFROM => 
+            SYS_RECVMSG => 
+            SYS_SHUTDOWN => 
+            SYS_BIND => 
+            SYS_LISTEN => 
+            SYS_GETSOCKNAME => 
+            SYS_GETPEERNAME => 
+            SYS_SETSOCKOPT => 
+            SYS_GETSOCKOPT => 
 
             // process
 
-            SYS_TKILL => self.sys_tkill(args[0], args[1]),
+            SYS_TKILL => 
 
 
             // system
-            SYS_GETPGID => self.sys_getpgid(args[0]),
-            SYS_SETPGID => self.sys_setpgid(args[0], args[1]),
-            SYS_SETPRIORITY => self.sys_set_priority(args[0]),
-            SYS_REBOOT => self.sys_reboot(
-                args[0] as u32,
-                args[1] as u32,
-                args[2] as u32,
-                args[3] as *const u8,
-            ),
+            SYS_GETPGID => 
+            SYS_SETPGID => 
+            SYS_SETPRIORITY => 
+            SYS_REBOOT =>
 
             // kernel module
-            SYS_INIT_MODULE => {
-                self.sys_init_module(args[0] as *const u8, args[1] as usize, args[2] as *const u8)
-            }
-            SYS_FINIT_MODULE => {
-                debug!("[LKM] sys_finit_module is unimplemented");
-                Err(SysError::ENOSYS)
-            }
-            SYS_DELETE_MODULE => self.sys_delete_module(args[0] as *const u8, args[1] as u32),
+            SYS_INIT_MODULE =>
+            SYS_FINIT_MODULE =>
+            SYS_DELETE_MODULE => 
 
             // custom
-            SYS_MAP_PCI_DEVICE => self.sys_map_pci_device(args[0], args[1]),
-            SYS_GET_PADDR => {
-                self.sys_get_paddr(args[0] as *const u64, args[1] as *mut u64, args[2])
-            }
+            SYS_MAP_PCI_DEVICE => 
+            SYS_GET_PADDR =>
 
     }
 
-    #[cfg(target_arch = "x86_64")]
     async fn x86_64_syscall(&mut self, id: usize, args: [usize; 6]) -> Option<SysResult> {
         let ret = match id {
             SYS_SYMLINK => self.sys_symlink(args[0] as *const u8, args[1] as *const u8),
@@ -597,10 +541,10 @@ zcore 实现
             SYS_EPOLL_WAIT => {
                 self.sys_epoll_wait(args[0], args[1] as *mut EpollEvent, args[2], args[3])
             }
-
+        }
 
 ```
-linux 的 syscall  就建议 先 根 rcore 看齐、根据 需要 跑得应用 在 相应的 添加、
+可以根据 这个 列表 在去 具体 查看 这些 syscall 的 实现 进度
 
 这里 给出 libc-test的 测试 结果
 
