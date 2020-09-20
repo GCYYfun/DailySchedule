@@ -102,9 +102,9 @@ zcore 中 有 两套 syscall 一个 是 linux的 一个 是 zircon 的
 
 共 31个 对象
 
-- 100% Finished （已经完成） = 61  
-- XX%  0<XX<100% (部分完成/不完善) = 56
-- 0%  （完全没做）= 37
+- 100% Finished （已经完成） = 61 ++  (不完全统计)
+- XX%  0<XX<100% (部分完成/不完善) = 56 -- (不完全统计)
+- 0%  （完全没做）= 37       (完全统计)
 
 完全 没有 实现的 如下 所示
 
@@ -428,10 +428,10 @@ Bti 2
 如下
 
 ```
-// Note, no options means the buffer is not writable.
+715    // Note, no options means the buffer is not writable.
   ASSERT_OK(zx::vmar::root_self()->map(0, vmo, 0, kSize, 0, &addr));
 
-// Note, no options means the buffer is not readable.
+750    // Note, no options means the buffer is not readable.
   ASSERT_OK(zx::vmar::root_self()->map(0, vmo, 0, kSize, 0, &addr));
 ```
 
@@ -443,6 +443,56 @@ Bti 2
 
 需要 对 socket 和 vmar 有一些 了解 、更便于开发
 
+那我们 顺便 在 来看下  Socket 这个 对象
+
+```
+Socket
+NAME
+Socket - Bidirectional streaming IPC transport
+
+SYNOPSIS
+Sockets are a bidirectional stream transport. Unlike channels, sockets only move data (not handles).
+
+DESCRIPTION
+Data is written into one end of a socket via zx_socket_write() and read from the opposing end via zx_socket_read().
+
+Upon creation, both ends of the socket are writable and readable. Via the ZX_SOCKET_SHUTDOWN_READ and ZX_SOCKET_SHUTDOWN_WRITE options to zx_socket_shutdown(), one end of the socket can be closed for reading and/or writing.
+
+
+Socket
+名称
+Socket-双向流IPC传输
+
+概要
+Socket是双向流传输。与channels不同，socket只能移动数据（而不移动handles）。
+
+描述
+数据通过zx_socket_write()被写入socket的一端，并从的另一端用zx_socket_read()读取。
+
+创建后，socket的两端都是可写和可读的。zx_socket_shutdown() 通过用 ZX_SOCKET_SHUTDOWN_READ和ZX_SOCKET_SHUTDOWN_WRITE选项 ，来控制Socket关闭和打开一端的读取和写入。
+
+
+```
+
+在这个测试用例 里 也 涉及到 socket 读写的syscall 
+
+可以 查阅   socket_read 具体 定义  
+https://fuchsia.dev/fuchsia-src/reference/syscalls/socket_read
+
+可以 查阅   socket_write 具体 定义  
+https://fuchsia.dev/fuchsia-src/reference/syscalls/socket_write
+
+
+在 这个 页面 查 所有object 
+
+https://fuchsia.dev/fuchsia-src/reference/kernel_objects/objects
+
+在 这个 页面 查 所有syscall
+
+https://fuchsia.dev/fuchsia-src/reference/syscalls
+
+
+这里就不 详细 展开了、内容 很多 导致 混乱
 
 
 ### linux  syscall 的 情况
@@ -682,3 +732,77 @@ int main(void)
 ```
 
 这些 syscall 排查改进和完善
+
+## 操作
+
+### linux
+
+在 zcore 的 根目录下 直接 运行 
+
+```
+cargo run --release -p linux-loader /libc-test/src/functional/socket.exe
+```
+
+就会 得到 如下 的 结果
+
+```
+Finished release [optimized] target(s) in 1m 30s
+     Running `target/release/linux-loader /libc-test/src/functional/socket.exe`
+[ERROR][2] unknown syscall: SOCKET. exit...
+```
+
+正如 我们 上面 所 列举的 、确实 socket syscall 是 没有 实现的
+
+一开始 可以 用 这样的 方法 、来 逐步 推进、先简单 的 把 zcore 根 rcore 对齐、然后 继续 根据 需要 支持的 应用 、来补充 添加 更多 的 syscall
+
+以防万一 、不失一般性、我们 可以 在试一个
+
+```
+cargo run --release -p linux-loader /libc-test/src/regression/statvfs.exe
+```
+
+结果 如下
+
+```
+Finished release [optimized] target(s) in 0.07s
+     Running `target/release/linux-loader /libc-test/src/regression/statvfs.exe`
+src/regression/statvfs.c:14: statvfs("/") failed: Permission denied
+src/regression/statvfs.c:16: / has bogus f_bsize: 0
+src/regression/statvfs.c:26: / has 0 file nodes
+src/regression/statvfs.c:28: / has more free file nodes (8) than total file nodes (0)
+src/regression/statvfs.c:34: / has bogus f_namemax: 1
+```
+
+这个结果 很友好、给出了 报错 位置、同理 还是去 找到 测试用例文件、阅读代码 、debug
+
+### zircon
+
+zcore的 readme 已经 有 写出
+
+简单提一下
+
+测试 （不会 崩溃 的） 全部 测试用例
+
+使用 这种 方式 
+```
+pip3 install pexpect
+cd scripts && python3 core-tests.py
+```
+
+如果 你单独 想 测一个
+
+使用  这种 方式， 但测试用例不对、有可能 引起崩溃
+
+```sh
+cd zCore && make test mode=release [accel=1] test_filter='Channel.*'
+```
+
+如果 全部 都想 测试 请 参见 上面 提到的 fix、注册到maillist
+
+请使用 云测试
+
+
+
+最后 提一下、这篇说明 为了帮助 同学 快速 了解怎么做 和 如何 上手、其实就是个很简单那的事情、小试一下就懂了、不夸张的说 虽然我写得很差 很啰嗦、但是这东西相信在座的各位5分钟就能 完全 掌握  
+
+好了，大概就是这样一个 流程了、感谢观看
