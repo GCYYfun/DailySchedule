@@ -122,7 +122,7 @@ with open(OUTPUT_FILE, "w") as output:
             # timeout.flush()
             # timeout_index += 1
         index += 1
-        
+
 os.system('killall linux-loader')
 
 end = time.time()
