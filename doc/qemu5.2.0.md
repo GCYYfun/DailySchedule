@@ -7,3 +7,11 @@
     sudo cp ninja /usr/bin/
 
     ninja --version
+
+
+./configure 
+
+--target-list=
+    riscv64-softmmu,
+    riscv64-linux-user,
+    x86_64-softmmu
