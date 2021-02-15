@@ -1,210 +1,79 @@
-# 那乍现的灵光
+# Daliy LOG
 
 ## 序言
 
-我又回来了、由于作息不规律、导致损害了记忆、就把这段记忆封印在这里、前一段在这里查看[记忆碎片](\annals\2020\README.md)
-
-## Index
-
-*一月*
-
-| Mon | Tues | Wed | Thur | Fri | Sat | Sun |
-|--|--|--|--|--|--|--|
-|  |  |  |  | 1 | 2 | 3 |
-| [4](#1) | [5](#2) | [6](#3) | [7](#4) | [8](#5) | [9](#6) | [10](#7) |
-| [11](#8) | [12](#9) | [13](#10) | [14](#11) | [15](#12) | [16](#13) | [17](#14) |
-| [18](#15) | [19](#16) | [20](#17) | [21](#18) | [22](#19) | [23](#20) | [24](#21) |
-| [25](#22) | [26](#23) | [27](#24) | [28](#25) | [29](#26) | [30](#27) | [31](#28) |
-
--------------------------------
-<br>
-<br>
-<br>
+没什么序言、但之前的记录在这里...[之前记录](\annals\2020\README.md)
 
 
-<span id="1"></span>
-## Day 1 （2021-01-04）周一
+# New 
 
-> GCYYfun
+## 庚子鼠年 腊月三十 除夕 （2021-02-11）周四
 
-### 今日计划
-| No. | Event             |
-|-----|-------------------|
-| 1   |  看电脑|
-### 今日完成
-| No. | Event             | Result | Comment |
-|-----|-------------------|--------|---------|
-| 1   |  认真的选电脑 | 计划失败 |
-### 今日总结
+## 辛丑牛年 正月初一 春节 （2021-02-12）周五
 
-    放下 电话 想出门 看看 、一打开 手机 em... 石家庄 进入 战时状态了、🤦‍♂️
+## 辛丑牛年 正月初二 初二 （2021-02-13）周六
 
---------------------------------------------------------
-<br>
-<br>
-<br>
+## 辛丑牛年 正月初三 初三 （2021-02-14）周日
 
+## 辛丑牛年 正月初四 初四 （2021-02-15）周一
 
-<span id="2"></span>
-## Day 2 （2021-01-05）周二
+ostep python 项目有许多更新
 
-> GCYYfun
+根据旧项目 参考 python 迁移新项目 中...
 
-### 今日计划
-| No. | Event             |
-|-----|-------------------|
-| 1   |  |
-### 今日完成
-| No. | Event             | Result | Comment |
-|-----|-------------------|--------|---------|
-| 1   |  看 csapp | 认真学习
-### 今日总结
+List 如下
 
-     em... 又是 一天早上 石家庄 成 高危地区了、🤦‍♂️🤦‍♂️、出门无望、开始 修电脑、勉强开机了
+### Virtualization
 
---------------------------------------------------------
-<br>
-<br>
-<br>
+Chapter | What To Do | Status |
+--------|----------- | ------ |
+[Abstraction: Processes](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf) | Run [process-run.py](cpu-intro)|🚧
+[Process API](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf) | Run [fork.py](cpu-api) and write some code|🚧
+[Direct Execution](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf) | Write some code
+[Scheduling Basics](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | Run [scheduler.py](cpu-sched)|🚧
+[MLFQ Scheduling](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf)	| Run [mlfq.py](cpu-sched-mlfq)|🚧
+[Lottery Scheduling](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) | Run [lottery.py](cpu-sched-lottery)|🚧
+[Multiprocessor Scheduling](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-sched-multi.pdf) | Run [multi.py](cpu-sched-multi)|🚧
+[Abstraction: Address Spaces](http://www.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf) | Write some code
+[VM API](http://www.cs.wisc.edu/~remzi/OSTEP/vm-api.pdf) | Write some code
+[Relocation](http://www.cs.wisc.edu/~remzi/OSTEP/vm-mechanism.pdf) | Run [relocation.py](vm-mechanism)|✔️
+[Segmentation](http://www.cs.wisc.edu/~remzi/OSTEP/vm-segmentation.pdf) | Run [segmentation.py](vm-segmentation)|🚧
+[Free Space](http://www.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) | Run [malloc.py](vm-freespace)|🚧
+[Paging](http://www.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf) | Run [paging-linear-translate.py](vm-paging)|🚧
+[TLBs](http://www.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf) | Write some code
+[Multi-level Paging](http://www.cs.wisc.edu/~remzi/OSTEP/vm-smalltables.pdf) | Run [paging-multilevel-translate.py](vm-smalltables)|🚧
+[Paging Mechanism](http://www.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys.pdf) | Run [mem.c](vm-beyondphys)|❌
+[Paging Policy](http://www.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys-policy.pdf) | Run [paging-policy.py](vm-beyondphys-policy)|🚧
+[Complete VM](http://www.cs.wisc.edu/~remzi/OSTEP/vm-complete.pdf) | No homework (yet)|❌
 
+### Concurrency
 
-<span id="3"></span>
-## Day 3 （2021-01-06）周三
+Chapter | What To Do | Status |
+--------|----------- | ------ |
+[Threads Intro](http://www.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf) | Run [x86.py](threads-intro)|🚧
+[Thread API](http://www.cs.wisc.edu/~remzi/OSTEP/threads-api.pdf)	| Run [some C code](threads-api)|🚧
+[Locks](http://www.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf)	| Run [x86.py](threads-locks)|🚧
+[Lock Usage](http://www.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf) | Write some code
+[Condition Variables](http://www.cs.wisc.edu/~remzi/OSTEP/threads-cv.pdf) | Run [some C code](threads-cv)|❌
+[Semaphores](http://www.cs.wisc.edu/~remzi/OSTEP/threads-sema.pdf) | Read and write [some code](threads-sema)
+[Concurrency Bugs](http://www.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf) | Run [some C code](threads-bugs)|❌
+[Event-based Concurrency](http://www.cs.wisc.edu/~remzi/OSTEP/threads-events.pdf) | Write some code
 
-> GCYYfun
+### Persistence
 
-### 今日计划
-| No. | Event     |
-|-----|-----------|
-| 1   | 看文档       |
-| 2   | 看csapp    |
-| 3   | 尝试 运行 lab |
-### 今日完成
-| No. | Event             | Result | Comment |
-|-----|-------------------|--------|---------|
-| 1   | 啊、电脑又挂了 |
-### 今日总结
+Chapter | What To Do | Status |
+--------|----------- | ------ |
+[I/O Devices](http://www.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf) | No homework (yet)
+[Hard Disk Drives](http://www.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf) | Run [disk.py](file-disks)|🚧
+[RAID](http://www.cs.wisc.edu/~remzi/OSTEP/file-raid.pdf) | Run [raid.py](file-raid)|🚧
+[FS Intro](http://www.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf) | Write some code
+[FS Implementation](http://www.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf) | Run [vsfs.py](file-implementation)|🚧
+[Fast File System](http://www.cs.wisc.edu/~remzi/OSTEP/file-ffs.pdf) | Run [ffs.py](file-ffs)|🚧
+[Crash Consistency and Journaling](http://www.cs.wisc.edu/~remzi/OSTEP/file-journaling.pdf) | Run [fsck.py](file-journaling)|❌
+[Log-Structured File Systems](http://www.cs.wisc.edu/~remzi/OSTEP/file-lfs.pdf) | Run [lfs.py](file-lfs)|❌
+[Solid-State Disk Drives](http://www.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf) | Run [ssd.py](file-ssd)|❌
+[Data Integrity](http://www.cs.wisc.edu/~remzi/OSTEP/file-integrity.pdf) | Run [checksum.py](file-integrity) and Write some code|❌
+[Distributed Intro](http://www.cs.wisc.edu/~remzi/OSTEP/dist-intro.pdf) | Write some code
+[NFS](http://www.cs.wisc.edu/~remzi/OSTEP/dist-nfs.pdf) | Write some analysis code
+[AFS](http://www.cs.wisc.edu/~remzi/OSTEP/dist-afs.pdf) | Run [afs.py](dist-afs)|🚧
 
-    em... 石家庄各小区 封闭了 、开始 全市 排查了 、啊这这、、、、🤦‍♂️🤦‍♂️🤦‍♂️
-
---------------------------------------------------------
-<br>
-<br>
-<br>
-
-
-<span id="4"></span>
-## Day 4 （2021-01-07）周四
-
-> GCYYfun
-
-### 今日计划
-| No. | Event     |
-|-----|-----------|
-| 1   | 看文档       |
-| 2   | 看csapp    |
-### 今日完成
-| No. | Event             | Result | Comment |
-|-----|-------------------|--------|---------|
-| 1   |  看资料 了解情况|
-### 今日总结
-
-    em... 今天做核酸检测 、快递什么的已经全停了、电脑显示、不定时黑屏、怀疑显卡、出了什么问题、🤦‍♂️🤦‍♂️🤦‍♂️🤦‍♂️
-
---------------------------------------------------------
-<br>
-<br>
-<br>
-
-
-<span id="5"></span>
-## Day 5 （2021-01-06）周五
-
-> GCYYfun
-
-### 今日计划
-| No. | Event     |
-|-----|-----------|
-| 1   | 看文档       |
-| 2   | 尝试 运行 lab |
-### 今日完成
-| No. | Event             | Result | Comment |
-|-----|-------------------|--------|---------|
-| 1   |  运行了下 demo|
-### 今日总结
-
-    em... 好像说 封3天 这是最后一天？🤦‍♂️🤦‍♂️🤦‍♂️🤦‍♂️🤦‍♂️、趁开机能亮、赶紧跑了下 项目、试了试、运行ok、
-
---------------------------------------------------------
-<br>
-<br>
-<br>
-
-
-<span id="6"></span>
-## Day 6 （2021-01-09）周六
-
-> GCYYfun
-
-### 今日计划
-| No. | Event     |
-|-----|-----------|
-| 1   | 看资料       |
-| 2   | 分析文档       |
-### 今日完成
-| No. | Event             | Result | Comment |
-|-----|-------------------|--------|---------|
-| 1   |  梳理 需求 、复习用到 知识、再看rust os |
-### 今日总结
-
-    em... 这下好了、又7天、交通、商场全关了、🤦‍♂️🤦‍♂️🤦‍♂️🤦‍♂️🤦‍♂️🤦‍♂️
-
---------------------------------------------------------
-<br>
-<br>
-<br>
-
-
-<span id="7"></span>
-## Day 7 （2021-01-10）周日
-
-一五 计划 
-
-| No. | Event     |
-|-----|-----------|
-| 1   | riscv 寄存器 特权级 指令集      |
-| 2   | riscv 汇编   |
-| 3   | bootload 逻辑
-| 4   | opensbi
-| 5   | 汇编 链接 elf 相关约定|
-
-<span id="8"></span>
-## Day 8 （2021-01-11）周一
-
-基本完成 1、riscv 寄存器 特权级 指令集
-
-<span id="9"></span>
-## Day 9 （2021-01-12）周二
-
-基本完成 2、 riscv 汇编
-
-<span id="10"></span>
-## Day 10 （2021-01-13）周三
-
-复习 blog os
-
-<span id="11"></span>
-## Day 11 （2021-01-14）周四
-
-基本完成  5、汇编 链接 elf 相关约定
-
-<span id="12"></span>
-## Day 12 （2021-01-15）周五
-
-学习cargo
-
-啊、完了、全没了、机子又死掉了、
-
-um....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................d.............e.........s...........p.....a.....................i...................r.................................................
-
-实现了下 test on qemu-riscv64、好像还行、但需要做一些工作
