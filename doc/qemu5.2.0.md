@@ -7,6 +7,7 @@
 
     git clone git://github.com/ninja-build/ninja.git && cd ninja
     ./configure.py --bootstrap
+
     sudo cp ninja /usr/bin/
 
     ninja --version
@@ -25,9 +26,8 @@
 
 
 sudo apt install pkg-config
-
-
 sudo apt install libglib2.0-dev
-
-
 sudo apt install libpixman-1-dev
+
+
+make -j 24
