@@ -6,6 +6,21 @@
 
 
 # New 
+
+## 辛丑牛年 （2021-02-27）周日
+关于 riscv 的 文档
+
+1. riscv 的 isa 文档
+https://github.com/riscv/riscv-isa-manual  
+两个：特权级 非特权级
+2. riscv 的 asm 文档
+https://github.com/riscv/riscv-asm-manual/blob/master/riscv-asm.md  
+西数视频教程（中字）：https://www.bilibili.com/video/BV1eJ411t7JS/?spm_id_from=333.788.videocard.8  
+3. riscv 的 plic 文档
+https://github.com/riscv/riscv-plic-spec/blob/master/riscv-plic.adoc
+4. riscv 的 sbi 文档
+https://github.com/riscv/riscv-sbi-doc/blob/master/riscv-sbi.adoc
+
 ## 辛丑牛年 （2021-02-27）周六
 1. 人生一片黑暗...看 opensbi 、仿写bootloader
 ## 辛丑牛年 （2021-02-26）周五
