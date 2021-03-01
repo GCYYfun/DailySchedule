@@ -10,3 +10,6 @@
 1. cargo 换源
 1. 安装 git make 
 1. 安装 qemu
+
+
+
