@@ -81,11 +81,11 @@ actual 实际读取的字节数存储在此处.如果vaddr + buffer_size超出�
 
 好了、到此我们至少知道了、这个api说了点什么、但目前好像我们还不能立马就去写、
 
-至于为什么、可以暂停在此处想一下、要去完成、需要些什么、 此处停顿几个须臾、
-考虑下 这个 syscall 什么意思
-谁调用了 这个 syscall 
-谁执行了 这个 syscall
-传的参数 想表达了什么意思
+至于为什么、可以暂停在此处想一下、要去完成、需要些什么、 此处停顿几个须臾、  
+考虑下 这个 syscall 什么意思  
+谁调用了 这个 syscall   
+谁执行了 这个 syscall  
+传的参数 想表达了什么意思  
 
 -------------------------
 
@@ -357,7 +357,13 @@ pub trait VMObjectTrait: Sync + Send {
 okok、我觉得我们已经具备 差不多必备的能力了、可以仔细思考下、  
 
 能不能实现 "读取指定进程的内存" 、
-### 让我们来demo下
+### 经过上述介绍、让我们来试着code下
+
+1. 注册 syscall
+1. 实现 syscall 函数
+1. 运行测试用例、查看是否通过
+1. 反复debug
+#### 注册 syscall
 
 首先 我们先在 zircon-syscall/src/lib.rs 里 注册上我们这个syscall
 
@@ -365,17 +371,21 @@ okok、我觉得我们已经具备 差不多必备的能力了、可以仔细思
 impl Syscall<'_> {
     pub async fn syscall(&mut self, num: u32,args: [usize;8]) -> isize {
         ···一些代码
-        Sys::PROCESS_READ_MEMORY => {
-            self.sys_process_read_memory(···)
+        // 这个 就是 我们 要补充 的 syscall 的 名字
+        Sys::PROCESS_READ_MEMORY => {  
+            // 这是 我们 实现 的 函数、函数的参数 要跟 定义类型一样、这里用...省略了、一会补充
+            self.sys_process_read_memory(···) 
         }
         ···一些代码
     }
 }
 ```
 
+#### 实现 syscall 函数
+
 在 zircon-syscall/src/task.rs 文件里
 
-我们写上 这个syscall 的实现
+我们添加上 这个syscall 的实现、也就是 刚才 省略 参数 的 那个函数
 
 ```Rust
 pub fn sys_process_read_memory (
@@ -403,6 +413,8 @@ pub fn sys_process_read_memory (
 }
 ```
 
+以上是 这个 syscall 的 主体逻辑
+
 顺便看下 read_memory的实现
 ```Rust
 zircon-object/src/vm/vmar.rs
@@ -417,6 +429,26 @@ pub fn read_memory (&self,vaddr:usize,buf:&mut [u8]) -> ZxResult<usize> {
 
 这与我们前面的想象差不多、
 
+我们现在 补上 syscall 注册 的 那个 参数
+
+```Rust
+impl Syscall<'_> {
+    pub async fn syscall(&mut self, num: u32,args: [usize;8]) -> isize {
+        
+        // 这里是把参数 args数组 内容 取出来给到 变量 、这些东西是 调用syscall 传进来的参数、  
+        let [a0, a1, a2, a3, a4, a5, a6, a7] = args;
+        let ret = match sys_type {
+            ···一些代码
+            Sys::PROCESS_READ_MEMORY => {  
+                // 基本类型 用 as _ 占位符 就能 推断、UserPtr 实现了 From 用 into() 推断
+                self.sys_process_read_memory(a0 as _, a1 as _, a2.into(), a3 as _, a4.into()) 
+            }
+            ···一些代码
+        }
+    }
+}
+```
+
 这基本上就完成了一个简单syscall的实现、当然有很多细节、并没有展开、错误检查也没有体现、是为了突出主干逻辑、
 
 具体操作肯定还是要看代码的、
@@ -424,6 +456,8 @@ pub fn read_memory (&self,vaddr:usize,buf:&mut [u8]) -> ZxResult<usize> {
 这个就是 一次 简单syscall的开发过程了、
 
 可以按这个思路 试下 process_write_momory 
+
+之后 参考 zcore 文档 进行 测试 、看看 是否 成功、
 
 ### 鸣谢
 
