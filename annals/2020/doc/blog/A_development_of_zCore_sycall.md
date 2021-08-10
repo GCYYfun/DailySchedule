@@ -21,29 +21,29 @@ https://zhuanlan.zhihu.com/p/137733625
 
 ### 背景介绍
 
-zcore的syscall的开发、参照了fuchsia的zircon的sycall、
+zcore的syscall的开发、参照了fuchsia的zircon的syscall、
 
 使用了相同的syscall约定、目前用的也是zircon的用户测试用例
 
 ### Syscall的调用流程
 
-写一个用户程序  //TODO
+1. 写一个用户程序  //TODO
 
-在用户程序中通过VDOS调用 sycall // TODO 
+2. 在用户程序中通过VDOS调用 sycall // TODO 
 
-放入 zCore    // TODO
+3. 放入 zCore    // TODO
 
-运行 程序 // TODO
+4. 运行 程序 // TODO
 
-进入内核 // TODO
+5. 进入内核 // TODO
 
-处理从用户态来的syscall上下文信息函数  // TODO
+6. 处理从用户态来的syscall上下文信息函数  // TODO
 
-调用内核的syscall函数 通过上下文指定的系统调用号 来找具体syscall // TODO
+7. 调用内核的syscall函数 通过上下文指定的系统调用号 来找具体syscall // TODO
 
-找到 syscall // TODO
+8. 找到 syscall // TODO
 
-执行 // TODO
+9. 执行 // TODO
 
 ### 切面
 
@@ -65,9 +65,10 @@ zx_status_t zx_process_read_memory(zx_handle_t handle,
 
 通过看文档 大致知道 (具体要参照文档、且开发时一定要参照文档、这里只是简要说明)  
 
-process_read_memory() 是尝试读取指定进程的内存、
-
+process_read_memory() 尝试读取指定进程的内存  
 函数的api的拥有几个参数
+
+handle 是 指定 进程 的 句柄
 
 vaddr 是要读取的内存块的地址
 
@@ -80,11 +81,30 @@ actual 实际读取的字节数存储在此处.如果vaddr + buffer_size超出�
 
 好了、到此我们至少知道了、这个api说了点什么、但目前好像我们还不能立马就去写、
 
-至于为什么、可以暂停在此处想一下、要去完成、需要些什么、 此处停顿几个须臾
+至于为什么、可以暂停在此处想一下、要去完成、需要些什么、 此处停顿几个须臾、
+考虑下 这个 syscall 什么意思
+谁调用了 这个 syscall 
+谁执行了 这个 syscall
+传的参数 想表达了什么意思
+
+-------------------------
 
 ### 准备工作
 
 我们了写出syscall、首先需要知道一些可以操作的东西、因为syscall本就是供用户使用系统资源的函数、
+
+我们需要知道  内存该如何使用、指针如何使用、
+
+因为 这个 syscall 想要做的 事情 是 读取数据 从 一个我们指定的进程中、
+
+假设一个场景是我们在写程序、这时候我们想去一个别的应用程序里 读取数据、我们就可能用到这个syscall、
+
+这个 syscall 被 调用 、由内核 执行 这段 代码、
+就是 我们 要 填写 补充 完整的
+
+参数也清晰的表达了这个syscall的意思、给我去用这个 handle 找到对应的process，然后从 这个process 的 
+vmar 的 vaddr 这里给我把数据取出来、放进我的 buffer 里、
+额外的信息 是做校验用的、以防出错
 
 #### VM
 
@@ -95,9 +115,12 @@ actual 实际读取的字节数存储在此处.如果vaddr + buffer_size超出�
 VMO 和 VMAR
 
 VMAR表示虚拟地址空间
-VMO表示物理内存
-VMMapping表示一个VMO映射到一个VMAR上面
+VMO表示一块虚拟地址空间
+VMMapping表示一个VMO映射到一个VMAR上面的关系
 VMAR里可以有多个Mapping
+
+举个例子、一般一个进程有一个 root VMAR 就是 没有 父节点、
+这个 vmar 可以无交叉的划分出子vmar  
 
 基本表示为 这么一张图片 
 
@@ -129,15 +152,27 @@ thread 负责 运行计算
 
 zCore里有与之相关的一个对于用户地址的封装
 
-在 kernel-hal\user 下 实现对地址读写的封装
+在 kernel-hal/src/user 下 实现对地址读写的封装
 
 ```Rust
 pub type UserInPtr<T> = UserPtr<T,In>;
 pub type UserOUTptr<T> = UserPtr<T,Out>;
 pub type UserInOut<T> = UserPtr<T,InOut>;
 ```
+UserIn 的 意思 是 user 给的一个地址、里面有数据、要进入内核
+
+User --In--> Kernel  对应到 操作就是 kernel read
+
+UserOut 相反、 
+
+Kernel --Out--> User 对应 操作 就是 kernel write
+
+InOut 就是 双向的 都可以 R/W
+
+
 
 ```Rust
+kernel-hal/src/user 116
 ...
 pub fn read_array(&self, len: usize) -> Result<Option<T>> {
     if len == 0 {
@@ -164,28 +199,30 @@ pub fn read_array(&self, len: usize) -> Result<Option<T>> {
 
  ### "指定进程"
 
-task 包含三个 object 分别是 job process thread 、在上面的图中很清晰的表述其关系
+task 包含三个 object 分别是 job process thread 、在上面的图中清晰的表述其关系
 
 也说了 thread 负责 运行计算
 
 所以在syscall的这个结构体里 存在在对当前thread的引用、
 
 ```Rust
+zircon-syscall/src/lib.rs
 pub struct Syscall<'a> {
-    pub regs: &'a mut GeneralRegs,
-    pub thread: Arc<Thread>,
-    pub spawn_fn: fn(thread: Arc<thread>),
-    pub exitL bool
+    pub thread: &'a CurrentThread,
+    pub thread_fn: ThreadFn,
 }
 ```
 
-这个 thread 实在 启动程序时创建的、是个内核thread、同时也会有创建了 job 和 process
+这个 thread 是在启动程序时创建的、是个内核thread、同时也会有创建了 job 和 process
 
 我们暂时先不去考虑 那些 、知道 当前syscall 是能 获取 当前线程的就很好、
 
 他可以让我们 通过 thread 进去去找到 process 、因为 process 负责 资源
 
+看 thread 结构
+
 ```Rust
+zircon-object/src/thread.rs
 pub struct Thread {
     base: KObjectBase,
     _counter: CountHelper,
@@ -199,6 +236,7 @@ pub struct Thread {
 process 拥有什么资源？最主要的还是空间资源
 
 ```Rust
+zircon-object/src/process.rs
 pub struct Process {
     base: KObjectBase,
     _counter: CountHelper,
@@ -211,7 +249,7 @@ pub struct Process {
 }
 ```
 
-现在我们在回顾一下 "读取指定进程的内存" 这句话 是不是觉得 其中 "指定进程" 也找到了
+这样就 获取到到了 内核 的 进程
 
 ### "内存"
 
@@ -220,21 +258,22 @@ pub struct Process {
 再让我们 想一下 刚才 提到 VM时 怎么说的 
 
 > VMAR表示虚拟地址空间  
-> VMO表示物理内存  
-> VMMapping表示一个VMO映射到一个VMAR上面  
+> VMO表示一块虚拟地址空间  
+> VMMapping表示一个VMO映射到一个VMAR上面的关系
 > VMAR里可以有多个Mapping  
 
 我们现在已经可以通过进程 能访问  vmar了
 
 要看看接下来怎么做
 
-这里说了 VMO 才是 表示 物理内存 、vmar 只是 虚拟的地址空间、还提到了 VMMapping 
+这里说了 VMO 表示 一块虚拟内存 、vmar 只是 虚拟的地址空间、还提到了 VMMapping 
 
 细究下VMMapping 是什么 他是表示 VMO 映射到 VMAR、那是不是意味着、VMAR 持有 VMMapping 、而VMMapping 又可以获得 VMO、
 
 我们分别看下他们
 
 ```Rust
+zircon-object/src/vmar.rs
 pub struct VmAddressRegion {
     flags: VmarFlages,
     base: KObjectBase,
@@ -250,6 +289,7 @@ pub struct VmAddressRegion {
 似乎没有我们预料的 vmmapping、其实不是、他被装在 vmarinner里
 
 ```Rust
+zircon-object/src/vmar.rs
 struct VmarInner {
     children: Vec<Arc<VmAddressRegion>>,
     mappings: Vec<Arc<VmMapping>>,
@@ -261,6 +301,7 @@ struct VmarInner {
 我们在看看mapping 
 
 ```Rust
+zircon-object/src/vmar.rs
 struct VmMapping {
     flags: MMUFlags,
     vmo： Arc<VmObject>,
@@ -272,6 +313,7 @@ struct VmMapping {
 我们也看到了vmo 、 顺利的找到 可以操作 物理内存的 对象、在多看一眼 inner
 
 ```Rust
+zircon-object/src/vmar.rs
 struct VmMappingInner {
     addr: VirtAddr,
     size: usize,
@@ -284,6 +326,7 @@ struct VmMappingInner {
 最后看下 VMO
 
 ```Rust
+zircon-object/src/vmo/mod.rs
 struct VmObject {
     base: KObjectBase,
     parent: Mutex<Weak<VmObject>>,
@@ -294,13 +337,14 @@ struct VmObject {
 }
 ```
 
-相信大家也猜出来了、肯定是再要看inner的、因为这个结构、跟像是一个基类(这里不可以玩谐音梗)
+相信大家也猜出来了、肯定是再要看inner的、因为这个结构、比较像是一个基类
 
 在Trait 里约定了 VMO的能力、具体实现 交给 要带上这个trait的对象 
 
 目前我们只要关心下、 VMO有什么能力就好
 
 ```Rust
+zircon-object/src/vmo/mod.rs
 pub trait VMObjectTrait: Sync + Send {
     // 通过VMO的offset 读内存到 buf
     fn read(&self, offset: usize, buf: &mut [u8]) -> ZxResult;
@@ -312,8 +356,7 @@ pub trait VMObjectTrait: Sync + Send {
 
 okok、我觉得我们已经具备 差不多必备的能力了、可以仔细思考下、  
 
-能不能实现 "读取指定进程的内存" 、这里是 思考时间.........
-
+能不能实现 "读取指定进程的内存" 、
 ### 让我们来demo下
 
 首先 我们先在 zircon-syscall/src/lib.rs 里 注册上我们这个syscall
@@ -321,11 +364,11 @@ okok、我觉得我们已经具备 差不多必备的能力了、可以仔细思
 ```Rust
 impl Syscall<'_> {
     pub async fn syscall(&mut self, num: u32,args: [usize;8]) -> isize {
-        ···
+        ···一些代码
         Sys::PROCESS_READ_MEMORY => {
             self.sys_process_read_memory(···)
         }
-        ···
+        ···一些代码
     }
 }
 ```
@@ -337,8 +380,8 @@ impl Syscall<'_> {
 ```Rust
 pub fn sys_process_read_memory (
     &self,                            // 这代表syscall自己
-    handle_value: HandleValue,        // 这代表 用户 拥有 的 ticket 用来取 存储在内核的 handler
-    vaddr: usize,                     // 文档说了 这是 要 读取的地址
+    handle_value: HandleValue,        // 这代表 用户 拥有 的 handle 用来取 存储在内核的 对应process
+    vaddr: usize,                     // 文档说了 这是 要 读取的地址 在 handle 对应 的 process 的 vmar 中
     mut buffer: UserOutPtr<u8>,       // 读取到这个 buffer 里
     buffer_size: usize,               // 尝试读取的大小
     mut actual: UserOutPtr<u32>,      // 实际读取的大小
@@ -362,6 +405,7 @@ pub fn sys_process_read_memory (
 
 顺便看下 read_memory的实现
 ```Rust
+zircon-object/src/vm/vmar.rs
 pub fn read_memory (&self,vaddr:usize,buf:&mut [u8]) -> ZxResult<usize> {
     let map = self.find_mapping(vaddr).ok_or(ZxError::No_MEMORY)?; // 通过 vaddr 获取 mapping
     let map_inner = map.inner.lock();  // 获取 mapping inner
@@ -377,9 +421,9 @@ pub fn read_memory (&self,vaddr:usize,buf:&mut [u8]) -> ZxResult<usize> {
 
 具体操作肯定还是要看代码的、
 
-那么这个就是 一次 简单syscall的开发过程了、最后再留一个思考、process_write_momory 你能实现了么、可以尝试一下、
+这个就是 一次 简单syscall的开发过程了、
 
-
+可以按这个思路 试下 process_write_momory 
 
 ### 鸣谢
 
