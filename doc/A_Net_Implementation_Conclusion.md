@@ -1,7 +1,7 @@
 # 网络 实现 的 总结
 
 
-## 1 Introduction
+## 1. Introduction
 
 zcore 具有了 基本 boot 功能、中断管理、内存管理、进程管理 、文件管理、内核和用户态切换 和 Syscall功能，可以运行 busybox ，那么也可以添网络功能。
 
@@ -9,7 +9,7 @@ zcore 具有了 基本 boot 功能、中断管理、内存管理、进程管理 
 
 因此 对 其 进行了 思考 和 实现
 
-## 2 思路
+## 2. 思路
 
 第一个 问题 是 网络通信的流程 是 如何 的 。
 
@@ -33,7 +33,7 @@ zcore 具有了 基本 boot 功能、中断管理、内存管理、进程管理 
 * Syscall 接口
 
 
-## 3 实现
+## 3. 实现
 
 根据 需要 把这个 东西 串 起来，使用到 别人写的库
 
@@ -253,7 +253,7 @@ SOCKETS 是全局变量， 所有 socket 存储 的 地方
 
 
 ```rust
-impl TcpSocketState {
+impl Socket for TcpSocketState {
     
 
      // some code ...
@@ -320,6 +320,12 @@ struct LinuxProcessInner {
 在 进程的 结构了 里 有  files 和 sockets 两个 hashmap
 区别于 用 一个 文件描述符 存到 一个 地方的 形式，这里 是 分开 存放的，对 应 各自 的 trait 和 实现
 
+这里 列出 zcore 对 smoltcp 使用 的 包装部分
+```rust
+(zcore) TcpSocketState ---封装---> TcpSocket (smoltcp)
+(zcore) UdpSocketState ---封装---> UdpSocket (smoltcp)
+(zcore) RawSocketState ---封装---> RawSocket (smoltcp)
+```
 
 Syscall
 
@@ -366,7 +372,7 @@ pub fn sys_socket(&mut self, domain: usize, socket_type: usize, protocol: usize)
         Ok(fd.into())
     }
 
-    /// net sys_connect
+    /// net sys_con流程nect
     pub async fn sys_connect(
         &mut self,
         fd: usize,
@@ -404,7 +410,7 @@ connect 是 根据 传入 的 参数 ，取出 对应 的 socket 调用 object�
 接下来 验证 一下
 
 
-## 4 运行与测试
+## 4. 运行与测试
 
 
 当我们 运行 zcore 进入 shell 
@@ -439,7 +445,11 @@ python3 baremetal-libc-test-one.py
 就可 得到 测试 结果，目前 没有 报错，通过这个 测试 ，udp 和 tcp 的 连接、发送、接收，尚未出现问题。
 
 
-## 5. 致谢
+## 5. 目前的不足
+
+因为前期对整体理解设计和规划的不足，目前还没有使用中断和完整的异步去处理更新唤醒机制，依然使用轮询方式，也得益于目前没有什么其他进程在运行，尚且表现正常，但这并不是期望的结果，后续我会把这部分不足补足，形成完整且合理的流程。
+
+## 6. 致谢
 
 首先要感谢老师，**支持**并给机会和时间让我去 尝试和实现网络部分功能。
 
