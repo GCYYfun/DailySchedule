@@ -85,7 +85,8 @@ sd 卡插入 unmatched，电源 插上给 unmatched 供电，usb 从 unmatched �
 
 ## 计划
 
-等组装完毕，有网络后 这款板子上，尝试linux上运行 SLAM，ROS，Rust等软件参考下
+等组装完毕，有网络后 这款板子上，尝试linux上运行 SLAM，ROS，Rust等软件参考下  
+引导起 rust os
 
 ## 隐藏内容
 
