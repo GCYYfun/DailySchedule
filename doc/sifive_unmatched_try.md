@@ -27,7 +27,6 @@ https://sifive.cdn.prismic.io/sifive/b9376339-5d60-45c9-8280-58fd0557c2f0_hifive
 1. 首先 确认 硬件 存在
 2. 基本点亮 硬件 需要 
 ```txt
-
 物品
 1. 电源
 2. sifive unmatched
@@ -71,16 +70,14 @@ sd 卡插入 unmatched，电源 插上给 unmatched 供电，usb 从 unmatched �
 
 ## 预期
 
-我还需 把目前 环境 复原，
-
 需要 一些 配件 来支持 使用 unmatched
 
-1. mini-itx 机箱
+1. mini-itx 机箱 ， 用来 打包 固定 电源 和 主板，可有可无，不耽误使用。
 1. m.2 固态固态 硬盘 ，如果 可以 希望有 两块，一块 装 linux 用来 为 以后 开发验证 riscv 程序 ，做一个对比平台。 另一个 装我们自己的OS。
-1. 32G a1型 闪迪 sd卡 还是 需要 多 需要 一个 的 ，不希望擦出 目前 以有的 linux，用一个 新 sd卡装 我们自己的OS，前期 用来 尝试boot 和 开发调试，最后还是要装到 固态里，sd开 太慢了，
-1. 电源 需要 一个 适配 机箱
+1. 32G a1型 闪迪 sd卡 还是 需要 多 需要 一个 的 ，不希望擦出 目前 以有的 linux，用一个 新 sd卡装 我们自己的OS，前期 用来 尝试boot 和 开发调试，最后还是要装到 固态里，sd开机太慢了。
+1. 电源 和 电源线 需要 ，适配 机箱，比如 sfx电源，不要机箱就无所谓了。
 1. 显卡 需要 一个 AMD 和 Nvidia 都可以
-1. 机箱 风扇 需要 ，目前 测试 散热 还是 有一些的，需要 空气 流动，被动散热 经测试 温度还是 有明显感觉。  
+1. 机箱 风扇 需要 ，目前 测试 散热 还是 有一些的，需要 空气 流动，被动散热 经测试 温度还是 有明显感觉。  不要机箱，也就无所谓了。
 1. intel a200 wifi m2卡，a201 不能用
 1. cr1220 纽扣 电池 一个 ，用来 激活 实时时钟。
 
@@ -99,7 +96,7 @@ https://item.jd.com/2248313.html#crumb-wrap
 1. 固态硬盘 
 三星 980 https://item.jd.com/100018768480.html or  
 西部数据 sn750 https://item.jd.com/100003226990.html
-1. 网卡 https://item.jd.com/100019489708.html
-1. cr1220 https://item.jd.com/100015023254.html
-1. sd卡 官方 带的 那款  ，属实有点慢，https://item.jd.com/1875992.html
+1. intel wifi6 网卡 https://item.jd.com/100019489708.html
+1. cr1220 电池 https://item.jd.com/100015023254.html
+1. sd卡 选择官方 带的 那款  ，但属实有点慢，https://item.jd.com/1875992.html
 1. 显卡 就 比较 随心意了
